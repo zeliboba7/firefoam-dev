@@ -1,9 +1,3 @@
-/*---------------------------------------------------------------------------*\
-    This file is part of a preliminary version of the FireFOAM code which is 
-    currently under development at FM Global. FM Global designates this file
-    WITHOUT ANY WARRANTY to be used for development purpose only. 
-\*---------------------------------------------------------------------------*/
-
 
     // Solve the Momentum equation
 
