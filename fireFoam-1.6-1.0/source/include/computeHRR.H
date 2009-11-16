@@ -1,5 +1,5 @@
   hc = thermo.hc(); 
-  hs = thermo.hs(); 
+  //hs = thermo.hs(); 
 
   if (multiVariate&&!isMULES)
   {

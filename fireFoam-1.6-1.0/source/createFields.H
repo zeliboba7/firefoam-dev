@@ -78,8 +78,8 @@
     volScalarField hc = thermo.hc();
     hc.oldTime();
 
-    volScalarField hs = thermo.hs();
-    hs.oldTime();
+//    volScalarField hs = thermo.hs();
+//    hs.oldTime();
 
 #   include "compressibleCreatePhi.H"
 
