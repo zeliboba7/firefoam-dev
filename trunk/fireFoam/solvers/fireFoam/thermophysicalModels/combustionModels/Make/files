@@ -1,0 +1,4 @@
+eddyDissipationModel/eddyDissipationModel.C
+
+LIB = $(FOAM_USER_LIBBIN)/libcombustionModelsSpeciesEDCNew17x
+
