@@ -1,0 +1,58 @@
+DEV_PATH=./../..
+
+EXE_INC = \
+    -I./include \
+    -I$(DEV_PATH)/libs/thermophysicalModels/combustionModelsSpecies/lnInclude \
+    -I$(DEV_PATH)/libs/regionModels/regionModel/lnInclude \
+    -I$(DEV_PATH)/libs/regionModels/surfaceFilmModels/lnInclude \
+    -I$(DEV_PATH)/libs/regionModels/pyrolysisModels/lnInclude \
+    -I$(DEV_PATH)/libs/lagrangian/intermediate/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/reactionThermoNew/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/chemistryModelNew/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo/basicSolid/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo/chemistryModel/lnInclude \
+    -I$(LIB_SRC)/lagrangian/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I${LIB_SRC}/meshTools/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/compressible/turbulenceModel \
+    -I$(LIB_SRC)/thermophysicalModels/liquids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/liquidMixture/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidMixture/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/radiation/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/thermophysicalFunctions/lnInclude \
+    -I$(LIB_SRC)/ODE/lnInclude 
+
+
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+        -lpatchFieldsFireFOAM \
+        -ladditionalReactionsNew17x \
+        -lcombustionModelsSpeciesNew17x \
+        -lcombustionModelsSpeciesEDCNew17x \
+        -lregionModels17x \
+        -lpyrolysisModels17x \
+        -lreactionThermophysicalModelsNew17x \
+        -lchemistryModelNew17x \
+        -lsolidMixtureThermo17x \
+        -lsolidChemistryModel17x \
+        -lgreyDiffusiveRadiationMixed17x \
+        -llagrangianIntermediateFireFOAM \
+    -lbasicThermophysicalModels \
+    -llagrangian \
+    -lfiniteVolume \
+    -lcompressibleLESModels \
+    -lcompressibleRASModels \
+    -lmeshTools \
+    -lthermophysicalFunctions \
+    -lradiation \
+    -lspecie \
+    -lsolids \
+    -lsolidMixture \
+    -lODE 
+   
+
+
