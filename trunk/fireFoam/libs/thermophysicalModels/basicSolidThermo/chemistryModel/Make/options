@@ -1,0 +1,21 @@
+DEV_PATH=./../../../..
+
+EXE_INC = \
+    -DFULLDEBUG -g -O0 \
+    -I$(DEV_PATH)/libs/thermophysicalModels/chemistryModelNew/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/reactionThermoNew/lnInclude \
+    \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/ODE/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude  \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I../solid/lnInclude \
+    -I../basicSolid/lnInclude
+
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+        -lchemistryModelNew17x \
+    -lfiniteVolume \
+    -lODE \

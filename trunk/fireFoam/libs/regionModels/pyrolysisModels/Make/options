@@ -1,0 +1,29 @@
+DEV_PATH = ./../../..
+
+EXE_INC = \
+    -DFULLDEBUG -g -O0 \
+    -I$(DEV_PATH)/libs/regionModels/regionModel/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo/solid/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo/basicSolid/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo/chemistryModel/lnInclude \
+    \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels \
+    -I$(LIB_SRC)/turbulenceModels/compressible/turbulenceModel/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/compressible/RAS/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/compressible/LES/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/LES/LESdeltas/lnInclude
+
+
+EXE_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+        -lregionModels17x \
+        -lsolidChemistryModel17x \
+        -lsolidThermo17x \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lcompressibleLESModels

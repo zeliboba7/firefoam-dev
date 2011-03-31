@@ -1,0 +1,7 @@
+log.fireFoam original/log.fireFoam
+zones/0.0011976/phi original/zones/0.0011976/phi
+zones/0.0011976/phiFt original/zones/0.0011976/phiFt
+zones/0.0011976/phiH original/zones/0.0011976/phiH
+zones/0.0011976/phiHs original/zones/0.0011976/phiHs
+zones/0.0011976/phiHc original/zones/0.0011976/phiHc
+zones/0.0011976/HRR_fu original/zones/0.0011976/HRR_fu

@@ -1,0 +1,200 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.6                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactingCloud1Properties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//active          true;
+active          false;
+
+//InjectionModel  ManualInjection;
+InjectionModel  ConeInjection;
+
+DragModel       SphereDrag;
+
+DispersionModel none;
+
+PatchInteractionModel StandardWallInteraction;
+
+HeatTransferModel RanzMarshall;
+
+CompositionModel SinglePhaseMixture;
+
+PhaseChangeModel LiquidEvaporation;
+
+PostProcessingModel none;
+
+SurfaceFilmModel ThermoSurfaceFilm; 
+
+radiation       off;
+
+coupled         true;
+
+cellValueSourceCorrection on;
+
+parcelTypeId    1;
+
+constantProperties
+{
+    rhoMin          rhoMin [ 1 -3 0 0 0 ] 1e-15;
+    TMin            TMin [ 0 0 0 1 0 ] 200;
+    pMin            pMin [ 1 -1 2 0 0 ] 1000;
+    rho0            rho0 [ 1 -3 0 0 0 ] 1000;
+    minParticleMass minParticleMass [ 1 0 0 0 0 ] 1e-15;
+    T0              T0 [ 0 0 0 1 0 ] 300;
+    cp0             cp0 [ 0 2 -2 -1 0 ] 4187;
+    epsilon0        epsilon0 [ 0 0 0 0 0 ] 1;
+    f0              f0 [ 0 0 0 0 0 ] 0.5;
+    Pr              Pr [ 0 0 0 0 0 ] 0.7;
+    Tvap            Tvap [ 0 0 0 1 0 ] 273;
+    Tbp             Tvap [ 0 0 0 1 0 ] 373;
+    constantVolume  false;
+}
+
+interpolationSchemes
+{
+    rho             cell;
+    U               cellPointFace;
+    mu              cell;
+    T               cell;
+    Cp              cell;
+    p               cell;
+}
+
+integrationSchemes
+{
+    U               Euler;
+    T               Analytical;
+}
+
+particleForces
+{
+    gravity         on;
+    virtualMass     off;
+    pressureGradient off;
+}
+
+ManualInjectionCoeffs
+{
+    massTotal       massTotal [ 1 0 0 0 0 ] 0.0005; //1e-8;
+    parcelBasisType mass;
+    SOI             0;
+    positionsFile   "reactingCloud1Positions";
+    U0              ( 0.5 -0.5 0 );
+    parcelPDF
+    {
+        pdfType         uniform;
+        uniformPDF
+        {
+            minValue        1e-05;
+            maxValue        1e-03;
+        }
+    }
+}
+
+ConeInjectionCoeffs
+{
+    massTotal       massTotal [ 1 0 0 0 0 ] 0.0005; //1e-8;
+    parcelBasisType mass;
+    SOI             0.001;
+    duration        10; //0.005;
+    position        ( 0. 0.0 0.0 );
+    direction       ( 0 -1 0 );
+    parcelsPerSecond 10000;
+    //volumeFlowRate  Constant 0.01;
+    volumeFlowRate  constant 0.01;
+    Umag            constant 50;
+    thetaInner      constant 0;
+    thetaOuter      constant 30;
+
+    parcelPDF
+    {
+        pdfType         RosinRammler;
+        RosinRammlerPDF
+        {
+            minValue        5e-05;
+            maxValue        0.0001;
+//            d               ( 7.5e-05 );
+            d               7.5e-05;
+//            n               ( 0.5 );
+            n               0.5;
+        }
+    }
+}
+
+
+StandardWallInteractionCoeffs
+{
+    type            rebound;
+}
+
+RanzMarshallCoeffs
+{
+    // thermal shielding
+    BirdCorrection  true;
+}
+
+/*
+StandardWallInteractionCoeffs
+{
+    e               e [ 0 0 0 0 0 ] 1;
+    mu              mu [ 0 0 0 0 0 ] 0;
+}
+
+RanzMarshallCoeffs
+{
+    Pr              Pr [ 0 0 0 0 0 ] 0.7;
+}
+*/
+
+SinglePhaseMixtureCoeffs
+{
+    phases
+    (
+        liquid
+        {
+            H2O 1;
+        }
+    );
+}
+
+LiquidEvaporationCoeffs
+{
+    enthalpyTransfer enthalpyDifference;
+
+    activeLiquids
+    (
+        H2O
+    );
+}
+
+ThermoSurfaceFilmCoeffs 
+   {
+    interactionType absorb;
+    deltaWetThreshold 0.0001;
+    Adry            2630;
+    Awet            1320;
+    Cf              0.6;
+    splashParcelPDF
+    {
+        pdfType         uniform;
+        uniformPDF
+        {
+            minValue        1e-04;
+            maxValue        1e-04;
+        }
+    }
+   }
+
+// ************************************************************************* //

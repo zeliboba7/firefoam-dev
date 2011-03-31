@@ -1,0 +1,10 @@
+decomposeMesh.C
+decomposePar.C
+domainDecomposition.C
+distributeCells.C
+fvFieldDecomposer.C
+pointFieldDecomposer.C
+lagrangianFieldDecomposer.C
+
+//EXE = $(FOAM_APPBIN)/decomposePar
+EXE = $(FOAM_USER_APPBIN)/decomposeParPyr

@@ -1,0 +1,10 @@
+decompositionMethod/decompositionMethod.C
+geomDecomp/geomDecomp.C
+simpleGeomDecomp/simpleGeomDecomp.C
+hierarchGeomDecomp/hierarchGeomDecomp.C
+manualDecomp/manualDecomp.C
+structuredDecomp/structuredDecomp.C
+structuredDecomp/topoDistanceData.C
+
+//LIB = $(FOAM_LIBBIN)/libdecompositionMethods
+LIB = $(FOAM_USER_LIBBIN)/libdecompositionMethodsPyr

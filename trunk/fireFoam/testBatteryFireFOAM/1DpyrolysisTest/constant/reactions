@@ -1,0 +1,14 @@
+species
+(
+    O2
+    H2O
+    CH4
+    CO2
+    N2
+);
+
+reactions
+(
+    irreversibleInfiniteReaction
+    CH4 + 2O2 + 7.52N2 = CO2 + 2H2O + 7.52N2
+);

@@ -1,0 +1,58 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.6                                   |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermophysicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+thermoType hsPsiMixtureThermoNew<singleStepReactingMixture<gasThermoPhysics>>;
+
+
+inertSpecie N2;
+fuel    CH4;
+
+chemistryReader foamChemistryReader;
+
+foamChemistryFile "$FOAM_CASE/constant/reactions";
+
+foamChemistryThermoFile "$FOAM_CASE/constant/thermo.compressibleGas";
+
+
+liquids
+{
+    liquidComponents
+    (
+        H2O
+    );
+
+    H2O             H2O defaultCoeffs;
+}
+
+
+solids
+{
+    solidComponents
+    ();
+}
+
+//needed for release version
+liquidComponents
+(
+    H2O
+);
+
+H2O             H2O defaultCoeffs;
+
+solidComponents
+();

@@ -1,3 +1,0 @@
-totalFlowRateAdvectiveDiffusiveFvPatchScalarField/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.C
-
-LIB = $(FOAM_USER_LIBBIN)/libpatchFields

@@ -1,0 +1,14 @@
+faceSet f0 new patchToFace movingWall
+faceZoneSet f0 new setToFaceZone f0
+quit
+faceZoneSet f0 new setToFaceZone f0
+faceZoneSet f0 new setToFaceZone f0
+faceSet f0 new patchToFace movingWall
+faceZoneSet f0 new setToFaceZone f0
+quit
+faceSet f0 new patchToFace movingWall
+faceZoneSet f0 new setToFaceZone f0
+quit
+faceSet f0 new patchToFace movingWall
+faceZoneSet f0 new setToFaceZone f0
+quit

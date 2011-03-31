@@ -1,0 +1,3 @@
+log.fireFoam
+fieldMimMax/0.00192308/fieldMinMax.dat original.fieldMinMax.dat
+HRR/0/cellSource.dat original.HRR.dat

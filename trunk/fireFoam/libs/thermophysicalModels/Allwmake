@@ -1,0 +1,12 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+set -x
+
+wmake libso additionalReactionsNew
+wmake libso reactionThermoNew
+wmake libso combustionModelsSpecies
+wmake libso chemistryModelNew
+./basicSolidThermo/Allwmake
+
+
+# ----------------------------------------------------------------- end-of-file

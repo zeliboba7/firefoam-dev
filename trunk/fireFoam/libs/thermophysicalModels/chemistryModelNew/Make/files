@@ -1,0 +1,15 @@
+
+chemistryModel/basicChemistryModel/basicChemistryModel.C
+
+chemistryModel/psiChemistryModel/psiChemistryModel.C
+chemistryModel/psiChemistryModel/newPsiChemistryModel.C
+/* chemistryModel/psiChemistryModel/psiChemistryModels.C */
+
+chemistryModel/rhoChemistryModel/rhoChemistryModel.C
+chemistryModel/rhoChemistryModel/newRhoChemistryModel.C
+
+chemistrySolver/chemistrySolver/makeChemistrySolvers.C
+
+chemistryModel/ODEChemistryModel/ODEChemistryModelsNew.C
+
+LIB = $(FOAM_USER_LIBBIN)/libchemistryModelNew17x
