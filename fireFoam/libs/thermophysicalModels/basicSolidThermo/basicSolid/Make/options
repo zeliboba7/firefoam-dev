@@ -1,0 +1,17 @@
+DEV_PATH = ./../../../..
+THERMO_BASE=$(DEV_PATH)/libs/thermophysicalModels/basicSolidThermo
+
+EXE_INC = \
+    -DFULLDEBUG -g -O0 \
+    -I$(THERMO_BASE)/solid/lnInclude \
+    -I$(THERMO_BASE)/basicSolid/solidMixtureTherm/lnInclude \
+    \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+        -lgeneralSolid17x \
+    -lmeshTools \
+    -lfiniteVolume

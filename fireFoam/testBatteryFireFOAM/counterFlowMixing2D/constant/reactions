@@ -1,0 +1,12 @@
+species
+(
+    O2
+    H2O
+    N2
+);
+
+reactions
+(
+    irreversibleInfiniteReaction
+    O2 + 3.76N2 + H2O = O2 + 3.76N2 + H2O 
+);

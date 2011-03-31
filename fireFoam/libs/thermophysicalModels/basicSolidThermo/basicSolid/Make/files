@@ -1,0 +1,7 @@
+basicSolidThermo/basicSolidThermo.C
+basicSolidThermo/newBasicSolidThermo.C
+
+solidMixtureThermo/mixtures/basicSolidMixture/basicSolidMixture.C
+solidMixtureThermo/solidMixtureThermo/solidMixtureThermos.C
+
+LIB = $(FOAM_USER_LIBBIN)/libsolidMixtureThermo17x

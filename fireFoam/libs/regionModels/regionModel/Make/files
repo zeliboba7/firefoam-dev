@@ -1,0 +1,9 @@
+/* Region models */
+regionModel/regionModel.C
+regionModel1D/regionModel1D.C
+
+/* Boundary conditions */
+derivedFvPatchFields/directMappedField/directMappedFieldFvPatchFields.C
+
+
+LIB = $(FOAM_USER_LIBBIN)/libregionModels17x

@@ -1,0 +1,20 @@
+DEV_PATH=./../../..
+
+EXE_INC = \
+    -I$(DEV_PATH)/libs/thermophysicalModels/reactionThermoNew/lnInclude \
+    \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/functions/Polynomial \
+    -I$(LIB_SRC)/thermophysicalModels/thermophysicalFunctions/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/compressible/lnInclude \
+    -I$(LIB_SRC)/ODE/lnInclude \
+
+LIB_LIBS = \
+     -L$(FOAM_USER_LIBBIN) \
+        -lreactionThermophysicalModelsNew17x \
+    -lbasicThermophysicalModels \
+    -lspecie \
+    -lthermophysicalFunctions \
+    -lODE

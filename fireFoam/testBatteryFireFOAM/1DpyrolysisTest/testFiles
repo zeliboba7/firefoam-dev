@@ -1,0 +1,5 @@
+log.fireFoam original/log.fireFoam
+probes/panelRegion/0/chemistrySh original/probes/panelRegion/0/chemistrySh
+probes/panelRegion/0/rho original/probes/panelRegion/0/rho
+probes/panelRegion/0/Yv original/probes/panelRegion/0/Yv
+probes/panelRegion/0/T original/probes/panelRegion/0/T

@@ -1,0 +1,3 @@
+faceSet f0 new patchToFace movingWall
+faceZoneSet f0 new setToFaceZone f0
+

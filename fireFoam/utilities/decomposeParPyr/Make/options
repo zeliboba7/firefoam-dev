@@ -1,0 +1,12 @@
+EXE_INC = \
+    -I./decompositionMethodsPyr/lnInclude \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/lagrangian/basic/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -L$(FOAM_USER_LIBBIN) -ldecompositionMethodsPyr \
+    -llagrangian \
+    -lmeshTools \
+    -lgenericPatchFields

@@ -1,0 +1,3 @@
+makeChemkinReactions.C
+
+LIB=$(FOAM_USER_LIBBIN)/libadditionalReactionsNew17x
