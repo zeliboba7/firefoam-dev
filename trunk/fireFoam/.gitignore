@@ -28,6 +28,7 @@ mfr_downstream
 mfr_inlet
 mfr_midPlane
 .cproject
+fireFoam
 *.org
 probs
 *.old
