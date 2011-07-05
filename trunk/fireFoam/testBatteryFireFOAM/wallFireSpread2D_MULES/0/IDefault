@@ -23,7 +23,7 @@ boundaryField
 
     region0_to_panelRegion_panel
     {
-        type            greyDiffusiveRadiation;
+        type            greyDiffusiveRadiationFire;
         T               T;
         emissivityMode  solidThermo; //lookup; 
         emissivity      uniform 1.0;
@@ -32,7 +32,7 @@ boundaryField
 
     ".*"
     {
-        type            greyDiffusiveRadiation;
+        type            greyDiffusiveRadiationFire;
         T               T;
         emissivityMode  lookup; //solidThermo
         emissivity      uniform 1.0;

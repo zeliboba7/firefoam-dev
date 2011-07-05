@@ -92,10 +92,7 @@ void Foam::singleStepReactingMixture<ThermoType>::calculateMaxProducts()
     forAll(reaction.rhs(), i)
     {
         label specieI = reaction.rhs()[i].index;
-        totalMol +=
-          //  this->speciesData()[specieI].W()
-          //* mag(specieStoichCoeffs_[specieI]);
-          mag(specieStoichCoeffs_[specieI]);
+        totalMol += mag(specieStoichCoeffs_[specieI]);
     }
 
     scalarList Xi(reaction.rhs().size());
@@ -103,11 +100,7 @@ void Foam::singleStepReactingMixture<ThermoType>::calculateMaxProducts()
     forAll(reaction.rhs(), i)
     {
         const label specieI = reaction.rhs()[i].index;
-        Xi[i] =
-          //  this->speciesData()[specieI].W()
-          //* mag(specieStoichCoeffs_[specieI])
-          mag(specieStoichCoeffs_[specieI])
-          / totalMol;
+        Xi[i] = mag(specieStoichCoeffs_[specieI])/totalMol;
 
         Wm += Xi[i]*this->speciesData()[specieI].W();
     }

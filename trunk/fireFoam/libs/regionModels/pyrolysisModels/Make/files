@@ -1,14 +1,15 @@
 /* derived patches */
 
-/* derivedFvPatchFields/turbulentTemperatureCoupledBaffleMixed/turbulentTemperatureCoupledBaffleMixedFvPatchScalarField2.C */
 derivedFvPatchFields/flowRateInletVelocityCoupled/flowRateInletVelocityCoupledFvPatchVectorField.C
-/* derivedFvPatchFields/turbulentTemperatureRadiativeCoupledMixed/turbulentTemperatureRadiationCoupledMixedSTFvPatchScalarField.C */
-
+derivedFvPatchFields/totalFlowRateAdvectiveDiffusive/totalFlowRateAdvectiveDiffusiveFvPatchScalarField.C
+derivedFvPatchFields/turbulentTemperatureCoupledMixedST/turbulentTemperatureCoupledMixedSTFvPatchScalarField.C
+derivedFvPatchFields/turbulentTemperatureRadiativeCoupledMixedST/turbulentTemperatureRadiationCoupledMixedSTFvPatchScalarField.C
 
 /* Pyrolysis models */
 pyrolysisModel/pyrolysisModel.C
 pyrolysisModel/pyrolysisModelNew.C
 reactingOneDim/reactingOneDim.C
 noPyrolysis/noPyrolysis.C
+
 
 LIB = $(FOAM_USER_LIBBIN)/libpyrolysisModels17x

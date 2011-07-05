@@ -47,13 +47,3 @@ solids
     ();
 }
 
-//needed for release version
-liquidComponents
-(
-    H2O
-);
-
-H2O             H2O defaultCoeffs;
-
-solidComponents
-();

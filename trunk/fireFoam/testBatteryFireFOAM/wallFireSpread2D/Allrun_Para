@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
@@ -12,7 +12,8 @@ application="fireFoam"
 runApplication decomposeParPyr -region panelRegion
 runApplication decomposePar
 
-runParallel $application 2
+#runParallel $application 2
+mpirun -np 2 $application -parallel < /dev/null > log.$application 2>log.$application.err
 
 #runApplication reconstructPar
 

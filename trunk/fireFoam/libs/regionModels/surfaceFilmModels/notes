@@ -1,0 +1,12 @@
+cp -rip ~/OpenFOAM/code-1.7.x/libs/surfaceFilmModels/surfaceFilmModel/kinematicSingleLayerFM .
+vi ../Make/files
+#add kinematicSingleLayerFM.C
+cp -rip thermoSingleLayer thermoSingleLayerLI
+cd thermoSingleLayerLI
+/*one or the other rename*/
+rename thermoSingleLayer thermoSingleLayerLI *
+rename 's/thermoSingleLayer/thermoSingleLayerLI/g' *
+sed -i 's/thermoSingleLayer/thermoSingleLayerLI/g' *
+sed -i 's/kinematicSingleLayer/kinematicSingleLayerFM/g' *
+cd ..
+cp -rip ~/OpenFOAM/code-1.7.x/libs/surfaceFilmModels/surfaceFilmModel/thermoSingleLayerFM .

@@ -239,6 +239,11 @@ void Foam::regionModels::regionModel::evolveRegion()
     // do nothing
 }
 
+void Foam::regionModels::regionModel::postEvolveRegion()
+{
+    // do nothing
+}
+
 
 void Foam::regionModels::regionModel::evolve()
 {
@@ -262,6 +267,9 @@ void Foam::regionModels::regionModel::evolve()
 
         // Increment the region equations up to the new time level
         evolveRegion();
+        
+        // Pre-evolve
+        postEvolveRegion();
 
         // Provide some feedback
         if (infoOutput_)

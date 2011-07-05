@@ -1,0 +1,18 @@
+DEV_PATH = ./../../..
+
+EXE_INC = \
+    -I$(DEV_PATH)/libs/thermophysicalModels/SLGThermo/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/reactionThermoNew/lnInclude \
+    \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/radiation/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/liquids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/liquidMixture/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidMixture/lnInclude
+
+LIB_LIBS = \
+    -lfiniteVolume \
+    -lradiation

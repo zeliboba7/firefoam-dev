@@ -1,0 +1,449 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.4                                   |
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+// FoamX Case Dictionary.
+
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+
+    root            "";
+    case            "";
+    instance        "";
+    local           "";
+
+    class           dictionary;
+    object          controlDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     fireFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         .030;
+
+deltaT          0.003;
+
+writeControl    adjustableRunTime;
+
+writeInterval   0.2;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  6;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   6;
+
+graphFormat     raw;
+
+runTimeModifiable yes;
+
+adjustTimeStep  no;
+
+maxCo           1.0; //1;
+
+maxDi           0.25;
+
+maxDeltaT       0.01;
+
+libs
+(
+    "libfvPatchFieldsPyrolysis.so"
+);
+
+functions
+(
+    probes
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        //outputInterval  10;
+        outputInterval  1;
+        probeLocations
+        (
+            ( 0.0001 .9 0.025 )
+            ( 0.0001 .9 0.225 )
+            ( 0.0001 .9 0.325 )
+            ( 0.0001 .9 0.425 )
+            ( 0.0001 .9 0.525 )
+//            ( 0.0001 .9 0.25 )
+//            ( 0.0001 .9 0.75 )
+//            ( 0.0001 .9 1.25 )
+//            ( 0.0001 .9 1.75 )
+        );
+        fields
+        (
+            T
+        );
+    }
+
+    probes
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        //outputInterval  10;
+        outputInterval  1;
+        region        pyrolysisRegion;
+        probeLocations
+        (
+            ( -0.0001 .9 0.025 )
+            ( -0.0001 .9 0.225 )
+            ( -0.0001 .9 0.325 )
+            ( -0.0001 .9 0.425 )
+            ( -0.0001 .9 0.525 )
+//            ( -0.0001 .9 0.25 )
+//            ( -0.0001 .9 0.75 )
+//            ( -0.0001 .9 1.25 )
+//            ( -0.0001 .9 1.75 )
+        );
+        fields
+        (
+            T
+        );
+    }
+    probes
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        //outputInterval  10;
+        outputInterval  1;
+        region        filmRegion;
+        probeLocations
+        (
+            ( -0.0001 .9 0.025 )
+            ( -0.0001 .9 0.225 )
+            ( -0.0001 .9 0.325 )
+            ( -0.0001 .9 0.425 )
+            ( -0.0001 .9 0.525 )
+//            ( -0.0001 .9 0.25 )
+//            ( -0.0001 .9 0.75 )
+//            ( -0.0001 .9 1.25 )
+//            ( -0.0001 .9 1.75 )
+        );
+        fields
+        (
+            Tf
+        );
+    }
+
+    patchProbes
+    {
+        type            patchProbes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        outputInterval  1;
+        region        pyrolysisRegion;
+        patchName      region0_to_pyrolysisRegion_coupledWall;
+        probeLocations
+        (
+            ( 0 .9 0.025 )
+            ( 0 .9 0.225 )
+            ( 0 .9 0.325 )
+            ( 0 .9 0.425 )
+            ( 0 .9 0.525 )
+//            ( 0 .9 0.25 )
+//            ( 0 .9 0.75 )
+//            ( 0 .9 1.25 )
+//            ( 0 .9 1.75 )
+            //( 0 0.1 0.475 )
+            //( 0 0.1 0.575 )
+        );
+        fields
+        (
+            T
+            emissivity
+        );
+    }
+
+    patchProbes
+    {
+        type            patchProbes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        outputInterval  1;
+        region        filmRegion;
+        patchName      coupledWall;
+        probeLocations
+        (
+            ( 0 .9 0.025 )
+            ( 0 .9 0.225 )
+            ( 0 .9 0.325 )
+            ( 0 .9 0.425 )
+            ( 0 .9 0.525 )
+//            ( 0 .9 0.25 )
+//            ( 0 .9 0.75 )
+//            ( 0 .9 1.25 )
+//            ( 0 .9 1.75 )
+            //( 0 0.1 0.475 )
+            //( 0 0.1 0.575 )
+        );
+        fields
+        (
+            Tf
+            deltaf
+        );
+    }
+
+    patchProbes
+    {
+        type            patchProbes;
+        functionObjectLibs ("libsampling.so");
+        outputControl   timeStep;
+        outputInterval  1;
+        patchName      region0_to_pyrolysisRegion_coupledWall;
+        probeLocations
+        (
+            ( 0 .9 0.025 )
+            ( 0 .9 0.225 )
+            ( 0 .9 0.325 )
+            ( 0 .9 0.425 )
+            ( 0 .9 0.525 )
+//            ( 0 .9 0.25 )
+//            ( 0 .9 0.75 )
+//            ( 0 .9 1.25 )
+//            ( 0 .9 1.75 )
+        );
+        fields
+        (
+            T
+            Qr
+        );
+    }
+
+    HRR
+    {
+        type            cellSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  //outputTime;
+        outputInterval  1;
+        log             false;     
+        valueOutput     false;
+        source          all;       //cellZone;
+        sourceName      c0;
+        operation       volIntegrate;
+        fields
+        (
+            dQ
+        );
+    }
+
+    patchBurner 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep; 
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      burner;
+        operation       sum;
+        fields
+        (
+            phi
+            HRR_fu
+        );
+    }
+
+    patchPanel 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      region0_to_pyrolysisRegion_coupledWall;
+        operation       sum;
+        fields
+        (
+            phi
+            HRR_fu
+        );
+    }
+
+    patchPanelQr 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      region0_to_pyrolysisRegion_coupledWall;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchFilmQrNet2 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        region          filmRegion;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      coupledWall;
+        operation       areaIntegrate;
+        fields
+        (
+         energyPhaseChangeDiagnostic
+         sensibleEnthalpyChange
+        );
+    }
+    patchFilmQrNet 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        region          filmRegion;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      coupledWall;
+        operation       areaIntegrate;
+        fields
+        (
+            QrNet
+            QrFilm
+            qWall
+            qGasToFilm
+        );
+    }
+
+    patchPyrQrNet 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        region          pyrolysisRegion;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      region0_to_pyrolysisRegion_coupledWall;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+            convectiveFlux
+        );
+    }
+
+    patchOutlet 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep; 
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      outlet;
+        operation       sum;
+        fields
+        (
+            phi
+            HRR_fu
+        );
+    }
+
+    patchPanelSolidRegion 
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        region          pyrolysisRegion;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      region0_to_pyrolysisRegion_coupledWall;
+        operation       sum;
+        fields
+        (
+            phiGas
+        );
+    }
+
+    patchFilmInlet
+    {
+        type            faceSource;
+        region          filmRegion;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      side3;
+        operation       sum;
+        fields
+        (
+            phi
+            advectiveEnthalpy
+        );
+    }
+
+    patchFilmOutlet
+    {
+        type            faceSource;
+        region          filmRegion;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      side1;
+        operation       sum;
+        fields
+        (
+            phi
+            advectiveEnthalpy
+        );
+    }
+
+);
+
+// ************************************************************************* //

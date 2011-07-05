@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #set -x 
 
 # Source tutorial run functions
@@ -21,6 +21,7 @@ rm log.*
 # Run
 #runApplication $application 
 decomposePar
-runParallel $application 4
+#runParallel $application 4
+mpirun -np 4 $application -parallel < /dev/null > log.$application 2>log.$application.err
 
 # -----------------------------------------------------------------------------

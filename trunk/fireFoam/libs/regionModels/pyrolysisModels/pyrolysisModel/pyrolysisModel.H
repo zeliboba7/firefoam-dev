@@ -86,6 +86,12 @@ protected:
 
         //- Pointer to film thickness field
         autoPtr<volScalarField> filmDeltaPtr_;
+        
+        //- Pointer to film temperature field
+        autoPtr<volScalarField> filmTemperaturePtr_;
+
+        //- Pointer to film wall convective heat flux field
+        autoPtr<volScalarField> filmConvPtr_;
 
         //- Film height below which reactions can occur [m]
         scalar reactionDeltaMin_;

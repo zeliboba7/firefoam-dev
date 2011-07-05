@@ -130,8 +130,14 @@ protected:
             //  Requires user to input mapping info for coupled patches
             volScalarField QrCoupled_;
 
+            //- Coupled region convective heat flux [W/m2]
+            volScalarField convectiveFlux_;
+
             //- In depth radiative heat flux [W/m2]
             volScalarField Qr_;
+
+            //- First internal cell temperature on film/gas side [K]
+            volScalarField Tinternal_;
 
 
         // Checks

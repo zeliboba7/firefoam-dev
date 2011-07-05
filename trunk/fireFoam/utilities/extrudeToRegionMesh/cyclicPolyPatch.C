@@ -8,10 +8,10 @@
 License
     This file is part of OpenFOAM.
 
-    OpenFOAM is free software; you can redistribute it and/or modify it
-    under the terms of the GNU General Public License as published by the
-    Free Software Foundation; either version 2 of the License, or (at your
-    option) any later version.
+    OpenFOAM is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
     OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
@@ -19,8 +19,7 @@ License
     for more details.
 
     You should have received a copy of the GNU General Public License
-    along with OpenFOAM; if not, write to the Free Software Foundation,
-    Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+    along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 \*---------------------------------------------------------------------------*/
 
@@ -44,18 +43,6 @@ namespace Foam
 
     addToRunTimeSelectionTable(polyPatch, cyclicPolyPatch, word);
     addToRunTimeSelectionTable(polyPatch, cyclicPolyPatch, dictionary);
-
-
-template<>
-const char* NamedEnum<cyclicPolyPatch::transformType, 3>::names[] =
-{
-    "unknown",
-    "rotational",
-    "translational"
-};
-
-const NamedEnum<cyclicPolyPatch::transformType, 3>
-    cyclicPolyPatch::transformTypeNames;
 }
 
 
@@ -247,7 +234,8 @@ void Foam::cyclicPolyPatch::calcTransforms()
                     vectorField(1, n0),
                     vectorField(1, n1),
                     scalarField(1, half0Tols[face0]),
-                    1E-4
+                    1E-4,
+                    ROTATIONAL
                 );
 
                 break;
@@ -262,7 +250,9 @@ void Foam::cyclicPolyPatch::calcTransforms()
                     half1Ctrs,
                     half0Normals,
                     half1Normals,
-                    half0Tols
+                    half0Tols,
+                    matchTol,
+                    transform_
                 );
 
                 break;
@@ -762,6 +752,26 @@ Foam::cyclicPolyPatch::cyclicPolyPatch
     rotationCentre_(point::zero),
     separationVector_(vector::zero)
 {
+    if (dict.found("neighbourPatch"))
+    {
+        FatalIOErrorIn
+        (
+            "cyclicPolyPatch::cyclicPolyPatch\n"
+            "(\n"
+            "    const word& name,\n"
+            "    const dictionary& dict,\n"
+            "    const label index,\n"
+            "    const polyBoundaryMesh& bm\n"
+            ")",
+            dict
+        )   << "Found \"neighbourPatch\" entry when reading cyclic patch "
+            << name << endl
+            << "Is this mesh already with split cyclics?" << endl
+            << "If so run a newer version that supports it"
+            << ", if not comment out the \"neighbourPatch\" entry and re-run"
+            << exit(FatalIOError);
+    }
+
     dict.readIfPresent("featureCos", featureCos_);
 
     if (dict.found("transform"))

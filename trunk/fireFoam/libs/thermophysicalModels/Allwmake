@@ -4,8 +4,10 @@ set -x
 
 wmake libso additionalReactionsNew
 wmake libso reactionThermoNew
+wmake libso SLGThermo
 wmake libso combustionModelsSpecies
 wmake libso chemistryModelNew
+wmake libso radiationModelNew
 ./basicSolidThermo/Allwmake
 
 

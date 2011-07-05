@@ -28,6 +28,7 @@ for (int nonOrth=0; nonOrth<=nNonOrthCorr; nonOrth++)
           - fvm::laplacian(rhorUAf, p)
          ==
             parcels.Srho()
+          + surfaceFilm.Srho()
         );
 
         closedVolume = p.needReference();

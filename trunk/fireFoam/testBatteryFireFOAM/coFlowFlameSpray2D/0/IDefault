@@ -22,7 +22,7 @@ boundaryField
 {
     ".*"
     {
-        type            greyDiffusiveRadiation;
+        type            greyDiffusiveRadiationFire;
         T               T;
         emissivity      1.0;
         value           uniform 0;

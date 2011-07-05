@@ -34,12 +34,11 @@ Description
 #include "hsCombustionThermo.H"
 #include "turbulenceModel.H"
 #include "combustionModel.H"
-//#include "basicReactingCloud.H"
-#include "BasicReactingCloud.H"
+#include "basicReactingCloud.H"
+#include "surfaceFilmModel.H"
 #include "radiationModel.H"
 #include "solidChemistryModel.H"
 #include "pyrolysisModel.H"
-#include "OFstream.H"
 #include "MULES.H"
 
 #include "singleStepReactingMixture.H"
@@ -49,6 +48,7 @@ Description
 int main(int argc, char *argv[])
 {
     #include "setRootCase.H"
+    //#include "printVersion.H"
     #include "createTime.H"
     #include "createMesh.H"
     #include "readGravitationalAcceleration.H"
@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     #include "createRadiationModel.H"
     #include "createPyrolysisModel.H"
     #include "createClouds.H"
-    //#include "createSurfaceFilmModel.H"
+    #include "createSurfaceFilmModel.H"
     #include "readTimeControls.H"
     #include "compressibleCourantNo.H"
     #include "setInitialDeltaT.H"
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 
         parcels.evolve();
 
-        //surfaceFilm.evolve();
+        surfaceFilm.evolve();
 
         if (solvePrimaryRegion)
         {
@@ -121,12 +121,16 @@ int main(int argc, char *argv[])
         }
         else
         {
+            pyrolysis.evolve();
             runTime.write();
         }
 
         Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
-            << "  ClockTime = " << runTime.elapsedClockTime() << " s"
-            << nl << endl;
+            << "  ClockTime = " << runTime.elapsedClockTime() << " s";
+        if(runTime.outputTime()){
+            Info<< " +";
+        }
+        Info<< nl << endl;
 
     }
 

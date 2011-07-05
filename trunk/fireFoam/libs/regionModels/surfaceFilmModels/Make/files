@@ -1,0 +1,54 @@
+/* Surface film models */
+surfaceFilmModel/surfaceFilmModel.C
+surfaceFilmModel/newSurfaceFilmModel.C
+noFilm/noFilm.C
+kinematicSingleLayer/kinematicSingleLayer.C
+thermoSingleLayer/thermoSingleLayer.C
+thermoSingleLayerPw/thermoSingleLayerPw.C
+thermoSingleLayerFmPanel/thermoSingleLayerFmPanel.C
+thermoSingleLayerFmBox/thermoSingleLayerFmBox.C
+
+
+/* Sub-models */
+submodels/subModelBase.C
+
+KINEMATICMODELS=submodels/kinematic
+$(KINEMATICMODELS)/injectionModel/injectionModel/injectionModel.C
+$(KINEMATICMODELS)/injectionModel/injectionModel/newInjectionModel.C
+$(KINEMATICMODELS)/injectionModel/injectionModelList/injectionModelList.C
+$(KINEMATICMODELS)/injectionModel/drippingInjection/drippingInjection.C
+$(KINEMATICMODELS)/injectionModel/removeInjection/removeInjection.C
+$(KINEMATICMODELS)/injectionModel/curvatureSeparation/curvatureSeparation.C
+
+THERMOMODELS=submodels/thermo
+$(THERMOMODELS)/phaseChangeModel/phaseChangeModel/phaseChangeModel.C
+$(THERMOMODELS)/phaseChangeModel/phaseChangeModel/newPhaseChangeModel.C
+$(THERMOMODELS)/phaseChangeModel/noPhaseChange/noPhaseChange.C
+$(THERMOMODELS)/phaseChangeModel/standardPhaseChange/standardPhaseChange.C
+
+$(THERMOMODELS)/heatTransferModel/heatTransferModel/heatTransferModel.C
+$(THERMOMODELS)/heatTransferModel/heatTransferModel/newHeatTransferModel.C
+$(THERMOMODELS)/heatTransferModel/constantHeatTransfer/constantHeatTransfer.C
+$(THERMOMODELS)/heatTransferModel/mappedConvectiveHeatTransfer/mappedConvectiveHeatTransfer.C
+$(THERMOMODELS)/heatTransferModel/alKhalilHeatTransfer/alKhalilHeatTransfer.C 
+/*$(THERMOMODELS)/heatTransferModel/flatPlateHeatTransfer/flatPlateHeatTransfer.C */
+
+$(THERMOMODELS)/filmRadiationModel/filmRadiationModel/filmRadiationModel.C
+$(THERMOMODELS)/filmRadiationModel/filmRadiationModel/newFilmRadiationModel.C
+$(THERMOMODELS)/filmRadiationModel/noRadiation/noRadiation.C
+$(THERMOMODELS)/filmRadiationModel/standardRadiation/standardRadiation.C
+
+
+/* Boundary conditions */
+derivedFvPatchFields/filmHeightInletVelocity/filmHeightInletVelocityFvPatchVectorField.C
+derivedFvPatchFields/filmHeightInletVelocityWavy/filmHeightInletVelocityWavyFvPatchVectorField.C
+derivedFvPatchFields/filmHeightInlet/filmHeightInletFvPatchScalarField.C
+derivedFvPatchFields/massFlowInlet/massFlowInletFvPatchScalarField.C
+derivedFvPatchFields/htcConv/htcConvFvPatchScalarField.C
+
+/* Wall functions for primary region */
+derivedFvPatchFields/wallFunctions/alphatFilmWallFunction/alphatFilmWallFunctionFvPatchScalarField.C
+derivedFvPatchFields/wallFunctions/mutFilmWallFunction/mutFilmWallFunctionFvPatchScalarField.C
+
+
+LIB = $(FOAM_USER_LIBBIN)/libsurfaceFilmModels17x

@@ -4,7 +4,8 @@ set -x
 
 ./thermophysicalModels/Allwclean
 ./regionModels/Allwclean
-wclean libso lagrangian/intermediate
+wclean libso lagrangian/basicNew
+wclean libso lagrangian/intermediateNew
 
 
 # ----------------------------------------------------------------- end-of-file

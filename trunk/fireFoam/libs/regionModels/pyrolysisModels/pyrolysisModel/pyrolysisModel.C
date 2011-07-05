@@ -64,7 +64,41 @@ void pyrolysisModel::constructMeshObjects()
             )
         );
 
+        filmTemperaturePtr_.reset
+        (
+            new volScalarField
+            (
+                IOobject
+                (
+                    "filmTemperature",
+                    time_.timeName(),
+                    regionMesh(),
+                    IOobject::MUST_READ,
+                    IOobject::AUTO_WRITE
+                ),
+                regionMesh()
+            )
+        );
+
+        filmConvPtr_.reset
+        (
+            new volScalarField
+            (
+                IOobject
+                (
+                    "filmConv",
+                    time_.timeName(),
+                    regionMesh(),
+                    IOobject::MUST_READ,
+                    IOobject::AUTO_WRITE
+                ),
+                regionMesh()
+            )
+        );
+
         const volScalarField& filmDelta = filmDeltaPtr_();
+        const volScalarField& filmTemperature = filmTemperaturePtr_();
+        const volScalarField& filmConv = filmConvPtr_();
 
         bool foundCoupledPatch = false;
         forAll(filmDelta.boundaryField(), patchI)
@@ -83,6 +117,46 @@ void pyrolysisModel::constructMeshObjects()
                 << "filmCoupled flag set to true, but no "
                 << directMappedFieldFvPatchField<scalar>::typeName
                 << " patches found on " << filmDelta.name() << " field"
+                << endl;
+        }
+
+        foundCoupledPatch = false;
+        forAll(filmTemperature.boundaryField(), patchI)
+        {
+            const fvPatchField<scalar>& fvp = filmTemperature.boundaryField()[patchI];
+            if (isA<directMappedFieldFvPatchField<scalar> >(fvp))
+            {
+                foundCoupledPatch = true;
+                break;
+            }
+        }
+
+        if (!foundCoupledPatch)
+        {
+            WarningIn("void pyrolysisModels::constructMeshObjects()")
+                << "filmCoupled flag set to true, but no "
+                << directMappedFieldFvPatchField<scalar>::typeName
+                << " patches found on " << filmTemperature.name() << " field"
+                << endl;
+        }
+
+        foundCoupledPatch = false;
+        forAll(filmConv.boundaryField(), patchI)
+        {
+            const fvPatchField<scalar>& fvp = filmConv.boundaryField()[patchI];
+            if (isA<directMappedFieldFvPatchField<scalar> >(fvp))
+            {
+                foundCoupledPatch = true;
+                break;
+            }
+        }
+
+        if (!foundCoupledPatch)
+        {
+            WarningIn("void pyrolysisModels::constructMeshObjects()")
+                << "filmCoupled flag set to true, but no "
+                << directMappedFieldFvPatchField<scalar>::typeName
+                << " patches found on " << filmConv.name() << " field"
                 << endl;
         }
     }
@@ -115,6 +189,8 @@ pyrolysisModel::pyrolysisModel(const fvMesh& mesh)
     regionModel1D(mesh),
     filmCoupled_(false),
     filmDeltaPtr_(NULL),
+    filmTemperaturePtr_(NULL),
+    filmConvPtr_(NULL),
     reactionDeltaMin_(0.0)
 {}
 
@@ -124,6 +200,8 @@ pyrolysisModel::pyrolysisModel(const word& modelType, const fvMesh& mesh)
     regionModel1D(mesh, "pyrolysis", modelType),
     filmCoupled_(false),
     filmDeltaPtr_(NULL),
+    filmTemperaturePtr_(NULL),
+    filmConvPtr_(NULL),
     reactionDeltaMin_(0.0)
 {
     if (active_)
@@ -157,6 +235,12 @@ void pyrolysisModel::preEvolveRegion()
     if (filmCoupled_)
     {
         filmDeltaPtr_->correctBoundaryConditions();
+        filmTemperaturePtr_->correctBoundaryConditions();
+        filmConvPtr_->correctBoundaryConditions();
+        if(time_.outputTime()){
+            filmTemperaturePtr_->write();
+            filmConvPtr_->write();
+        }
     }
 }
 

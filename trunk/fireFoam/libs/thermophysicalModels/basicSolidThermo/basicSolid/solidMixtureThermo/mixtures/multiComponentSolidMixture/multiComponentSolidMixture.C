@@ -210,7 +210,6 @@ Foam::scalar Foam::multiComponentSolidMixture<ThermoSolidType>::emissivity
     scalar tmp = 0.0;
     forAll(solidData_, i)
     {
-        //tmp += solidData_[i].emissivity(T)*Y_[i][celli];
         tmp += solidData_[i].emissivity(T)*X(i, celli, T);
     }
     return tmp;

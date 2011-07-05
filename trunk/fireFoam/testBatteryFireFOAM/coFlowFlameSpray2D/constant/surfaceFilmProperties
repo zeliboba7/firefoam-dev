@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-active          false; //true;
+active          true;
 
 //surfaceFilmModel thermoSingleLayerFM;
 surfaceFilmModel none;

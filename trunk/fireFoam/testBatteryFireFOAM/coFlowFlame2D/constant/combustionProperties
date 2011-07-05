@@ -15,10 +15,9 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-//combustionModel    infinitelyFastChemistry;
-combustionModel    eddyDissipationModel;
+combustionModel    eddyDissipationExplicitModel;
 
-eddyDissipationModelCoeffs
+eddyDissipationExplicitModelCoeffs
 {
     C       4.0;
 }

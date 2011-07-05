@@ -1,0 +1,2 @@
+faceSet coupledWall new boxToFace (-0.1 -2.1 0.09)(0.01 2.51 0.61)
+faceZoneSet coupledWall new setToFaceZone coupledWall

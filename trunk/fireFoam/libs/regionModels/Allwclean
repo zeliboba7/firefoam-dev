@@ -4,6 +4,8 @@ set -x
 
 wclean libso regionModel
 wclean libso pyrolysisModels
+wclean libso surfaceFilmModels
+wclean libso regionCoupling
 
 
 # ----------------------------------------------------------------- end-of-file

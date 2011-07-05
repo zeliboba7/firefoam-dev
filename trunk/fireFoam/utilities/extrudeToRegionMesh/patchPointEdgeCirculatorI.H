@@ -234,7 +234,7 @@ void Foam::patchPointEdgeCirculator::setCanonical()
 
 
 //- Step to next edge.
-Foam::patchPointEdgeCirculator::patchPointEdgeCirculator&
+Foam::patchPointEdgeCirculator&
 Foam::patchPointEdgeCirculator::operator++()
 {
     if (index_ == -1)

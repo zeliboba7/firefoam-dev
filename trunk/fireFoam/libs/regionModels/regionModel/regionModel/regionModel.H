@@ -208,8 +208,11 @@ public:
 
             //- Evolve the region
             virtual void evolveRegion();
+            
+            //- Post-evolve region
+            virtual void postEvolveRegion();
 
-            //- Evolve the film
+            //- Evolve the region
             virtual void evolve();
 
 

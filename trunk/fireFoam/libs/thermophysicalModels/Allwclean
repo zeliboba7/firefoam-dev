@@ -4,8 +4,10 @@ set -x
 
 wclean libso additionalReactionsNew
 wclean libso reactionThermoNew
+wclean libso SLGThermo
 wclean libso combustionModelsSpecies
 wclean libso chemistryModelNew
+wclean libso radiationModelNew
 ./basicSolidThermo/Allwclean
 
 

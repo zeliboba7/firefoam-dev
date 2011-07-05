@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/CleanFunctions
+
+rm -fr log.*
+
+#runApplication foamClearPolyMesh
+cleanCase
+rm -f constant/polyMesh/boundary
+rm -fr constant/polyMesh/sets/*_old
+
+
+rm -fr constant/pyrolysisRegion/polyMesh
+rm -fr constant/filmRegion/polyMesh
+
+rm -rf VTK
+
+rm -rf patch*
+rm -rf HRR
+rm -rf probes
+rm -f *.obj
+rm -f outFlameHeight_0
+# Run
+#runParallel $application 4
+
+# -----------------------------------------------------------------------------
