@@ -153,17 +153,24 @@ solvers
 PISO
 {
     momentumPredictor yes;
-    nOuterCorrectors  1;
+    nOuterCorrectors  3;
     nCorrectors       2;
     nNonOrthogonalCorrectors 0;
 }
 
+MULES
+{
+    bMULES     no;
+}
+
 relaxationFactors
 {
+/*
     U       0.9;
     "CH4|O2|H2O|CO2"  0.9;       
     hs       0.9;
     k        0.9;
+*/
 }
 
 

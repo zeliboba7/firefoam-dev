@@ -1,4 +1,6 @@
 eddyDissipationModel/eddyDissipationModel.C
+eddyDissipationExplicitModel/eddyDissipationExplicitModel.C
+infinitelyFastChemistryExplicit/infinitelyFastChemistryExplicit.C
 
 LIB = $(FOAM_USER_LIBBIN)/libcombustionModelsSpeciesEDCNew17x
 

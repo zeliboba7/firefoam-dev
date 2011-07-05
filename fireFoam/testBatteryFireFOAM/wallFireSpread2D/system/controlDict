@@ -113,6 +113,7 @@ functions
         outputControl   timeStep;
         outputInterval  1;
         region        panelRegion;
+        patchName      region0_to_panelRegion_panel;
         probeLocations
         (
             ( 0 0.1 0.225 )
@@ -135,6 +136,7 @@ functions
         functionObjectLibs ("libsampling.so");
         outputControl   timeStep;
         outputInterval  1;
+        patchName      region0_to_panelRegion_panel;
         probeLocations
         (
             ( 0 0.1 0.225 )
@@ -146,6 +148,8 @@ functions
         (
             T
             Qr
+            Qin
+            Qem
         );
     }
 
@@ -240,6 +244,114 @@ functions
         fields
         (
             phiGas
+        );
+    }
+
+    patchPanelQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      region0_to_panelRegion_panel;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchWallQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      wall;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchSideQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      side;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchBurnerQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      burner;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchOutletQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      outlet;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
+        );
+    }
+
+    patchGroundQr
+    {
+        type            faceSource;
+        functionObjectLibs ("libfieldFunctionObjects.so");
+        enabled         true;
+        outputControl   timeStep;  
+        outputInterval  1;
+        log             false;
+        valueOutput     false;
+        source          patch;
+        sourceName      ground;
+        operation       areaIntegrate;
+        fields
+        (
+            Qr
         );
     }
 

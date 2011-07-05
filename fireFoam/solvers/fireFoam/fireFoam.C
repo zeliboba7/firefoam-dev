@@ -40,6 +40,7 @@ Description
 #include "solidChemistryModel.H"
 #include "pyrolysisModel.H"
 #include "OFstream.H"
+#include "MULES.H"
 
 #include "singleStepReactingMixture.H"
 #include "thermoPhysicsTypes.H"
@@ -74,6 +75,7 @@ int main(int argc, char *argv[])
         #include "solidRegionDiffusionNo.H"
         //#include "setMultiRegionDeltaT.H"
         #include "setDeltaT.H"
+        #include "readMultivarMULEControls.H"
 
         runTime++;
         Info<< "Time = " << runTime.timeName() << nl << endl;

@@ -21,30 +21,64 @@ tmp<fv::convectionScheme<scalar> > mvConvection
             volScalarField& Yi = Y[i];
     	    fvScalarMatrix R = combustion->R(Yi);
 
-            fvScalarMatrix YiEqn
-            (
-                fvm::ddt(rho, Yi)
-              + mvConvection->fvmDiv(phi, Yi)
-              - fvm::laplacian(turbulence->alphaEff(), Yi)
-            );
-
-            if (oCorr == nOuterCorr-1)
+            if (isMULES)
             {
-                YiEqn.relax(1);   
+                MULES::explicitSolve
+                (
+                    rho,
+                    Yi,
+                    phi,
+                    fvc::flux
+                    (
+                        phi,
+                        Yi
+                    )(),
+                    zeroField(),
+                    zeroField(),
+                    1, 0
+                );
+        
+                solve
+                (
+                    fvm::ddt(rho, Yi) - fvc::ddt(rho, Yi)
+                  - fvm::laplacian(turbulence->alphaEff(), Yi)
+                 == 
+                    parcels.Srho(i)
+                  + R,
+                    mesh.solver("Yi")
+                );
             }
             else
             {
-                YiEqn.relax(); 
+                fvScalarMatrix YiEqn
+                (
+                    fvm::ddt(rho, Yi)
+                  + mvConvection->fvmDiv(phi, Yi)
+                  - fvm::laplacian(turbulence->alphaEff(), Yi)
+                );
+
+                if (oCorr == nOuterCorr-1)
+                {
+                    YiEqn.relax(1);   
+                }
+                else
+                {
+                    YiEqn.relax(); 
+                }
+    
+                solve
+                (
+                    YiEqn
+                 == 
+                    parcels.Srho(i)
+                  + R,
+                    mesh.solver("Yi")
+                );
+
             }
 
-            solve
-            (
-                YiEqn
-             == 
-                parcels.Srho(i)
-              + R,
-                mesh.solver("Yi")
-            );
+            //Info << "max of " << Y[i].name() << " = " << max(Y[i]).value() << endl;
+            //Info << "min of " << Y[i].name() << " = " << min(Y[i]).value() << endl;
 
             //Yi.max(0.0);
             Yt += Yi;
@@ -62,28 +96,85 @@ tmp<fv::convectionScheme<scalar> > mvConvection
 
     radiation->correct();
 
-    fvScalarMatrix hsEqn
-    (
-        fvm::ddt(rho, hs)
-      + mvConvection->fvmDiv(phi, hs)
-      - fvm::laplacian(turbulence->alphaEff(), hs)
-     ==
-        DpDt
-      + parcels.Sh()         
-      + dQ                    
-      + radiation->Shs(thermo)
-    );
-
-    if (oCorr == nOuterCorr-1)
+    if (!isMULES)
     {
-        hsEqn.relax(1);
+        fvScalarMatrix hsEqn
+        (
+            fvm::ddt(rho, hs)
+          + mvConvection->fvmDiv(phi, hs)
+          - fvm::laplacian(turbulence->alphaEff(), hs)
+         ==
+            DpDt
+          + parcels.Sh()         
+          + dQ                    
+          + radiation->Shs(thermo)
+        );
+
+        if (oCorr == nOuterCorr-1)
+        {
+            hsEqn.relax(1);
+        }
+        else
+        {
+            hsEqn.relax();
+        }
+
+        hsEqn.solve();
+    }
+    else if (isHsMULES)
+    {
+        MULES::explicitSolve
+        (
+            rho,
+            hs,
+            phi,
+            fvc::flux
+            (
+                phi,
+                hs
+            )(),
+            zeroField(),
+            zeroField(),
+            //1, 0
+            1e10, 0
+        );
+ 
+        solve
+        (
+            fvm::ddt(rho, hs) - fvc::ddt(rho, hs)
+          - fvm::laplacian(turbulence->alphaEff(), hs)
+         == 
+            DpDt
+          + parcels.Sh()         
+          + dQ                    
+          + radiation->Shs(thermo)
+        );
     }
     else
     {
-        hsEqn.relax();
-    }
+        fvScalarMatrix hsEqn
+        (
+            fvm::ddt(rho, hs)
+          + fvm::div(phi, hs)
+          - fvm::laplacian(turbulence->alphaEff(), hs)
+         ==
+            DpDt
+          + parcels.Sh()         
+          + dQ                    
+          + radiation->Shs(thermo)
+        );
 
-    hsEqn.solve();
+        if (oCorr == nOuterCorr-1)
+        {
+            hsEqn.relax(1);
+        }
+        else
+        {
+            hsEqn.relax();
+        }
+
+        hsEqn.solve();
+    }
 
     thermo.correct();
 }

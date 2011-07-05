@@ -66,12 +66,13 @@ boundaryField
     region0_to_panelRegion_panel
     {
         //type          compressible::turbulentTemperatureCoupledBaffleMixed;
-        type          compressible::turbulentTemperatureRadiationCoupledMixed;
+        //type          compressible::turbulentTemperatureRadiationCoupledMixed;
+        type          compressible::turbulentTemperatureRadiationQinCoupledMixed;
         //type          compressible::turbulentTemperatureRadiationCoupledMixedST;
         neighbourFieldName T;
         K               none;
         neighbourFieldRadiativeName none;
-        fieldRadiativeName Qr;
+        fieldRadiativeName Qin; //Qr;
         value           $internalField;
     }
 }
