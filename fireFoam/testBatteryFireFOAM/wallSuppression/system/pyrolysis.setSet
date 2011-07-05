@@ -1,0 +1,3 @@
+#faceSet panel new boxToFace (-0.1 -0.1 0.39)(0.01 2.51 0.91)
+faceSet coupledWall new patchToFace coupledWall
+faceZoneSet coupledWall new setToFaceZone coupledWall

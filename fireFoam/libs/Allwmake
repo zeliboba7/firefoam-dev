@@ -4,7 +4,8 @@ set -x
 
 ./thermophysicalModels/Allwmake
 ./regionModels/Allwmake
-wmake libso lagrangian/intermediate
+wmake libso lagrangian/basicNew
+wmake libso lagrangian/intermediateNew
 
 
 # ----------------------------------------------------------------- end-of-file

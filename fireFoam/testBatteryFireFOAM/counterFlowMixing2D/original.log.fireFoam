@@ -5,17 +5,20 @@
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
-Build  : 1.7.x-e90828cd94a4
+Build  : 1.7.x-356805cce996
 Exec   : fireFoam
-Date   : Mar 05 2011
-Time   : 07:37:54
-Host   : wangyUbuntu
-PID    : 11627
-Case   : /home/wangy/OpenFOAM/wangy-1.7.x/run/fireFoam/testBatteryFireFOAM/counterFlowMixing2D
+Date   : May 23 2011
+Time   : 15:44:34
+Host   : kvmlinux
+PID    : 27609
+Case   : /home/meredithk/filmModel/testBatteryFireFOAM/counterFlowMixing2D
 nProcs : 1
 SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FireFOAM Build Version:  5987a816c9aca3e866f5fc5977a376e9a1338485
+FireFOAM Build Time Stamp:  Mon May 23 15:42:56 EDT 2011
+****************************************************
 Create time
 
 Create mesh for time = 0
@@ -72,13 +75,14 @@ Creating pyrolysis model
 Selecting pyrolysisModel none
 
 Constructing reacting cloud
+Constructing cloud functions
+    none
 Selecting DispersionModel none
 Selecting DragModel SphereDrag
 Selecting InjectionModel ConeInjection
     Constructing 2-D injection
 Selecting pdfType RosinRammler
 Selecting PatchInteractionModel StandardWallInteraction
-Selecting PostProcessingModel none
 Selecting SurfaceFilmModel ThermoSurfaceFilm
     Applying absorb interaction model
 Selecting U IntegrationScheme Euler
@@ -116,7 +120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0343061, Final residual = 9.24392
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 1.54715e-08, global = 3.89813e-09, cumulative = 3.90052e-05
 smoothSolver:  Solving for k, Initial residual = 1, Final residual = 5.18131e-08, No Iterations 12
-ExecutionTime = 0.03 s  ClockTime = 0 s
+ExecutionTime = 0.04 s  ClockTime = 0 s
 
 Courant Number mean: 0.171863 max: 0.96154
 deltaT = 0.00192308
@@ -141,7 +145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.218798, Final residual = 9.34776e
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.04742e-09, global = -7.14617e-10, cumulative = 7.44528e-05
 smoothSolver:  Solving for k, Initial residual = 0.205392, Final residual = 7.03409e-08, No Iterations 9
-ExecutionTime = 0.04 s  ClockTime = 0 s
+ExecutionTime = 0.05 s  ClockTime = 0 s
 
 Courant Number mean: 0.18877 max: 0.961538
 deltaT = 0.00192308
@@ -166,7 +170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.130248, Final residual = 5.15685e
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.81694e-10, global = 1.25945e-10, cumulative = 6.81865e-05
 smoothSolver:  Solving for k, Initial residual = 0.139192, Final residual = 5.34786e-08, No Iterations 9
-ExecutionTime = 0.05 s  ClockTime = 0 s
+ExecutionTime = 0.07 s  ClockTime = 0 s
 
 Courant Number mean: 0.189453 max: 0.961538
 deltaT = 0.00192308
@@ -191,7 +195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0790262, Final residual = 6.97698
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 2.63758e-10, global = -4.0245e-11, cumulative = 7.17241e-05
 smoothSolver:  Solving for k, Initial residual = 0.120241, Final residual = 6.40626e-08, No Iterations 9
-ExecutionTime = 0.06 s  ClockTime = 0 s
+ExecutionTime = 0.08 s  ClockTime = 0 s
 
 Courant Number mean: 0.190919 max: 0.961538
 deltaT = 0.00192308
@@ -216,7 +220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0445501, Final residual = 8.56544
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.36599e-10, global = 3.77241e-11, cumulative = 7.26377e-05
 smoothSolver:  Solving for k, Initial residual = 0.0971293, Final residual = 6.07222e-08, No Iterations 9
-ExecutionTime = 0.06 s  ClockTime = 0 s
+ExecutionTime = 0.09 s  ClockTime = 0 s
 
 Courant Number mean: 0.193913 max: 0.961539
 deltaT = 0.00192308
@@ -241,7 +245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0269407, Final residual = 8.51876
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.51391e-10, global = -8.46061e-11, cumulative = 7.17788e-05
 smoothSolver:  Solving for k, Initial residual = 0.08343, Final residual = 6.0195e-08, No Iterations 9
-ExecutionTime = 0.07 s  ClockTime = 0 s
+ExecutionTime = 0.1 s  ClockTime = 0 s
 
 Courant Number mean: 0.197533 max: 0.961538
 deltaT = 0.00192308
@@ -266,7 +270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0160167, Final residual = 8.86479
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.55546e-10, global = -8.65786e-11, cumulative = 7.2972e-05
 smoothSolver:  Solving for k, Initial residual = 0.0714032, Final residual = 5.22532e-08, No Iterations 9
-ExecutionTime = 0.08 s  ClockTime = 0 s
+ExecutionTime = 0.11 s  ClockTime = 0 s
 
 Courant Number mean: 0.201346 max: 0.961538
 deltaT = 0.00192308
@@ -291,7 +295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.012366, Final residual = 6.89425e
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.0445e-10, global = -6.84398e-11, cumulative = 7.39929e-05
 smoothSolver:  Solving for k, Initial residual = 0.0642081, Final residual = 5.51978e-08, No Iterations 9
-ExecutionTime = 0.09 s  ClockTime = 0 s
+ExecutionTime = 0.12 s  ClockTime = 0 s
 
 Courant Number mean: 0.205176 max: 0.961538
 deltaT = 0.00192308
@@ -316,7 +320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0100423, Final residual = 9.91085
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.84797e-10, global = 8.37392e-11, cumulative = 7.47602e-05
 smoothSolver:  Solving for k, Initial residual = 0.0578283, Final residual = 5.87354e-08, No Iterations 9
-ExecutionTime = 0.1 s  ClockTime = 0 s
+ExecutionTime = 0.13 s  ClockTime = 0 s
 
 Courant Number mean: 0.208909 max: 0.961538
 deltaT = 0.00192308
@@ -341,7 +345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00941127, Final residual = 7.1026
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.15875e-10, global = -6.3665e-11, cumulative = 7.42571e-05
 smoothSolver:  Solving for k, Initial residual = 0.0539103, Final residual = 5.39125e-08, No Iterations 9
-ExecutionTime = 0.11 s  ClockTime = 0 s
+ExecutionTime = 0.15 s  ClockTime = 0 s
 
 Courant Number mean: 0.212526 max: 0.961538
 deltaT = 0.00192308
@@ -366,7 +370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00798728, Final residual = 9.6648
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.92694e-10, global = -1.25871e-10, cumulative = 7.4681e-05
 smoothSolver:  Solving for k, Initial residual = 0.0510045, Final residual = 5.82038e-08, No Iterations 9
-ExecutionTime = 0.12 s  ClockTime = 0 s
+ExecutionTime = 0.16 s  ClockTime = 0 s
 
 Courant Number mean: 0.215991 max: 0.961538
 deltaT = 0.00192308
@@ -391,7 +395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00636543, Final residual = 8.6436
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.62313e-10, global = 5.58253e-11, cumulative = 7.43985e-05
 smoothSolver:  Solving for k, Initial residual = 0.0484433, Final residual = 6.14746e-08, No Iterations 9
-ExecutionTime = 0.12 s  ClockTime = 0 s
+ExecutionTime = 0.17 s  ClockTime = 0 s
 
 Courant Number mean: 0.219315 max: 0.961538
 deltaT = 0.00192308
@@ -416,7 +420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00755747, Final residual = 9.2167
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.84409e-10, global = 5.6941e-11, cumulative = 7.44527e-05
 smoothSolver:  Solving for k, Initial residual = 0.0477249, Final residual = 5.88524e-08, No Iterations 9
-ExecutionTime = 0.13 s  ClockTime = 0 s
+ExecutionTime = 0.18 s  ClockTime = 0 s
 
 Courant Number mean: 0.222481 max: 0.961538
 deltaT = 0.00192308
@@ -441,7 +445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00542125, Final residual = 7.1332
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.14126e-10, global = -4.97559e-11, cumulative = 7.43021e-05
 smoothSolver:  Solving for k, Initial residual = 0.0464481, Final residual = 5.81866e-08, No Iterations 9
-ExecutionTime = 0.14 s  ClockTime = 0 s
+ExecutionTime = 0.19 s  ClockTime = 0 s
 
 Courant Number mean: 0.225492 max: 0.961538
 deltaT = 0.00192308
@@ -466,7 +470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00485289, Final residual = 8.4059
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.4527e-10, global = 6.61775e-11, cumulative = 7.45598e-05
 smoothSolver:  Solving for k, Initial residual = 0.0450842, Final residual = 6.50358e-08, No Iterations 9
-ExecutionTime = 0.15 s  ClockTime = 0 s
+ExecutionTime = 0.2 s  ClockTime = 0 s
 
 Courant Number mean: 0.228357 max: 0.961538
 deltaT = 0.00192308
@@ -491,7 +495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00681294, Final residual = 7.2049
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.33212e-10, global = -9.2578e-11, cumulative = 7.45838e-05
 smoothSolver:  Solving for k, Initial residual = 0.045419, Final residual = 6.33661e-08, No Iterations 9
-ExecutionTime = 0.16 s  ClockTime = 0 s
+ExecutionTime = 0.21 s  ClockTime = 0 s
 
 Courant Number mean: 0.231062 max: 0.961538
 deltaT = 0.00192308
@@ -516,7 +520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00508701, Final residual = 6.7273
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 2.9962e-10, global = -7.57413e-11, cumulative = 7.45773e-05
 smoothSolver:  Solving for k, Initial residual = 0.0448933, Final residual = 6.22676e-08, No Iterations 9
-ExecutionTime = 0.16 s  ClockTime = 0 s
+ExecutionTime = 0.22 s  ClockTime = 0 s
 
 Courant Number mean: 0.233626 max: 0.961538
 deltaT = 0.00192308
@@ -541,7 +545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00590802, Final residual = 6.3910
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.09557e-10, global = -6.27179e-11, cumulative = 7.44412e-05
 smoothSolver:  Solving for k, Initial residual = 0.0444662, Final residual = 6.91196e-08, No Iterations 9
-ExecutionTime = 0.17 s  ClockTime = 0 s
+ExecutionTime = 0.23 s  ClockTime = 0 s
 
 Courant Number mean: 0.236057 max: 0.961538
 deltaT = 0.00192308
@@ -566,7 +570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00489302, Final residual = 9.5955
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.17134e-10, global = 6.35848e-11, cumulative = 7.44432e-05
 smoothSolver:  Solving for k, Initial residual = 0.0454589, Final residual = 6.36933e-08, No Iterations 9
-ExecutionTime = 0.18 s  ClockTime = 0 s
+ExecutionTime = 0.24 s  ClockTime = 0 s
 
 Courant Number mean: 0.23835 max: 0.961538
 deltaT = 0.00192308
@@ -591,7 +595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00568482, Final residual = 7.3653
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.52787e-10, global = -5.04706e-11, cumulative = 7.50676e-05
 smoothSolver:  Solving for k, Initial residual = 0.0455859, Final residual = 6.58126e-08, No Iterations 9
-ExecutionTime = 0.19 s  ClockTime = 0 s
+ExecutionTime = 0.25 s  ClockTime = 0 s
 
 Courant Number mean: 0.240518 max: 0.961538
 deltaT = 0.00192308
@@ -616,7 +620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00604411, Final residual = 9.6614
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.06068e-10, global = 6.15164e-11, cumulative = 7.51316e-05
 smoothSolver:  Solving for k, Initial residual = 0.0461193, Final residual = 7.50419e-08, No Iterations 9
-ExecutionTime = 0.2 s  ClockTime = 0 s
+ExecutionTime = 0.26 s  ClockTime = 0 s
 
 Courant Number mean: 0.24255 max: 0.961538
 deltaT = 0.00192308
@@ -641,7 +645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00372706, Final residual = 9.3884
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.34441e-10, global = -1.24414e-10, cumulative = 7.4989e-05
 smoothSolver:  Solving for k, Initial residual = 0.0472656, Final residual = 6.25713e-08, No Iterations 9
-ExecutionTime = 0.2 s  ClockTime = 0 s
+ExecutionTime = 0.27 s  ClockTime = 0 s
 
 Courant Number mean: 0.244462 max: 0.961538
 deltaT = 0.00192308
@@ -666,7 +670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00373078, Final residual = 7.9001
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.58327e-10, global = -9.39263e-11, cumulative = 7.50786e-05
 smoothSolver:  Solving for k, Initial residual = 0.0474109, Final residual = 6.99626e-08, No Iterations 9
-ExecutionTime = 0.21 s  ClockTime = 0 s
+ExecutionTime = 0.28 s  ClockTime = 0 s
 
 Courant Number mean: 0.246259 max: 0.961538
 deltaT = 0.00192308
@@ -691,7 +695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00329955, Final residual = 9.4639
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.48003e-10, global = -9.50238e-11, cumulative = 7.51563e-05
 smoothSolver:  Solving for k, Initial residual = 0.048391, Final residual = 7.55571e-08, No Iterations 9
-ExecutionTime = 0.22 s  ClockTime = 0 s
+ExecutionTime = 0.29 s  ClockTime = 0 s
 
 Courant Number mean: 0.247943 max: 0.961538
 deltaT = 0.00192308
@@ -716,7 +720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0029454, Final residual = 7.78994
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.82093e-10, global = -1.12846e-10, cumulative = 7.52012e-05
 smoothSolver:  Solving for k, Initial residual = 0.0491738, Final residual = 6.50762e-08, No Iterations 9
-ExecutionTime = 0.23 s  ClockTime = 0 s
+ExecutionTime = 0.3 s  ClockTime = 0 s
 
 Courant Number mean: 0.249516 max: 0.961538
 deltaT = 0.00192308
@@ -741,7 +745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00292488, Final residual = 6.2305
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.15257e-10, global = -7.22165e-11, cumulative = 7.53284e-05
 smoothSolver:  Solving for k, Initial residual = 0.0493695, Final residual = 7.1536e-08, No Iterations 9
-ExecutionTime = 0.24 s  ClockTime = 0 s
+ExecutionTime = 0.32 s  ClockTime = 0 s
 
 Courant Number mean: 0.250982 max: 0.961538
 deltaT = 0.00192308
@@ -766,7 +770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00293816, Final residual = 8.0059
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.80499e-10, global = -1.00873e-10, cumulative = 7.55377e-05
 smoothSolver:  Solving for k, Initial residual = 0.0499956, Final residual = 7.16995e-08, No Iterations 9
-ExecutionTime = 0.25 s  ClockTime = 0 s
+ExecutionTime = 0.33 s  ClockTime = 0 s
 
 Courant Number mean: 0.252348 max: 0.961538
 deltaT = 0.00192308
@@ -791,7 +795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00245355, Final residual = 9.8360
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.44413e-10, global = -1.47282e-10, cumulative = 7.55116e-05
 smoothSolver:  Solving for k, Initial residual = 0.0501102, Final residual = 6.44518e-08, No Iterations 9
-ExecutionTime = 0.26 s  ClockTime = 0 s
+ExecutionTime = 0.34 s  ClockTime = 0 s
 
 Courant Number mean: 0.253618 max: 0.961538
 deltaT = 0.00192308
@@ -816,7 +820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00246523, Final residual = 8.2412
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01471e-10, global = 5.26712e-11, cumulative = 7.55522e-05
 smoothSolver:  Solving for k, Initial residual = 0.0500929, Final residual = 6.66463e-08, No Iterations 9
-ExecutionTime = 0.27 s  ClockTime = 0 s
+ExecutionTime = 0.35 s  ClockTime = 0 s
 
 Courant Number mean: 0.254793 max: 0.961538
 deltaT = 0.00192308
@@ -841,7 +845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00171704, Final residual = 6.6721
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.26223e-10, global = -9.47934e-11, cumulative = 7.56344e-05
 smoothSolver:  Solving for k, Initial residual = 0.0496435, Final residual = 6.81753e-08, No Iterations 9
-ExecutionTime = 0.27 s  ClockTime = 0 s
+ExecutionTime = 0.36 s  ClockTime = 0 s
 
 Courant Number mean: 0.25588 max: 0.961538
 deltaT = 0.00192308
@@ -866,7 +870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0022075, Final residual = 8.40067
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.94459e-10, global = -1.20051e-10, cumulative = 7.55248e-05
 smoothSolver:  Solving for k, Initial residual = 0.0485115, Final residual = 5.91899e-08, No Iterations 9
-ExecutionTime = 0.28 s  ClockTime = 0 s
+ExecutionTime = 0.38 s  ClockTime = 0 s
 
 Courant Number mean: 0.256877 max: 0.961538
 deltaT = 0.00192308
@@ -891,7 +895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00152848, Final residual = 6.1570
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.2621e-10, global = -6.41432e-11, cumulative = 7.55721e-05
 smoothSolver:  Solving for k, Initial residual = 0.0471142, Final residual = 6.58347e-08, No Iterations 9
-ExecutionTime = 0.29 s  ClockTime = 0 s
+ExecutionTime = 0.39 s  ClockTime = 0 s
 
 Courant Number mean: 0.257796 max: 0.961538
 deltaT = 0.00192308
@@ -916,7 +920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0021307, Final residual = 8.94856
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.03796e-10, global = 2.3043e-11, cumulative = 7.5605e-05
 smoothSolver:  Solving for k, Initial residual = 0.0455488, Final residual = 6.16474e-08, No Iterations 9
-ExecutionTime = 0.3 s  ClockTime = 0 s
+ExecutionTime = 0.4 s  ClockTime = 0 s
 
 Courant Number mean: 0.258641 max: 0.961538
 deltaT = 0.00192308
@@ -941,7 +945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00145917, Final residual = 7.7628
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.8991e-10, global = -1.23353e-10, cumulative = 7.56663e-05
 smoothSolver:  Solving for k, Initial residual = 0.0438081, Final residual = 4.90418e-08, No Iterations 9
-ExecutionTime = 0.31 s  ClockTime = 0 s
+ExecutionTime = 0.41 s  ClockTime = 0 s
 
 Courant Number mean: 0.259415 max: 0.961538
 deltaT = 0.00192308
@@ -966,7 +970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0015197, Final residual = 6.72785
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.36727e-10, global = -8.77531e-11, cumulative = 7.56879e-05
 smoothSolver:  Solving for k, Initial residual = 0.0424854, Final residual = 4.72149e-08, No Iterations 9
-ExecutionTime = 0.31 s  ClockTime = 0 s
+ExecutionTime = 0.42 s  ClockTime = 0 s
 
 Courant Number mean: 0.26012 max: 0.961538
 deltaT = 0.00192308
@@ -991,7 +995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00117155, Final residual = 6.8819
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.48556e-10, global = -9.92439e-11, cumulative = 7.57732e-05
 smoothSolver:  Solving for k, Initial residual = 0.0408622, Final residual = 4.59951e-08, No Iterations 9
-ExecutionTime = 0.32 s  ClockTime = 0 s
+ExecutionTime = 0.43 s  ClockTime = 0 s
 
 Courant Number mean: 0.26077 max: 0.961538
 deltaT = 0.00192308
@@ -1016,7 +1020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0018558, Final residual = 7.24475
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.2366e-10, global = -7.91671e-11, cumulative = 7.58871e-05
 smoothSolver:  Solving for k, Initial residual = 0.0388317, Final residual = 3.97077e-08, No Iterations 9
-ExecutionTime = 0.33 s  ClockTime = 0 s
+ExecutionTime = 0.44 s  ClockTime = 0 s
 
 Courant Number mean: 0.261384 max: 0.961538
 deltaT = 0.00192308
@@ -1041,7 +1045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00139406, Final residual = 7.6946
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.8439e-10, global = -1.01001e-10, cumulative = 7.57863e-05
 smoothSolver:  Solving for k, Initial residual = 0.0370798, Final residual = 3.88079e-08, No Iterations 9
-ExecutionTime = 0.34 s  ClockTime = 0 s
+ExecutionTime = 0.45 s  ClockTime = 0 s
 
 Courant Number mean: 0.261946 max: 0.961538
 deltaT = 0.00192308
@@ -1066,7 +1070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000922158, Final residual = 6.660
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.40671e-10, global = -8.91876e-11, cumulative = 7.58805e-05
 smoothSolver:  Solving for k, Initial residual = 0.0352265, Final residual = 3.69178e-08, No Iterations 9
-ExecutionTime = 0.35 s  ClockTime = 0 s
+ExecutionTime = 0.46 s  ClockTime = 0 s
 
 Courant Number mean: 0.262465 max: 0.961538
 deltaT = 0.00192308
@@ -1091,7 +1095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00110637, Final residual = 6.6360
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.20449e-10, global = -7.91417e-11, cumulative = 7.59124e-05
 smoothSolver:  Solving for k, Initial residual = 0.0332841, Final residual = 3.09494e-08, No Iterations 9
-ExecutionTime = 0.35 s  ClockTime = 0 s
+ExecutionTime = 0.47 s  ClockTime = 0 s
 
 Courant Number mean: 0.262937 max: 0.961538
 deltaT = 0.00192308
@@ -1116,7 +1120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000863764, Final residual = 8.889
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.10998e-10, global = -1.22018e-10, cumulative = 7.58761e-05
 smoothSolver:  Solving for k, Initial residual = 0.0316487, Final residual = 2.98364e-08, No Iterations 9
-ExecutionTime = 0.36 s  ClockTime = 0 s
+ExecutionTime = 0.48 s  ClockTime = 0 s
 
 Courant Number mean: 0.263368 max: 0.961538
 deltaT = 0.00192308
@@ -1141,7 +1145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00161907, Final residual = 9.3401
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.42148e-10, global = -8.56659e-11, cumulative = 7.58058e-05
 smoothSolver:  Solving for k, Initial residual = 0.0299305, Final residual = 2.51161e-08, No Iterations 9
-ExecutionTime = 0.37 s  ClockTime = 0 s
+ExecutionTime = 0.49 s  ClockTime = 0 s
 
 Courant Number mean: 0.263768 max: 0.961538
 deltaT = 0.00192308
@@ -1166,7 +1170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000839547, Final residual = 7.487
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.79067e-10, global = -1.02057e-10, cumulative = 7.57929e-05
 smoothSolver:  Solving for k, Initial residual = 0.0283233, Final residual = 2.34763e-08, No Iterations 9
-ExecutionTime = 0.38 s  ClockTime = 0 s
+ExecutionTime = 0.5 s  ClockTime = 0 s
 
 Courant Number mean: 0.264142 max: 0.961538
 deltaT = 0.00192308
@@ -1191,7 +1195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000748782, Final residual = 8.701
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.77014e-10, global = -1.09792e-10, cumulative = 7.57598e-05
 smoothSolver:  Solving for k, Initial residual = 0.0269114, Final residual = 2.32719e-08, No Iterations 9
-ExecutionTime = 0.39 s  ClockTime = 0 s
+ExecutionTime = 0.51 s  ClockTime = 0 s
 
 Courant Number mean: 0.264484 max: 0.961538
 deltaT = 0.00192308
@@ -1216,7 +1220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000901582, Final residual = 7.545
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.6254e-10, global = -9.06168e-11, cumulative = 7.58418e-05
 smoothSolver:  Solving for k, Initial residual = 0.0253925, Final residual = 9.20766e-08, No Iterations 8
-ExecutionTime = 0.39 s  ClockTime = 0 s
+ExecutionTime = 0.53 s  ClockTime = 0 s
 
 Courant Number mean: 0.264797 max: 0.961538
 deltaT = 0.00192308
@@ -1241,7 +1245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000948409, Final residual = 7.506
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.7177e-10, global = -9.5061e-11, cumulative = 7.58047e-05
 smoothSolver:  Solving for k, Initial residual = 0.0239354, Final residual = 8.91848e-08, No Iterations 8
-ExecutionTime = 0.4 s  ClockTime = 0 s
+ExecutionTime = 0.53 s  ClockTime = 0 s
 
 Courant Number mean: 0.26508 max: 0.961538
 deltaT = 0.00192308
@@ -1266,7 +1270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00140185, Final residual = 8.4220
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.87333e-10, global = 5.80886e-11, cumulative = 7.58855e-05
 smoothSolver:  Solving for k, Initial residual = 0.0227112, Final residual = 7.79793e-08, No Iterations 8
-ExecutionTime = 0.41 s  ClockTime = 0 s
+ExecutionTime = 0.54 s  ClockTime = 0 s
 
 Courant Number mean: 0.265344 max: 0.961538
 deltaT = 0.00192308
@@ -1291,7 +1295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000589391, Final residual = 8.661
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.91785e-10, global = -1.02098e-10, cumulative = 7.58345e-05
 smoothSolver:  Solving for k, Initial residual = 0.0214699, Final residual = 7.38586e-08, No Iterations 8
-ExecutionTime = 0.42 s  ClockTime = 0 s
+ExecutionTime = 0.55 s  ClockTime = 0 s
 
 Courant Number mean: 0.265601 max: 0.961538
 deltaT = 0.00192308
@@ -1316,7 +1320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00103348, Final residual = 8.1868
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.77094e-10, global = -1.07179e-10, cumulative = 7.57935e-05
 smoothSolver:  Solving for k, Initial residual = 0.0203801, Final residual = 7.33413e-08, No Iterations 8
-ExecutionTime = 0.43 s  ClockTime = 0 s
+ExecutionTime = 0.56 s  ClockTime = 0 s
 
 Courant Number mean: 0.265835 max: 0.961538
 deltaT = 0.00192308
@@ -1341,7 +1345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00135217, Final residual = 7.6456
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.75403e-10, global = -1.25146e-10, cumulative = 7.58014e-05
 smoothSolver:  Solving for k, Initial residual = 0.0192581, Final residual = 6.36913e-08, No Iterations 8
-ExecutionTime = 0.43 s  ClockTime = 0 s
+ExecutionTime = 0.57 s  ClockTime = 0 s
 
 Courant Number mean: 0.266049 max: 0.961538
 deltaT = 0.00192308
@@ -1366,7 +1370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00166366, Final residual = 8.5448
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.90357e-10, global = 4.93859e-11, cumulative = 7.58936e-05
 smoothSolver:  Solving for k, Initial residual = 0.0182482, Final residual = 5.59428e-08, No Iterations 8
-ExecutionTime = 0.44 s  ClockTime = 0 s
+ExecutionTime = 0.59 s  ClockTime = 0 s
 
 Courant Number mean: 0.266249 max: 0.961538
 deltaT = 0.00192308
@@ -1391,7 +1395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000721993, Final residual = 6.626
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.26643e-10, global = -7.27104e-11, cumulative = 7.59545e-05
 smoothSolver:  Solving for k, Initial residual = 0.017364, Final residual = 5.3679e-08, No Iterations 8
-ExecutionTime = 0.46 s  ClockTime = 0 s
+ExecutionTime = 0.6 s  ClockTime = 0 s
 
 Courant Number mean: 0.266443 max: 0.961538
 deltaT = 0.00192308
@@ -1416,7 +1420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00123633, Final residual = 9.3292
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.36818e-10, global = 1.04413e-10, cumulative = 7.60282e-05
 smoothSolver:  Solving for k, Initial residual = 0.0165416, Final residual = 4.80376e-08, No Iterations 8
-ExecutionTime = 0.47 s  ClockTime = 0 s
+ExecutionTime = 0.61 s  ClockTime = 0 s
 
 Courant Number mean: 0.26665 max: 0.961538
 deltaT = 0.00192308
@@ -1441,7 +1445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000781063, Final residual = 7.822
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.7618e-10, global = -1.1138e-10, cumulative = 7.60442e-05
 smoothSolver:  Solving for k, Initial residual = 0.0157182, Final residual = 4.51021e-08, No Iterations 8
-ExecutionTime = 0.47 s  ClockTime = 0 s
+ExecutionTime = 0.62 s  ClockTime = 0 s
 
 Courant Number mean: 0.266846 max: 0.961538
 deltaT = 0.00192308
@@ -1466,7 +1470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00134382, Final residual = 8.2602
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.90032e-10, global = 6.52646e-11, cumulative = 7.61117e-05
 smoothSolver:  Solving for k, Initial residual = 0.014978, Final residual = 4.25684e-08, No Iterations 8
-ExecutionTime = 0.48 s  ClockTime = 0 s
+ExecutionTime = 0.63 s  ClockTime = 0 s
 
 Courant Number mean: 0.267034 max: 0.961538
 deltaT = 0.00192308
@@ -1491,7 +1495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00134924, Final residual = 6.9145
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.40537e-10, global = -9.04677e-11, cumulative = 7.61642e-05
 smoothSolver:  Solving for k, Initial residual = 0.0143348, Final residual = 3.75663e-08, No Iterations 8
-ExecutionTime = 0.49 s  ClockTime = 0 s
+ExecutionTime = 0.65 s  ClockTime = 0 s
 
 Courant Number mean: 0.267211 max: 0.961538
 deltaT = 0.00192308
@@ -1516,7 +1520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00163606, Final residual = 9.1924
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.20337e-10, global = 5.65104e-11, cumulative = 7.6165e-05
 smoothSolver:  Solving for k, Initial residual = 0.0137198, Final residual = 3.57498e-08, No Iterations 8
-ExecutionTime = 0.5 s  ClockTime = 0 s
+ExecutionTime = 0.66 s  ClockTime = 0 s
 
 Courant Number mean: 0.267393 max: 0.961538
 deltaT = 0.00192308
@@ -1541,7 +1545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00211052, Final residual = 7.7198
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.76125e-10, global = -9.87195e-11, cumulative = 7.62156e-05
 smoothSolver:  Solving for k, Initial residual = 0.0131331, Final residual = 3.38271e-08, No Iterations 8
-ExecutionTime = 0.5 s  ClockTime = 0 s
+ExecutionTime = 0.67 s  ClockTime = 0 s
 
 Courant Number mean: 0.267567 max: 0.961538
 deltaT = 0.00192308
@@ -1566,7 +1570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00189927, Final residual = 9.6795
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.34581e-10, global = -1.45325e-10, cumulative = 7.62307e-05
 smoothSolver:  Solving for k, Initial residual = 0.0126152, Final residual = 3.20165e-08, No Iterations 8
-ExecutionTime = 0.51 s  ClockTime = 0 s
+ExecutionTime = 0.68 s  ClockTime = 0 s
 
 Courant Number mean: 0.267736 max: 0.961538
 deltaT = 0.00192308
@@ -1591,7 +1595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00134604, Final residual = 9.9834
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.37639e-10, global = 9.1444e-11, cumulative = 7.62e-05
 smoothSolver:  Solving for k, Initial residual = 0.0121303, Final residual = 2.98281e-08, No Iterations 8
-ExecutionTime = 0.52 s  ClockTime = 0 s
+ExecutionTime = 0.69 s  ClockTime = 0 s
 
 Courant Number mean: 0.267901 max: 0.961538
 deltaT = 0.00192308
@@ -1616,7 +1620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00138155, Final residual = 7.7594
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.67701e-10, global = -1.0587e-10, cumulative = 7.62354e-05
 smoothSolver:  Solving for k, Initial residual = 0.0116798, Final residual = 2.83334e-08, No Iterations 8
-ExecutionTime = 0.53 s  ClockTime = 0 s
+ExecutionTime = 0.7 s  ClockTime = 0 s
 
 Courant Number mean: 0.268058 max: 0.961538
 deltaT = 0.00192308
@@ -1641,7 +1645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000770039, Final residual = 9.709
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.49936e-10, global = 1.01908e-10, cumulative = 7.62067e-05
 smoothSolver:  Solving for k, Initial residual = 0.0112865, Final residual = 2.68112e-08, No Iterations 8
-ExecutionTime = 0.54 s  ClockTime = 0 s
+ExecutionTime = 0.71 s  ClockTime = 0 s
 
 Courant Number mean: 0.268222 max: 0.961538
 deltaT = 0.00192308
@@ -1666,7 +1670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000470948, Final residual = 7.216
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.56195e-10, global = -8.3026e-11, cumulative = 7.62009e-05
 smoothSolver:  Solving for k, Initial residual = 0.0109095, Final residual = 2.57412e-08, No Iterations 8
-ExecutionTime = 0.54 s  ClockTime = 0 s
+ExecutionTime = 0.72 s  ClockTime = 0 s
 
 Courant Number mean: 0.268382 max: 0.961538
 deltaT = 0.00192308
@@ -1691,7 +1695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000550512, Final residual = 7.581
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.66781e-10, global = -1.01707e-10, cumulative = 7.62224e-05
 smoothSolver:  Solving for k, Initial residual = 0.0105415, Final residual = 2.38923e-08, No Iterations 8
-ExecutionTime = 0.55 s  ClockTime = 0 s
+ExecutionTime = 0.73 s  ClockTime = 0 s
 
 Courant Number mean: 0.26853 max: 0.961538
 deltaT = 0.00192308
@@ -1716,7 +1720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000488654, Final residual = 6.728
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.4693e-10, global = -5.47924e-11, cumulative = 7.62221e-05
 smoothSolver:  Solving for k, Initial residual = 0.010209, Final residual = 2.25645e-08, No Iterations 8
-ExecutionTime = 0.56 s  ClockTime = 0 s
+ExecutionTime = 0.74 s  ClockTime = 0 s
 
 Courant Number mean: 0.268674 max: 0.961538
 deltaT = 0.00192308
@@ -1741,7 +1745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000419834, Final residual = 6.407
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.31257e-10, global = -6.05461e-11, cumulative = 7.62196e-05
 smoothSolver:  Solving for k, Initial residual = 0.00993023, Final residual = 2.14409e-08, No Iterations 8
-ExecutionTime = 0.57 s  ClockTime = 0 s
+ExecutionTime = 0.75 s  ClockTime = 0 s
 
 Courant Number mean: 0.268813 max: 0.961538
 deltaT = 0.00192308
@@ -1766,7 +1770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000382821, Final residual = 7.088
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.27077e-10, global = -6.82357e-11, cumulative = 7.62203e-05
 smoothSolver:  Solving for k, Initial residual = 0.00966698, Final residual = 2.07621e-08, No Iterations 8
-ExecutionTime = 0.58 s  ClockTime = 0 s
+ExecutionTime = 0.76 s  ClockTime = 0 s
 
 Courant Number mean: 0.268947 max: 0.961538
 deltaT = 0.00192308
@@ -1791,7 +1795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000360124, Final residual = 9.273
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.26556e-10, global = 4.96678e-11, cumulative = 7.6225e-05
 smoothSolver:  Solving for k, Initial residual = 0.00942002, Final residual = 9.67198e-08, No Iterations 7
-ExecutionTime = 0.58 s  ClockTime = 0 s
+ExecutionTime = 0.77 s  ClockTime = 0 s
 
 Courant Number mean: 0.269076 max: 0.961538
 deltaT = 0.00192308
@@ -1816,7 +1820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000345489, Final residual = 8.733
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.15634e-10, global = 6.58778e-11, cumulative = 7.6233e-05
 smoothSolver:  Solving for k, Initial residual = 0.0091718, Final residual = 9.3011e-08, No Iterations 7
-ExecutionTime = 0.59 s  ClockTime = 0 s
+ExecutionTime = 0.78 s  ClockTime = 1 s
 
 Courant Number mean: 0.269201 max: 0.961538
 deltaT = 0.00192308
@@ -1841,7 +1845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000334444, Final residual = 8.548
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.03198e-10, global = 5.41471e-11, cumulative = 7.62434e-05
 smoothSolver:  Solving for k, Initial residual = 0.00893682, Final residual = 8.94457e-08, No Iterations 7
-ExecutionTime = 0.6 s  ClockTime = 0 s
+ExecutionTime = 0.79 s  ClockTime = 1 s
 
 Courant Number mean: 0.269322 max: 0.961538
 deltaT = 0.00192308
@@ -1866,7 +1870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00127791, Final residual = 7.9008
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.76127e-10, global = 7.40126e-11, cumulative = 7.62541e-05
 smoothSolver:  Solving for k, Initial residual = 0.00871573, Final residual = 8.55147e-08, No Iterations 7
-ExecutionTime = 0.61 s  ClockTime = 0 s
+ExecutionTime = 0.8 s  ClockTime = 1 s
 
 Courant Number mean: 0.269439 max: 0.961538
 deltaT = 0.00192308
@@ -1891,7 +1895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000378085, Final residual = 8.416
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.95463e-10, global = 6.05854e-11, cumulative = 7.62468e-05
 smoothSolver:  Solving for k, Initial residual = 0.00848946, Final residual = 8.26859e-08, No Iterations 7
-ExecutionTime = 0.62 s  ClockTime = 0 s
+ExecutionTime = 0.81 s  ClockTime = 1 s
 
 Courant Number mean: 0.269563 max: 0.961538
 deltaT = 0.00192308
@@ -1916,7 +1920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000724127, Final residual = 9.731
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.34748e-10, global = 9.46683e-11, cumulative = 7.62429e-05
 smoothSolver:  Solving for k, Initial residual = 0.00825591, Final residual = 7.98464e-08, No Iterations 7
-ExecutionTime = 0.62 s  ClockTime = 0 s
+ExecutionTime = 0.82 s  ClockTime = 1 s
 
 Courant Number mean: 0.269678 max: 0.961538
 deltaT = 0.00192308
@@ -1941,7 +1945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00150061, Final residual = 9.0645
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.24024e-10, global = -1.28697e-10, cumulative = 7.62536e-05
 smoothSolver:  Solving for k, Initial residual = 0.00804597, Final residual = 7.70212e-08, No Iterations 7
-ExecutionTime = 0.63 s  ClockTime = 0 s
+ExecutionTime = 0.83 s  ClockTime = 1 s
 
 Courant Number mean: 0.269794 max: 0.961538
 deltaT = 0.00192308
@@ -1966,7 +1970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00127599, Final residual = 8.1010
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01255e-10, global = 6.37444e-11, cumulative = 7.62533e-05
 smoothSolver:  Solving for k, Initial residual = 0.00784634, Final residual = 7.35005e-08, No Iterations 7
-ExecutionTime = 0.64 s  ClockTime = 0 s
+ExecutionTime = 0.85 s  ClockTime = 1 s
 
 Courant Number mean: 0.269917 max: 0.961538
 deltaT = 0.00192308
@@ -1991,7 +1995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00125155, Final residual = 7.1501
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.44519e-10, global = -7.75745e-11, cumulative = 7.62133e-05
 smoothSolver:  Solving for k, Initial residual = 0.00763661, Final residual = 7.11828e-08, No Iterations 7
-ExecutionTime = 0.65 s  ClockTime = 0 s
+ExecutionTime = 0.86 s  ClockTime = 1 s
 
 Courant Number mean: 0.270031 max: 0.961538
 deltaT = 0.00192308
@@ -2016,7 +2020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00160676, Final residual = 7.4963
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.74193e-10, global = 4.40385e-11, cumulative = 7.62734e-05
 smoothSolver:  Solving for k, Initial residual = 0.00743523, Final residual = 6.9169e-08, No Iterations 7
-ExecutionTime = 0.66 s  ClockTime = 0 s
+ExecutionTime = 0.87 s  ClockTime = 1 s
 
 Courant Number mean: 0.270156 max: 0.961538
 deltaT = 0.00192308
@@ -2041,7 +2045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000867031, Final residual = 8.309
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.88508e-10, global = 3.86344e-11, cumulative = 7.62569e-05
 smoothSolver:  Solving for k, Initial residual = 0.00723551, Final residual = 6.7729e-08, No Iterations 7
-ExecutionTime = 0.67 s  ClockTime = 0 s
+ExecutionTime = 0.88 s  ClockTime = 1 s
 
 Courant Number mean: 0.27027 max: 0.961538
 deltaT = 0.00192308
@@ -2066,7 +2070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00124517, Final residual = 7.1798
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.53134e-10, global = -9.33554e-11, cumulative = 7.62165e-05
 smoothSolver:  Solving for k, Initial residual = 0.00703957, Final residual = 6.50135e-08, No Iterations 7
-ExecutionTime = 0.68 s  ClockTime = 0 s
+ExecutionTime = 0.89 s  ClockTime = 1 s
 
 Courant Number mean: 0.270373 max: 0.961538
 deltaT = 0.00192308
@@ -2091,7 +2095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00122194, Final residual = 8.6349
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.17424e-10, global = -1.09982e-10, cumulative = 7.62201e-05
 smoothSolver:  Solving for k, Initial residual = 0.00686023, Final residual = 6.20609e-08, No Iterations 7
-ExecutionTime = 0.68 s  ClockTime = 0 s
+ExecutionTime = 0.9 s  ClockTime = 1 s
 
 Courant Number mean: 0.270488 max: 0.961538
 deltaT = 0.00192308
@@ -2116,7 +2120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00162895, Final residual = 8.4863
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.02663e-10, global = 7.09538e-11, cumulative = 7.62699e-05
 smoothSolver:  Solving for k, Initial residual = 0.0066745, Final residual = 5.87053e-08, No Iterations 7
-ExecutionTime = 0.69 s  ClockTime = 0 s
+ExecutionTime = 0.91 s  ClockTime = 1 s
 
 Courant Number mean: 0.27061 max: 0.961538
 deltaT = 0.00192308
@@ -2141,7 +2145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00170422, Final residual = 6.3693
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.42143e-10, global = -8.00208e-11, cumulative = 7.622e-05
 smoothSolver:  Solving for k, Initial residual = 0.00647896, Final residual = 5.66047e-08, No Iterations 7
-ExecutionTime = 0.7 s  ClockTime = 0 s
+ExecutionTime = 0.92 s  ClockTime = 1 s
 
 Courant Number mean: 0.270714 max: 0.961538
 deltaT = 0.00192308
@@ -2166,7 +2170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00184331, Final residual = 9.8031
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.38002e-10, global = -1.18444e-10, cumulative = 7.62715e-05
 smoothSolver:  Solving for k, Initial residual = 0.00629315, Final residual = 5.49212e-08, No Iterations 7
-ExecutionTime = 0.71 s  ClockTime = 0 s
+ExecutionTime = 0.94 s  ClockTime = 1 s
 
 Courant Number mean: 0.270828 max: 0.961538
 deltaT = 0.00192308
@@ -2191,7 +2195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00118059, Final residual = 7.3668
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.44212e-10, global = -6.47997e-11, cumulative = 7.62438e-05
 smoothSolver:  Solving for k, Initial residual = 0.00611559, Final residual = 5.31336e-08, No Iterations 7
-ExecutionTime = 0.72 s  ClockTime = 0 s
+ExecutionTime = 0.95 s  ClockTime = 1 s
 
 Courant Number mean: 0.270924 max: 0.961538
 deltaT = 0.00192308
@@ -2216,7 +2220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00150868, Final residual = 8.5279
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01961e-10, global = -7.41237e-11, cumulative = 7.62757e-05
 smoothSolver:  Solving for k, Initial residual = 0.00595204, Final residual = 5.31117e-08, No Iterations 7
-ExecutionTime = 0.72 s  ClockTime = 0 s
+ExecutionTime = 0.96 s  ClockTime = 1 s
 
 Courant Number mean: 0.271029 max: 0.961538
 deltaT = 0.00192308
@@ -2241,7 +2245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00127368, Final residual = 6.6125
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.51979e-10, global = 1.30447e-11, cumulative = 7.62813e-05
 smoothSolver:  Solving for k, Initial residual = 0.00579986, Final residual = 5.34835e-08, No Iterations 7
-ExecutionTime = 0.73 s  ClockTime = 0 s
+ExecutionTime = 0.97 s  ClockTime = 1 s
 
 Courant Number mean: 0.271128 max: 0.961538
 deltaT = 0.00192308
@@ -2266,7 +2270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0015969, Final residual = 7.42507
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.56704e-10, global = 3.03329e-11, cumulative = 7.65399e-05
 smoothSolver:  Solving for k, Initial residual = 0.00563641, Final residual = 5.18031e-08, No Iterations 7
-ExecutionTime = 0.74 s  ClockTime = 0 s
+ExecutionTime = 0.98 s  ClockTime = 1 s
 
 Courant Number mean: 0.271211 max: 0.961538
 deltaT = 0.00192308
@@ -2291,7 +2295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00168379, Final residual = 7.5684
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.61074e-10, global = -5.27338e-11, cumulative = 7.65647e-05
 smoothSolver:  Solving for k, Initial residual = 0.00548521, Final residual = 5.17338e-08, No Iterations 7
-ExecutionTime = 0.75 s  ClockTime = 0 s
+ExecutionTime = 0.99 s  ClockTime = 1 s
 
 Courant Number mean: 0.271299 max: 0.961538
 deltaT = 0.00192308
@@ -2316,7 +2320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00122664, Final residual = 8.9329
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.18908e-10, global = -5.602e-11, cumulative = 7.65357e-05
 smoothSolver:  Solving for k, Initial residual = 0.00532128, Final residual = 4.98503e-08, No Iterations 7
-ExecutionTime = 0.76 s  ClockTime = 0 s
+ExecutionTime = 1 s  ClockTime = 1 s
 
 Courant Number mean: 0.271381 max: 0.961538
 deltaT = 0.00192308
@@ -2341,7 +2345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000863429, Final residual = 8.228
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.86229e-10, global = 5.41027e-11, cumulative = 7.65246e-05
 smoothSolver:  Solving for k, Initial residual = 0.00515204, Final residual = 4.76019e-08, No Iterations 7
-ExecutionTime = 0.76 s  ClockTime = 0 s
+ExecutionTime = 1.01 s  ClockTime = 1 s
 
 Courant Number mean: 0.271455 max: 0.961538
 deltaT = 0.00192308
@@ -2366,7 +2370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000574817, Final residual = 8.577
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.83481e-10, global = 4.25448e-11, cumulative = 7.65543e-05
 smoothSolver:  Solving for k, Initial residual = 0.00498707, Final residual = 4.59614e-08, No Iterations 7
-ExecutionTime = 0.77 s  ClockTime = 0 s
+ExecutionTime = 1.02 s  ClockTime = 1 s
 
 Courant Number mean: 0.271527 max: 0.961538
 deltaT = 0.00192308
@@ -2391,7 +2395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0019601, Final residual = 6.31471
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.3232e-10, global = -6.23234e-11, cumulative = 7.65422e-05
 smoothSolver:  Solving for k, Initial residual = 0.00485016, Final residual = 4.60124e-08, No Iterations 7
-ExecutionTime = 0.78 s  ClockTime = 0 s
+ExecutionTime = 1.03 s  ClockTime = 1 s
 
 Courant Number mean: 0.271603 max: 0.961538
 deltaT = 0.00192308
@@ -2416,7 +2420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00143549, Final residual = 9.8132
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.76927e-10, global = -1.31395e-10, cumulative = 7.6589e-05
 smoothSolver:  Solving for k, Initial residual = 0.00469356, Final residual = 4.4803e-08, No Iterations 7
-ExecutionTime = 0.79 s  ClockTime = 0 s
+ExecutionTime = 1.04 s  ClockTime = 1 s
 
 Courant Number mean: 0.271682 max: 0.961538
 deltaT = 0.00192308
@@ -2441,7 +2445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100098, Final residual = 8.5352
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.17229e-10, global = -1.32412e-10, cumulative = 7.65607e-05
 smoothSolver:  Solving for k, Initial residual = 0.00454404, Final residual = 4.31905e-08, No Iterations 7
-ExecutionTime = 0.79 s  ClockTime = 0 s
+ExecutionTime = 1.05 s  ClockTime = 1 s
 
 Courant Number mean: 0.271749 max: 0.961538
 deltaT = 0.00192308
@@ -2466,7 +2470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000986293, Final residual = 7.560
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.63623e-10, global = 3.56904e-11, cumulative = 7.6571e-05
 smoothSolver:  Solving for k, Initial residual = 0.00440063, Final residual = 4.16516e-08, No Iterations 7
-ExecutionTime = 0.8 s  ClockTime = 0 s
+ExecutionTime = 1.06 s  ClockTime = 1 s
 
 Courant Number mean: 0.271813 max: 0.961538
 deltaT = 0.00192308
@@ -2491,7 +2495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00148535, Final residual = 7.2942
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.41555e-10, global = -2.94589e-11, cumulative = 7.65514e-05
 smoothSolver:  Solving for k, Initial residual = 0.00425672, Final residual = 3.99488e-08, No Iterations 7
-ExecutionTime = 0.81 s  ClockTime = 0 s
+ExecutionTime = 1.07 s  ClockTime = 1 s
 
 Courant Number mean: 0.271876 max: 0.961538
 deltaT = 0.00192308
@@ -2516,7 +2520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00136715, Final residual = 7.9418
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.94873e-10, global = 6.38437e-11, cumulative = 7.64903e-05
 smoothSolver:  Solving for k, Initial residual = 0.00411291, Final residual = 3.77167e-08, No Iterations 7
-ExecutionTime = 0.82 s  ClockTime = 0 s
+ExecutionTime = 1.08 s  ClockTime = 1 s
 
 Courant Number mean: 0.27194 max: 0.961538
 deltaT = 0.00192308
@@ -2541,7 +2545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00097719, Final residual = 6.9904
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.30166e-10, global = -6.14568e-11, cumulative = 7.64837e-05
 smoothSolver:  Solving for k, Initial residual = 0.00398252, Final residual = 3.68095e-08, No Iterations 7
-ExecutionTime = 0.82 s  ClockTime = 0 s
+ExecutionTime = 1.09 s  ClockTime = 1 s
 
 Courant Number mean: 0.272001 max: 0.961538
 deltaT = 0.00192308
@@ -2566,7 +2570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00104522, Final residual = 7.3541
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.59876e-10, global = -9.21933e-11, cumulative = 7.64691e-05
 smoothSolver:  Solving for k, Initial residual = 0.00387243, Final residual = 3.6931e-08, No Iterations 7
-ExecutionTime = 0.83 s  ClockTime = 0 s
+ExecutionTime = 1.1 s  ClockTime = 1 s
 
 Courant Number mean: 0.272056 max: 0.961538
 deltaT = 0.00192308
@@ -2591,7 +2595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000773316, Final residual = 8.318
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01882e-10, global = -8.44809e-11, cumulative = 7.65216e-05
 smoothSolver:  Solving for k, Initial residual = 0.00375357, Final residual = 3.55868e-08, No Iterations 7
-ExecutionTime = 0.84 s  ClockTime = 0 s
+ExecutionTime = 1.11 s  ClockTime = 1 s
 
 Courant Number mean: 0.272108 max: 0.961538
 deltaT = 0.00192308
@@ -2616,7 +2620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00131925, Final residual = 7.9824
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.8264e-10, global = -1.09702e-10, cumulative = 7.6522e-05
 smoothSolver:  Solving for k, Initial residual = 0.00364142, Final residual = 3.47876e-08, No Iterations 7
-ExecutionTime = 0.85 s  ClockTime = 0 s
+ExecutionTime = 1.12 s  ClockTime = 1 s
 
 Courant Number mean: 0.272162 max: 0.961538
 deltaT = 0.00192308
@@ -2641,7 +2645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00110422, Final residual = 8.4564
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.97766e-10, global = 3.71956e-11, cumulative = 7.65343e-05
 smoothSolver:  Solving for k, Initial residual = 0.00353238, Final residual = 3.41242e-08, No Iterations 7
-ExecutionTime = 0.85 s  ClockTime = 0 s
+ExecutionTime = 1.13 s  ClockTime = 1 s
 
 Courant Number mean: 0.272209 max: 0.961538
 deltaT = 0.00192308
@@ -2666,7 +2670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000553245, Final residual = 8.995
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.29278e-10, global = -1.11585e-10, cumulative = 7.65393e-05
 smoothSolver:  Solving for k, Initial residual = 0.00342215, Final residual = 3.33283e-08, No Iterations 7
-ExecutionTime = 0.86 s  ClockTime = 0 s
+ExecutionTime = 1.14 s  ClockTime = 1 s
 
 Courant Number mean: 0.272257 max: 0.961538
 deltaT = 0.00192308
@@ -2691,7 +2695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000653936, Final residual = 7.071
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.49295e-10, global = -8.16615e-11, cumulative = 7.65359e-05
 smoothSolver:  Solving for k, Initial residual = 0.00330926, Final residual = 3.03389e-08, No Iterations 7
-ExecutionTime = 0.88 s  ClockTime = 0 s
+ExecutionTime = 1.16 s  ClockTime = 1 s
 
 Courant Number mean: 0.272299 max: 0.961538
 deltaT = 0.00192308
@@ -2716,7 +2720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000364577, Final residual = 7.494
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.67495e-10, global = -8.70115e-11, cumulative = 7.65389e-05
 smoothSolver:  Solving for k, Initial residual = 0.00320315, Final residual = 2.90491e-08, No Iterations 7
-ExecutionTime = 0.88 s  ClockTime = 0 s
+ExecutionTime = 1.17 s  ClockTime = 1 s
 
 Courant Number mean: 0.272339 max: 0.961538
 deltaT = 0.00192308
@@ -2741,7 +2745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00136202, Final residual = 6.4229
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.40329e-10, global = -6.27525e-11, cumulative = 7.65651e-05
 smoothSolver:  Solving for k, Initial residual = 0.00311907, Final residual = 2.89078e-08, No Iterations 7
-ExecutionTime = 0.89 s  ClockTime = 0 s
+ExecutionTime = 1.18 s  ClockTime = 1 s
 
 Courant Number mean: 0.272383 max: 0.961538
 deltaT = 0.00192308
@@ -2766,7 +2770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00138688, Final residual = 8.1397
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.98398e-10, global = 4.66585e-11, cumulative = 7.64387e-05
 smoothSolver:  Solving for k, Initial residual = 0.00301298, Final residual = 2.75142e-08, No Iterations 7
-ExecutionTime = 0.9 s  ClockTime = 0 s
+ExecutionTime = 1.19 s  ClockTime = 1 s
 
 Courant Number mean: 0.27243 max: 0.961538
 deltaT = 0.00192308
@@ -2791,7 +2795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00110614, Final residual = 9.6496
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.61431e-10, global = -1.02033e-10, cumulative = 7.66061e-05
 smoothSolver:  Solving for k, Initial residual = 0.00291972, Final residual = 2.68993e-08, No Iterations 7
-ExecutionTime = 0.91 s  ClockTime = 0 s
+ExecutionTime = 1.2 s  ClockTime = 1 s
 
 Courant Number mean: 0.272468 max: 0.961538
 deltaT = 0.00192308
@@ -2816,7 +2820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00148542, Final residual = 7.1805
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.76907e-10, global = -1.01611e-10, cumulative = 7.66095e-05
 smoothSolver:  Solving for k, Initial residual = 0.00283497, Final residual = 2.6859e-08, No Iterations 7
-ExecutionTime = 0.91 s  ClockTime = 0 s
+ExecutionTime = 1.21 s  ClockTime = 1 s
 
 Courant Number mean: 0.272506 max: 0.961538
 deltaT = 0.00192308
@@ -2841,7 +2845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000986993, Final residual = 6.746
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.40417e-10, global = -2.095e-11, cumulative = 7.6668e-05
 smoothSolver:  Solving for k, Initial residual = 0.00275036, Final residual = 2.65633e-08, No Iterations 7
-ExecutionTime = 0.92 s  ClockTime = 0 s
+ExecutionTime = 1.22 s  ClockTime = 1 s
 
 Courant Number mean: 0.272539 max: 0.961538
 deltaT = 0.00192308
@@ -2866,7 +2870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000670878, Final residual = 7.109
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.50368e-10, global = 1.29337e-11, cumulative = 7.66883e-05
 smoothSolver:  Solving for k, Initial residual = 0.00265774, Final residual = 2.47988e-08, No Iterations 7
-ExecutionTime = 0.93 s  ClockTime = 0 s
+ExecutionTime = 1.23 s  ClockTime = 1 s
 
 Courant Number mean: 0.27257 max: 0.961538
 deltaT = 0.00192308
@@ -2891,7 +2895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100924, Final residual = 9.079e
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.33836e-10, global = 8.37975e-11, cumulative = 7.66918e-05
 smoothSolver:  Solving for k, Initial residual = 0.00256902, Final residual = 2.36762e-08, No Iterations 7
-ExecutionTime = 0.94 s  ClockTime = 1 s
+ExecutionTime = 1.24 s  ClockTime = 1 s
 
 Courant Number mean: 0.272604 max: 0.961538
 deltaT = 0.00192308
@@ -2916,7 +2920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000786577, Final residual = 6.708
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.51849e-10, global = -8.21244e-11, cumulative = 7.67074e-05
 smoothSolver:  Solving for k, Initial residual = 0.00248927, Final residual = 2.3242e-08, No Iterations 7
-ExecutionTime = 0.94 s  ClockTime = 1 s
+ExecutionTime = 1.25 s  ClockTime = 1 s
 
 Courant Number mean: 0.272635 max: 0.961538
 deltaT = 0.00192308
@@ -2941,7 +2945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000787665, Final residual = 6.775
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.36065e-10, global = 4.54097e-11, cumulative = 7.67508e-05
 smoothSolver:  Solving for k, Initial residual = 0.00242233, Final residual = 2.37445e-08, No Iterations 7
-ExecutionTime = 0.95 s  ClockTime = 1 s
+ExecutionTime = 1.26 s  ClockTime = 1 s
 
 Courant Number mean: 0.272667 max: 0.961538
 deltaT = 0.00192308
@@ -2966,7 +2970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00115648, Final residual = 7.2461
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.58322e-10, global = -6.65782e-11, cumulative = 7.67502e-05
 smoothSolver:  Solving for k, Initial residual = 0.00234005, Final residual = 2.2223e-08, No Iterations 7
-ExecutionTime = 0.96 s  ClockTime = 1 s
+ExecutionTime = 1.27 s  ClockTime = 1 s
 
 Courant Number mean: 0.2727 max: 0.961538
 deltaT = 0.00192308
@@ -2991,7 +2995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100682, Final residual = 9.1605
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.42129e-10, global = -2.24418e-11, cumulative = 7.68065e-05
 smoothSolver:  Solving for k, Initial residual = 0.00226863, Final residual = 2.2016e-08, No Iterations 7
-ExecutionTime = 0.97 s  ClockTime = 1 s
+ExecutionTime = 1.28 s  ClockTime = 1 s
 
 Courant Number mean: 0.272729 max: 0.961538
 deltaT = 0.00192308
@@ -3016,7 +3020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00104972, Final residual = 7.6537
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.68486e-10, global = 9.46554e-11, cumulative = 7.6836e-05
 smoothSolver:  Solving for k, Initial residual = 0.00220102, Final residual = 2.18045e-08, No Iterations 7
-ExecutionTime = 0.97 s  ClockTime = 1 s
+ExecutionTime = 1.29 s  ClockTime = 1 s
 
 Courant Number mean: 0.272752 max: 0.961538
 deltaT = 0.00192308
@@ -3041,7 +3045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00114636, Final residual = 9.4256
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.37666e-10, global = 6.66613e-11, cumulative = 7.68352e-05
 smoothSolver:  Solving for k, Initial residual = 0.00213546, Final residual = 2.1807e-08, No Iterations 7
-ExecutionTime = 0.98 s  ClockTime = 1 s
+ExecutionTime = 1.3 s  ClockTime = 1 s
 
 Courant Number mean: 0.272778 max: 0.961538
 deltaT = 0.00192308
@@ -3066,7 +3070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000853941, Final residual = 9.019
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.31133e-10, global = 5.29849e-11, cumulative = 7.68506e-05
 smoothSolver:  Solving for k, Initial residual = 0.00205698, Final residual = 9.83143e-08, No Iterations 6
-ExecutionTime = 0.99 s  ClockTime = 1 s
+ExecutionTime = 1.31 s  ClockTime = 1 s
 
 Courant Number mean: 0.2728 max: 0.961538
 deltaT = 0.00192308
@@ -3091,7 +3095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000654979, Final residual = 7.125
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.56825e-10, global = -6.27505e-11, cumulative = 7.68638e-05
 smoothSolver:  Solving for k, Initial residual = 0.00198264, Final residual = 9.30573e-08, No Iterations 6
-ExecutionTime = 1 s  ClockTime = 1 s
+ExecutionTime = 1.32 s  ClockTime = 1 s
 
 Courant Number mean: 0.27282 max: 0.961538
 deltaT = 0.00192308
@@ -3116,7 +3120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00098851, Final residual = 9.1660
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.25684e-10, global = 5.61776e-11, cumulative = 7.68656e-05
 smoothSolver:  Solving for k, Initial residual = 0.00191615, Final residual = 9.04628e-08, No Iterations 6
-ExecutionTime = 1 s  ClockTime = 1 s
+ExecutionTime = 1.33 s  ClockTime = 1 s
 
 Courant Number mean: 0.272845 max: 0.961538
 deltaT = 0.00192308
@@ -3141,7 +3145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00103485, Final residual = 8.0988
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.05259e-10, global = -1.08763e-10, cumulative = 7.69199e-05
 smoothSolver:  Solving for k, Initial residual = 0.00186475, Final residual = 9.18696e-08, No Iterations 6
-ExecutionTime = 1.01 s  ClockTime = 1 s
+ExecutionTime = 1.34 s  ClockTime = 1 s
 
 Courant Number mean: 0.272869 max: 0.961538
 deltaT = 0.00192308
@@ -3166,7 +3170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000889727, Final residual = 8.259
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.03565e-10, global = 6.73669e-11, cumulative = 7.69588e-05
 smoothSolver:  Solving for k, Initial residual = 0.00179895, Final residual = 8.61658e-08, No Iterations 6
-ExecutionTime = 1.02 s  ClockTime = 1 s
+ExecutionTime = 1.35 s  ClockTime = 1 s
 
 Courant Number mean: 0.272888 max: 0.961538
 deltaT = 0.00192308
@@ -3191,7 +3195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120071, Final residual = 9.4374
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.53025e-10, global = 4.9689e-11, cumulative = 7.69505e-05
 smoothSolver:  Solving for k, Initial residual = 0.00174135, Final residual = 8.43087e-08, No Iterations 6
-ExecutionTime = 1.03 s  ClockTime = 1 s
+ExecutionTime = 1.36 s  ClockTime = 1 s
 
 Courant Number mean: 0.272912 max: 0.961538
 deltaT = 0.00192308
@@ -3216,7 +3220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00122738, Final residual = 6.4234
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.20494e-10, global = -4.60071e-11, cumulative = 7.69598e-05
 smoothSolver:  Solving for k, Initial residual = 0.0016894, Final residual = 8.4169e-08, No Iterations 6
-ExecutionTime = 1.03 s  ClockTime = 1 s
+ExecutionTime = 1.37 s  ClockTime = 1 s
 
 Courant Number mean: 0.272928 max: 0.961538
 deltaT = 0.00192308
@@ -3241,7 +3245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000850671, Final residual = 7.163
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.65027e-10, global = 9.46431e-12, cumulative = 7.69866e-05
 smoothSolver:  Solving for k, Initial residual = 0.00163955, Final residual = 8.37918e-08, No Iterations 6
-ExecutionTime = 1.04 s  ClockTime = 1 s
+ExecutionTime = 1.38 s  ClockTime = 1 s
 
 Courant Number mean: 0.272942 max: 0.961538
 deltaT = 0.00192308
@@ -3266,7 +3270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00110147, Final residual = 9.1452
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.28562e-10, global = 7.28414e-11, cumulative = 7.69947e-05
 smoothSolver:  Solving for k, Initial residual = 0.00157639, Final residual = 7.73426e-08, No Iterations 6
-ExecutionTime = 1.05 s  ClockTime = 1 s
+ExecutionTime = 1.39 s  ClockTime = 1 s
 
 Courant Number mean: 0.27296 max: 0.961538
 deltaT = 0.00192308
@@ -3291,7 +3295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000818117, Final residual = 9.001
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.30989e-10, global = 6.62376e-11, cumulative = 7.7012e-05
 smoothSolver:  Solving for k, Initial residual = 0.00151823, Final residual = 7.30625e-08, No Iterations 6
-ExecutionTime = 1.06 s  ClockTime = 1 s
+ExecutionTime = 1.4 s  ClockTime = 1 s
 
 Courant Number mean: 0.272975 max: 0.961538
 deltaT = 0.00192308
@@ -3316,7 +3320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000700552, Final residual = 8.311
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.77655e-10, global = -4.85836e-11, cumulative = 7.70477e-05
 smoothSolver:  Solving for k, Initial residual = 0.00146763, Final residual = 7.09142e-08, No Iterations 6
-ExecutionTime = 1.06 s  ClockTime = 1 s
+ExecutionTime = 1.41 s  ClockTime = 1 s
 
 Courant Number mean: 0.272988 max: 0.961538
 deltaT = 0.00192308
@@ -3341,7 +3345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00125793, Final residual = 8.2119
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.91919e-10, global = 3.77337e-11, cumulative = 7.70448e-05
 smoothSolver:  Solving for k, Initial residual = 0.00143082, Final residual = 7.32833e-08, No Iterations 6
-ExecutionTime = 1.08 s  ClockTime = 1 s
+ExecutionTime = 1.43 s  ClockTime = 1 s
 
 Courant Number mean: 0.273009 max: 0.961538
 deltaT = 0.00192308
@@ -3366,7 +3370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100646, Final residual = 8.8869
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.0933e-10, global = 5.53283e-11, cumulative = 7.70643e-05
 smoothSolver:  Solving for k, Initial residual = 0.00137934, Final residual = 6.84259e-08, No Iterations 6
-ExecutionTime = 1.09 s  ClockTime = 1 s
+ExecutionTime = 1.44 s  ClockTime = 1 s
 
 Courant Number mean: 0.273024 max: 0.961538
 deltaT = 0.00192308
@@ -3391,7 +3395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000915633, Final residual = 7.200
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.45052e-10, global = 6.3588e-11, cumulative = 7.71697e-05
 smoothSolver:  Solving for k, Initial residual = 0.00133565, Final residual = 6.75606e-08, No Iterations 6
-ExecutionTime = 1.09 s  ClockTime = 1 s
+ExecutionTime = 1.45 s  ClockTime = 1 s
 
 Courant Number mean: 0.273036 max: 0.961538
 deltaT = 0.00192308
@@ -3416,7 +3420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00220903, Final residual = 6.7253
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.40568e-10, global = -3.00924e-11, cumulative = 7.69338e-05
 smoothSolver:  Solving for k, Initial residual = 0.00130117, Final residual = 6.79053e-08, No Iterations 6
-ExecutionTime = 1.1 s  ClockTime = 1 s
+ExecutionTime = 1.46 s  ClockTime = 1 s
 
 Courant Number mean: 0.273054 max: 0.961538
 deltaT = 0.00192308
@@ -3441,7 +3445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00109152, Final residual = 7.1625
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.7121e-10, global = -1.14981e-10, cumulative = 7.69957e-05
 smoothSolver:  Solving for k, Initial residual = 0.00126426, Final residual = 6.80127e-08, No Iterations 6
-ExecutionTime = 1.11 s  ClockTime = 1 s
+ExecutionTime = 1.47 s  ClockTime = 1 s
 
 Courant Number mean: 0.273067 max: 0.961538
 deltaT = 0.00192308
@@ -3466,7 +3470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00087244, Final residual = 6.9687
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.53994e-10, global = 4.94581e-11, cumulative = 7.70362e-05
 smoothSolver:  Solving for k, Initial residual = 0.00121109, Final residual = 6.15356e-08, No Iterations 6
-ExecutionTime = 1.12 s  ClockTime = 1 s
+ExecutionTime = 1.48 s  ClockTime = 1 s
 
 Courant Number mean: 0.273076 max: 0.961538
 deltaT = 0.00192308
@@ -3491,7 +3495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00111404, Final residual = 7.9631
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.77954e-10, global = 2.65223e-11, cumulative = 7.7043e-05
 smoothSolver:  Solving for k, Initial residual = 0.00116115, Final residual = 5.79959e-08, No Iterations 6
-ExecutionTime = 1.12 s  ClockTime = 1 s
+ExecutionTime = 1.49 s  ClockTime = 1 s
 
 Courant Number mean: 0.27309 max: 0.961538
 deltaT = 0.00192308
@@ -3516,7 +3520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000803278, Final residual = 9.108
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.19338e-10, global = 3.40159e-11, cumulative = 7.70571e-05
 smoothSolver:  Solving for k, Initial residual = 0.00111856, Final residual = 5.63673e-08, No Iterations 6
-ExecutionTime = 1.13 s  ClockTime = 1 s
+ExecutionTime = 1.5 s  ClockTime = 1 s
 
 Courant Number mean: 0.273101 max: 0.961538
 deltaT = 0.00192308
@@ -3541,7 +3545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000977779, Final residual = 9.009
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.09838e-10, global = 9.84989e-11, cumulative = 7.7154e-05
 smoothSolver:  Solving for k, Initial residual = 0.00109289, Final residual = 5.89578e-08, No Iterations 6
-ExecutionTime = 1.14 s  ClockTime = 1 s
+ExecutionTime = 1.51 s  ClockTime = 1 s
 
 Courant Number mean: 0.273111 max: 0.961538
 deltaT = 0.00192308
@@ -3566,7 +3570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00128042, Final residual = 7.0979
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.52171e-10, global = -8.18735e-11, cumulative = 7.71599e-05
 smoothSolver:  Solving for k, Initial residual = 0.00105101, Final residual = 5.48138e-08, No Iterations 6
-ExecutionTime = 1.15 s  ClockTime = 1 s
+ExecutionTime = 1.52 s  ClockTime = 1 s
 
 Courant Number mean: 0.273125 max: 0.961538
 deltaT = 0.00192308
@@ -3591,7 +3595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100862, Final residual = 8.1390
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01775e-10, global = 1.71238e-11, cumulative = 7.72192e-05
 smoothSolver:  Solving for k, Initial residual = 0.00101663, Final residual = 5.44412e-08, No Iterations 6
-ExecutionTime = 1.15 s  ClockTime = 1 s
+ExecutionTime = 1.53 s  ClockTime = 1 s
 
 Courant Number mean: 0.273135 max: 0.961538
 deltaT = 0.00192308
@@ -3616,7 +3620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00121766, Final residual = 7.7287
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.74838e-10, global = 6.40472e-11, cumulative = 7.72679e-05
 smoothSolver:  Solving for k, Initial residual = 0.000988599, Final residual = 5.51161e-08, No Iterations 6
-ExecutionTime = 1.16 s  ClockTime = 1 s
+ExecutionTime = 1.54 s  ClockTime = 1 s
 
 Courant Number mean: 0.27314 max: 0.961538
 deltaT = 0.00192308
@@ -3641,7 +3645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00124668, Final residual = 9.2268
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.30456e-10, global = 8.23737e-11, cumulative = 7.72766e-05
 smoothSolver:  Solving for k, Initial residual = 0.000959767, Final residual = 5.5833e-08, No Iterations 6
-ExecutionTime = 1.17 s  ClockTime = 1 s
+ExecutionTime = 1.55 s  ClockTime = 1 s
 
 Courant Number mean: 0.273149 max: 0.961538
 deltaT = 0.00192308
@@ -3666,7 +3670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000847919, Final residual = 7.209
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.5763e-10, global = 2.4022e-12, cumulative = 7.7292e-05
 smoothSolver:  Solving for k, Initial residual = 0.000917996, Final residual = 4.97088e-08, No Iterations 6
-ExecutionTime = 1.18 s  ClockTime = 1 s
+ExecutionTime = 1.56 s  ClockTime = 1 s
 
 Courant Number mean: 0.273155 max: 0.961538
 deltaT = 0.00192308
@@ -3691,7 +3695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00080371, Final residual = 7.7459
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.59787e-10, global = 6.94862e-11, cumulative = 7.73286e-05
 smoothSolver:  Solving for k, Initial residual = 0.000880337, Final residual = 4.63141e-08, No Iterations 6
-ExecutionTime = 1.18 s  ClockTime = 1 s
+ExecutionTime = 1.57 s  ClockTime = 1 s
 
 Courant Number mean: 0.273159 max: 0.961538
 deltaT = 0.00192308
@@ -3716,7 +3720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107093, Final residual = 8.9048
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.27945e-10, global = 5.42976e-11, cumulative = 7.7339e-05
 smoothSolver:  Solving for k, Initial residual = 0.000847716, Final residual = 4.51806e-08, No Iterations 6
-ExecutionTime = 1.19 s  ClockTime = 1 s
+ExecutionTime = 1.58 s  ClockTime = 1 s
 
 Courant Number mean: 0.273169 max: 0.961538
 deltaT = 0.00192308
@@ -3741,7 +3745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00103174, Final residual = 8.6685
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.13258e-10, global = -9.22524e-11, cumulative = 7.73957e-05
 smoothSolver:  Solving for k, Initial residual = 0.000830133, Final residual = 4.82197e-08, No Iterations 6
-ExecutionTime = 1.2 s  ClockTime = 1 s
+ExecutionTime = 1.59 s  ClockTime = 1 s
 
 Courant Number mean: 0.273178 max: 0.961538
 deltaT = 0.00192308
@@ -3766,7 +3770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0010138, Final residual = 7.68371
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.83993e-10, global = -3.76378e-11, cumulative = 7.745e-05
 smoothSolver:  Solving for k, Initial residual = 0.000797933, Final residual = 4.43408e-08, No Iterations 6
-ExecutionTime = 1.21 s  ClockTime = 1 s
+ExecutionTime = 1.6 s  ClockTime = 1 s
 
 Courant Number mean: 0.273183 max: 0.961538
 deltaT = 0.00192308
@@ -3791,7 +3795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00127414, Final residual = 9.2399
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.52639e-10, global = 6.29746e-11, cumulative = 7.74471e-05
 smoothSolver:  Solving for k, Initial residual = 0.000770926, Final residual = 4.45044e-08, No Iterations 6
-ExecutionTime = 1.21 s  ClockTime = 1 s
+ExecutionTime = 1.61 s  ClockTime = 1 s
 
 Courant Number mean: 0.273194 max: 0.961538
 deltaT = 0.00192308
@@ -3816,7 +3820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00122509, Final residual = 9.4742
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.55453e-10, global = -2.85362e-11, cumulative = 7.74569e-05
 smoothSolver:  Solving for k, Initial residual = 0.000749808, Final residual = 4.52399e-08, No Iterations 6
-ExecutionTime = 1.22 s  ClockTime = 1 s
+ExecutionTime = 1.62 s  ClockTime = 1 s
 
 Courant Number mean: 0.273197 max: 0.961538
 deltaT = 0.00192308
@@ -3841,7 +3845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000958377, Final residual = 9.377
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.47623e-10, global = -5.23171e-12, cumulative = 7.74964e-05
 smoothSolver:  Solving for k, Initial residual = 0.000728528, Final residual = 4.59473e-08, No Iterations 6
-ExecutionTime = 1.23 s  ClockTime = 1 s
+ExecutionTime = 1.63 s  ClockTime = 1 s
 
 Courant Number mean: 0.273198 max: 0.961538
 deltaT = 0.00192308
@@ -3866,7 +3870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00116721, Final residual = 9.3710
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.27352e-10, global = 3.79018e-11, cumulative = 7.75094e-05
 smoothSolver:  Solving for k, Initial residual = 0.000692704, Final residual = 4.02561e-08, No Iterations 6
-ExecutionTime = 1.24 s  ClockTime = 1 s
+ExecutionTime = 1.64 s  ClockTime = 1 s
 
 Courant Number mean: 0.273205 max: 0.961538
 deltaT = 0.00192308
@@ -3891,7 +3895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000814386, Final residual = 8.636
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.2034e-10, global = 6.2328e-11, cumulative = 7.75264e-05
 smoothSolver:  Solving for k, Initial residual = 0.000660995, Final residual = 3.72937e-08, No Iterations 6
-ExecutionTime = 1.24 s  ClockTime = 1 s
+ExecutionTime = 1.65 s  ClockTime = 1 s
 
 Courant Number mean: 0.273208 max: 0.961538
 deltaT = 0.00192308
@@ -3916,7 +3920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000791724, Final residual = 7.205
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.67971e-10, global = 6.00707e-11, cumulative = 7.75738e-05
 smoothSolver:  Solving for k, Initial residual = 0.000636465, Final residual = 3.62755e-08, No Iterations 6
-ExecutionTime = 1.25 s  ClockTime = 1 s
+ExecutionTime = 1.66 s  ClockTime = 1 s
 
 Courant Number mean: 0.27321 max: 0.961538
 deltaT = 0.00192308
@@ -3941,7 +3945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00130937, Final residual = 8.5656
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.94721e-10, global = 2.80568e-11, cumulative = 7.75761e-05
 smoothSolver:  Solving for k, Initial residual = 0.000625925, Final residual = 3.99534e-08, No Iterations 6
-ExecutionTime = 1.26 s  ClockTime = 1 s
+ExecutionTime = 1.67 s  ClockTime = 1 s
 
 Courant Number mean: 0.273222 max: 0.961538
 deltaT = 0.00192308
@@ -3966,7 +3970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00100391, Final residual = 8.2633
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.02965e-10, global = 2.16427e-11, cumulative = 7.7595e-05
 smoothSolver:  Solving for k, Initial residual = 0.000597933, Final residual = 3.65594e-08, No Iterations 6
-ExecutionTime = 1.27 s  ClockTime = 1 s
+ExecutionTime = 1.68 s  ClockTime = 1 s
 
 Courant Number mean: 0.273227 max: 0.961538
 deltaT = 0.00192308
@@ -3991,7 +3995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00104717, Final residual = 8.8380
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.11589e-10, global = -7.75314e-12, cumulative = 7.7578e-05
 smoothSolver:  Solving for k, Initial residual = 0.000577414, Final residual = 3.69192e-08, No Iterations 6
-ExecutionTime = 1.28 s  ClockTime = 1 s
+ExecutionTime = 1.7 s  ClockTime = 2 s
 
 Courant Number mean: 0.273237 max: 0.961538
 deltaT = 0.00192308
@@ -4016,7 +4020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00117519, Final residual = 6.6912
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.31646e-10, global = 2.88119e-11, cumulative = 7.75893e-05
 smoothSolver:  Solving for k, Initial residual = 0.000562205, Final residual = 3.79686e-08, No Iterations 6
-ExecutionTime = 1.29 s  ClockTime = 1 s
+ExecutionTime = 1.71 s  ClockTime = 2 s
 
 Courant Number mean: 0.27324 max: 0.961538
 deltaT = 0.00192308
@@ -4041,7 +4045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00106789, Final residual = 8.0709
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.02535e-10, global = -2.18894e-11, cumulative = 7.75443e-05
 smoothSolver:  Solving for k, Initial residual = 0.000545466, Final residual = 3.91179e-08, No Iterations 6
-ExecutionTime = 1.29 s  ClockTime = 1 s
+ExecutionTime = 1.72 s  ClockTime = 2 s
 
 Courant Number mean: 0.273244 max: 0.961538
 deltaT = 0.00192308
@@ -4066,7 +4070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000863339, Final residual = 7.368
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.5084e-10, global = -6.08654e-11, cumulative = 7.75437e-05
 smoothSolver:  Solving for k, Initial residual = 0.000516003, Final residual = 3.32535e-08, No Iterations 6
-ExecutionTime = 1.3 s  ClockTime = 1 s
+ExecutionTime = 1.73 s  ClockTime = 2 s
 
 Courant Number mean: 0.273243 max: 0.961538
 deltaT = 0.00192308
@@ -4091,7 +4095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000910951, Final residual = 6.803
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.46728e-10, global = 2.52328e-11, cumulative = 7.75487e-05
 smoothSolver:  Solving for k, Initial residual = 0.000491276, Final residual = 3.06214e-08, No Iterations 6
-ExecutionTime = 1.31 s  ClockTime = 1 s
+ExecutionTime = 1.74 s  ClockTime = 2 s
 
 Courant Number mean: 0.273249 max: 0.961538
 deltaT = 0.00192308
@@ -4116,7 +4120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000749262, Final residual = 7.600
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.7414e-10, global = 3.14817e-11, cumulative = 7.75644e-05
 smoothSolver:  Solving for k, Initial residual = 0.000470397, Final residual = 2.99988e-08, No Iterations 6
-ExecutionTime = 1.32 s  ClockTime = 1 s
+ExecutionTime = 1.75 s  ClockTime = 2 s
 
 Courant Number mean: 0.273252 max: 0.961538
 deltaT = 0.00192308
@@ -4141,7 +4145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108231, Final residual = 7.5632
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.70221e-10, global = -8.40365e-12, cumulative = 7.75518e-05
 smoothSolver:  Solving for k, Initial residual = 0.000463731, Final residual = 3.3572e-08, No Iterations 6
-ExecutionTime = 1.33 s  ClockTime = 1 s
+ExecutionTime = 1.77 s  ClockTime = 2 s
 
 Courant Number mean: 0.27326 max: 0.961538
 deltaT = 0.00192308
@@ -4166,7 +4170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00104279, Final residual = 7.7409
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.50694e-10, global = -6.84602e-11, cumulative = 7.75417e-05
 smoothSolver:  Solving for k, Initial residual = 0.000442641, Final residual = 3.03697e-08, No Iterations 6
-ExecutionTime = 1.33 s  ClockTime = 1 s
+ExecutionTime = 1.78 s  ClockTime = 2 s
 
 Courant Number mean: 0.273261 max: 0.961538
 deltaT = 0.00192308
@@ -4191,7 +4195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00109641, Final residual = 8.0394
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.1373e-10, global = 4.25072e-11, cumulative = 7.75318e-05
 smoothSolver:  Solving for k, Initial residual = 0.000429342, Final residual = 3.09315e-08, No Iterations 6
-ExecutionTime = 1.34 s  ClockTime = 1 s
+ExecutionTime = 1.79 s  ClockTime = 2 s
 
 Courant Number mean: 0.273268 max: 0.961538
 deltaT = 0.00192308
@@ -4216,7 +4220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0012007, Final residual = 9.74472
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.47773e-10, global = -2.7934e-11, cumulative = 7.75412e-05
 smoothSolver:  Solving for k, Initial residual = 0.000417665, Final residual = 3.22182e-08, No Iterations 6
-ExecutionTime = 1.35 s  ClockTime = 1 s
+ExecutionTime = 1.8 s  ClockTime = 2 s
 
 Courant Number mean: 0.273269 max: 0.961538
 deltaT = 0.00192308
@@ -4241,7 +4245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107315, Final residual = 9.4454
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.25818e-10, global = -2.83234e-11, cumulative = 7.74898e-05
 smoothSolver:  Solving for k, Initial residual = 0.000406962, Final residual = 3.36282e-08, No Iterations 6
-ExecutionTime = 1.36 s  ClockTime = 1 s
+ExecutionTime = 1.81 s  ClockTime = 2 s
 
 Courant Number mean: 0.273272 max: 0.961538
 deltaT = 0.00192308
@@ -4266,7 +4270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000893685, Final residual = 7.808
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.83962e-10, global = -6.22378e-11, cumulative = 7.74849e-05
 smoothSolver:  Solving for k, Initial residual = 0.000381274, Final residual = 2.79883e-08, No Iterations 6
-ExecutionTime = 1.36 s  ClockTime = 1 s
+ExecutionTime = 1.82 s  ClockTime = 2 s
 
 Courant Number mean: 0.273269 max: 0.961538
 deltaT = 0.00192308
@@ -4291,7 +4295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000941134, Final residual = 7.176
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.79203e-10, global = 4.88683e-11, cumulative = 7.74946e-05
 smoothSolver:  Solving for k, Initial residual = 0.000363638, Final residual = 2.55456e-08, No Iterations 6
-ExecutionTime = 1.37 s  ClockTime = 1 s
+ExecutionTime = 1.83 s  ClockTime = 2 s
 
 Courant Number mean: 0.273273 max: 0.961538
 deltaT = 0.00192308
@@ -4316,7 +4320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753142, Final residual = 7.748
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.68343e-10, global = 3.60393e-11, cumulative = 7.75102e-05
 smoothSolver:  Solving for k, Initial residual = 0.00034794, Final residual = 2.51625e-08, No Iterations 6
-ExecutionTime = 1.38 s  ClockTime = 1 s
+ExecutionTime = 1.84 s  ClockTime = 2 s
 
 Courant Number mean: 0.273275 max: 0.961538
 deltaT = 0.00192308
@@ -4341,7 +4345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108478, Final residual = 7.6207
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.61644e-10, global = -1.62478e-11, cumulative = 7.74976e-05
 smoothSolver:  Solving for k, Initial residual = 0.000345983, Final residual = 2.89049e-08, No Iterations 6
-ExecutionTime = 1.39 s  ClockTime = 1 s
+ExecutionTime = 1.85 s  ClockTime = 2 s
 
 Courant Number mean: 0.273283 max: 0.961538
 deltaT = 0.00192308
@@ -4366,7 +4370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00106107, Final residual = 8.0144
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.81556e-10, global = -9.70551e-11, cumulative = 7.74842e-05
 smoothSolver:  Solving for k, Initial residual = 0.000328756, Final residual = 2.59465e-08, No Iterations 6
-ExecutionTime = 1.39 s  ClockTime = 1 s
+ExecutionTime = 1.86 s  ClockTime = 2 s
 
 Courant Number mean: 0.273282 max: 0.961538
 deltaT = 0.00192308
@@ -4391,7 +4395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00111168, Final residual = 8.1654
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.88465e-10, global = 5.84501e-11, cumulative = 7.74758e-05
 smoothSolver:  Solving for k, Initial residual = 0.000320975, Final residual = 2.66799e-08, No Iterations 6
-ExecutionTime = 1.4 s  ClockTime = 1 s
+ExecutionTime = 1.87 s  ClockTime = 2 s
 
 Courant Number mean: 0.273288 max: 0.961538
 deltaT = 0.00192308
@@ -4416,7 +4420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120264, Final residual = 9.7513
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.52125e-10, global = 1.84928e-11, cumulative = 7.74852e-05
 smoothSolver:  Solving for k, Initial residual = 0.000315452, Final residual = 2.81412e-08, No Iterations 6
-ExecutionTime = 1.41 s  ClockTime = 1 s
+ExecutionTime = 1.88 s  ClockTime = 2 s
 
 Courant Number mean: 0.273288 max: 0.961538
 deltaT = 0.00192308
@@ -4441,7 +4445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107477, Final residual = 6.5974
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.41433e-10, global = 4.00005e-11, cumulative = 7.74328e-05
 smoothSolver:  Solving for k, Initial residual = 0.000307094, Final residual = 2.97219e-08, No Iterations 6
-ExecutionTime = 1.42 s  ClockTime = 1 s
+ExecutionTime = 1.89 s  ClockTime = 2 s
 
 Courant Number mean: 0.27329 max: 0.961538
 deltaT = 0.00192308
@@ -4466,7 +4470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000904256, Final residual = 8.437
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.17626e-10, global = -4.50443e-11, cumulative = 7.74267e-05
 smoothSolver:  Solving for k, Initial residual = 0.000284873, Final residual = 2.42522e-08, No Iterations 6
-ExecutionTime = 1.42 s  ClockTime = 1 s
+ExecutionTime = 1.9 s  ClockTime = 2 s
 
 Courant Number mean: 0.273286 max: 0.961538
 deltaT = 0.00192308
@@ -4491,7 +4495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000949703, Final residual = 7.579
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.61886e-10, global = 4.60751e-11, cumulative = 7.74378e-05
 smoothSolver:  Solving for k, Initial residual = 0.000271084, Final residual = 9.60614e-08, No Iterations 5
-ExecutionTime = 1.43 s  ClockTime = 1 s
+ExecutionTime = 1.91 s  ClockTime = 2 s
 
 Courant Number mean: 0.273289 max: 0.961538
 deltaT = 0.00192308
@@ -4516,7 +4520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753642, Final residual = 7.126
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.61214e-10, global = -4.65494e-12, cumulative = 7.74534e-05
 smoothSolver:  Solving for k, Initial residual = 0.00026124, Final residual = 9.37175e-08, No Iterations 5
-ExecutionTime = 1.44 s  ClockTime = 1 s
+ExecutionTime = 1.92 s  ClockTime = 2 s
 
 Courant Number mean: 0.27329 max: 0.961538
 deltaT = 0.00192308
@@ -4541,7 +4545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108525, Final residual = 7.6088
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.55016e-10, global = -1.8627e-11, cumulative = 7.74407e-05
 smoothSolver:  Solving for k, Initial residual = 0.000260266, Final residual = 2.55618e-08, No Iterations 6
-ExecutionTime = 1.45 s  ClockTime = 1 s
+ExecutionTime = 1.93 s  ClockTime = 2 s
 
 Courant Number mean: 0.273298 max: 0.961538
 deltaT = 0.00192308
@@ -4566,7 +4570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00106923, Final residual = 8.4305
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.2999e-10, global = -1.00673e-10, cumulative = 7.74262e-05
 smoothSolver:  Solving for k, Initial residual = 0.000245856, Final residual = 9.70673e-08, No Iterations 5
-ExecutionTime = 1.45 s  ClockTime = 1 s
+ExecutionTime = 1.94 s  ClockTime = 2 s
 
 Courant Number mean: 0.273296 max: 0.961538
 deltaT = 0.00192308
@@ -4591,7 +4595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00111756, Final residual = 8.5694
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.27262e-10, global = 4.35708e-11, cumulative = 7.74184e-05
 smoothSolver:  Solving for k, Initial residual = 0.000241407, Final residual = 9.96529e-08, No Iterations 5
-ExecutionTime = 1.46 s  ClockTime = 1 s
+ExecutionTime = 1.95 s  ClockTime = 2 s
 
 Courant Number mean: 0.273301 max: 0.961538
 deltaT = 0.00192308
@@ -4616,7 +4620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0012036, Final residual = 9.00644
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.44288e-10, global = -1.70195e-11, cumulative = 7.74277e-05
 smoothSolver:  Solving for k, Initial residual = 0.000241123, Final residual = 2.52198e-08, No Iterations 6
-ExecutionTime = 1.47 s  ClockTime = 1 s
+ExecutionTime = 1.96 s  ClockTime = 2 s
 
 Courant Number mean: 0.2733 max: 0.961538
 deltaT = 0.00192308
@@ -4641,7 +4645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107538, Final residual = 6.4067
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.43062e-10, global = 4.90981e-11, cumulative = 7.73747e-05
 smoothSolver:  Solving for k, Initial residual = 0.000233386, Final residual = 2.69446e-08, No Iterations 6
-ExecutionTime = 1.48 s  ClockTime = 1 s
+ExecutionTime = 1.98 s  ClockTime = 2 s
 
 Courant Number mean: 0.273302 max: 0.961538
 deltaT = 0.002
@@ -4666,7 +4670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000936087, Final residual = 8.297
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.12677e-10, global = -6.77661e-11, cumulative = 7.73559e-05
 smoothSolver:  Solving for k, Initial residual = 0.000222069, Final residual = 2.65322e-08, No Iterations 6
-ExecutionTime = 1.49 s  ClockTime = 1 s
+ExecutionTime = 1.99 s  ClockTime = 2 s
 
 Courant Number mean: 0.284229 max: 1
 deltaT = 0.00192
@@ -4691,7 +4695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000955215, Final residual = 7.210
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.45778e-10, global = 2.98521e-11, cumulative = 7.73783e-05
 smoothSolver:  Solving for k, Initial residual = 0.000202175, Final residual = 8.13941e-08, No Iterations 5
-ExecutionTime = 1.5 s  ClockTime = 1 s
+ExecutionTime = 2 s  ClockTime = 2 s
 
 Courant Number mean: 0.272863 max: 0.96
 deltaT = 0.00192
@@ -4716,7 +4720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000754089, Final residual = 8.135
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.79235e-10, global = 1.40095e-11, cumulative = 7.73935e-05
 smoothSolver:  Solving for k, Initial residual = 0.000197073, Final residual = 8.02897e-08, No Iterations 5
-ExecutionTime = 1.5 s  ClockTime = 1 s
+ExecutionTime = 2.01 s  ClockTime = 2 s
 
 Courant Number mean: 0.272864 max: 0.96
 deltaT = 0.00192
@@ -4741,7 +4745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108248, Final residual = 7.1261
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.69619e-10, global = -4.99933e-11, cumulative = 7.73807e-05
 smoothSolver:  Solving for k, Initial residual = 0.000197284, Final residual = 9.41067e-08, No Iterations 5
-ExecutionTime = 1.51 s  ClockTime = 1 s
+ExecutionTime = 2.02 s  ClockTime = 2 s
 
 Courant Number mean: 0.27287 max: 0.96
 deltaT = 0.00192
@@ -4766,7 +4770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107205, Final residual = 7.8504
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.03458e-10, global = -7.7851e-11, cumulative = 7.73655e-05
 smoothSolver:  Solving for k, Initial residual = 0.00018547, Final residual = 8.46135e-08, No Iterations 5
-ExecutionTime = 1.52 s  ClockTime = 1 s
+ExecutionTime = 2.03 s  ClockTime = 2 s
 
 Courant Number mean: 0.272868 max: 0.96
 deltaT = 0.00192
@@ -4791,7 +4795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00111625, Final residual = 8.6361
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.31616e-10, global = 5.37588e-11, cumulative = 7.73581e-05
 smoothSolver:  Solving for k, Initial residual = 0.000183687, Final residual = 8.83187e-08, No Iterations 5
-ExecutionTime = 1.53 s  ClockTime = 1 s
+ExecutionTime = 2.04 s  ClockTime = 2 s
 
 Courant Number mean: 0.272873 max: 0.96
 deltaT = 0.00192
@@ -4816,7 +4820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120454, Final residual = 9.6829
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.50322e-10, global = -8.5883e-12, cumulative = 7.73674e-05
 smoothSolver:  Solving for k, Initial residual = 0.000187385, Final residual = 9.42994e-08, No Iterations 5
-ExecutionTime = 1.53 s  ClockTime = 1 s
+ExecutionTime = 2.05 s  ClockTime = 2 s
 
 Courant Number mean: 0.272871 max: 0.96
 deltaT = 0.00192
@@ -4841,7 +4845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107594, Final residual = 6.6463
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.42257e-10, global = 5.24232e-11, cumulative = 7.73143e-05
 smoothSolver:  Solving for k, Initial residual = 0.000181217, Final residual = 2.49557e-08, No Iterations 6
-ExecutionTime = 1.54 s  ClockTime = 1 s
+ExecutionTime = 2.06 s  ClockTime = 2 s
 
 Courant Number mean: 0.272873 max: 0.96
 deltaT = 0.00192
@@ -4866,7 +4870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000913165, Final residual = 8.406
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.91383e-10, global = -4.59014e-11, cumulative = 7.73073e-05
 smoothSolver:  Solving for k, Initial residual = 0.000163607, Final residual = 8.11288e-08, No Iterations 5
-ExecutionTime = 1.55 s  ClockTime = 1 s
+ExecutionTime = 2.07 s  ClockTime = 2 s
 
 Courant Number mean: 0.272868 max: 0.96
 deltaT = 0.00192
@@ -4891,7 +4895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000953696, Final residual = 7.506
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.70723e-10, global = 6.15013e-11, cumulative = 7.73195e-05
 smoothSolver:  Solving for k, Initial residual = 0.000154881, Final residual = 7.34539e-08, No Iterations 5
-ExecutionTime = 1.56 s  ClockTime = 1 s
+ExecutionTime = 2.08 s  ClockTime = 2 s
 
 Courant Number mean: 0.27287 max: 0.96
 deltaT = 0.00192
@@ -4916,7 +4920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000754902, Final residual = 7.840
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.66968e-10, global = 3.13829e-11, cumulative = 7.73351e-05
 smoothSolver:  Solving for k, Initial residual = 0.000152091, Final residual = 7.1337e-08, No Iterations 5
-ExecutionTime = 1.56 s  ClockTime = 1 s
+ExecutionTime = 2.09 s  ClockTime = 2 s
 
 Courant Number mean: 0.27287 max: 0.96
 deltaT = 0.00192
@@ -4941,7 +4945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108257, Final residual = 7.7739
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.8174e-10, global = -1.63131e-11, cumulative = 7.73224e-05
 smoothSolver:  Solving for k, Initial residual = 0.000153394, Final residual = 8.56121e-08, No Iterations 5
-ExecutionTime = 1.57 s  ClockTime = 1 s
+ExecutionTime = 2.1 s  ClockTime = 2 s
 
 Courant Number mean: 0.272877 max: 0.96
 deltaT = 0.00192
@@ -4966,7 +4970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107501, Final residual = 8.3505
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.1151e-10, global = -9.68519e-11, cumulative = 7.73069e-05
 smoothSolver:  Solving for k, Initial residual = 0.000142963, Final residual = 7.63774e-08, No Iterations 5
-ExecutionTime = 1.58 s  ClockTime = 1 s
+ExecutionTime = 2.11 s  ClockTime = 2 s
 
 Courant Number mean: 0.272874 max: 0.96
 deltaT = 0.00192
@@ -4991,7 +4995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00111941, Final residual = 8.0140
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.04479e-10, global = 5.31494e-11, cumulative = 7.72999e-05
 smoothSolver:  Solving for k, Initial residual = 0.000142839, Final residual = 8.01246e-08, No Iterations 5
-ExecutionTime = 1.59 s  ClockTime = 1 s
+ExecutionTime = 2.12 s  ClockTime = 2 s
 
 Courant Number mean: 0.272879 max: 0.96
 deltaT = 0.00192
@@ -5016,7 +5020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120229, Final residual = 9.8379
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.42995e-10, global = 1.75488e-11, cumulative = 7.73092e-05
 smoothSolver:  Solving for k, Initial residual = 0.00014817, Final residual = 8.62617e-08, No Iterations 5
-ExecutionTime = 1.59 s  ClockTime = 1 s
+ExecutionTime = 2.13 s  ClockTime = 2 s
 
 Courant Number mean: 0.272877 max: 0.96
 deltaT = 0.00192
@@ -5041,7 +5045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107496, Final residual = 6.4453
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.18558e-10, global = 5.49901e-11, cumulative = 7.72558e-05
 smoothSolver:  Solving for k, Initial residual = 0.000143343, Final residual = 9.27302e-08, No Iterations 5
-ExecutionTime = 1.6 s  ClockTime = 1 s
+ExecutionTime = 2.14 s  ClockTime = 2 s
 
 Courant Number mean: 0.272878 max: 0.96
 deltaT = 0.00192
@@ -5066,7 +5070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000914707, Final residual = 8.340
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.21164e-10, global = -5.85991e-11, cumulative = 7.72486e-05
 smoothSolver:  Solving for k, Initial residual = 0.000126976, Final residual = 7.38058e-08, No Iterations 5
-ExecutionTime = 1.61 s  ClockTime = 1 s
+ExecutionTime = 2.15 s  ClockTime = 2 s
 
 Courant Number mean: 0.272873 max: 0.96
 deltaT = 0.00192
@@ -5091,7 +5095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000956385, Final residual = 7.871
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.87768e-10, global = 4.51337e-11, cumulative = 7.72612e-05
 smoothSolver:  Solving for k, Initial residual = 0.000120554, Final residual = 6.67464e-08, No Iterations 5
-ExecutionTime = 1.62 s  ClockTime = 1 s
+ExecutionTime = 2.16 s  ClockTime = 2 s
 
 Courant Number mean: 0.272875 max: 0.96
 deltaT = 0.00192
@@ -5116,7 +5120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753703, Final residual = 7.195
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.64312e-10, global = 2.72661e-11, cumulative = 7.72768e-05
 smoothSolver:  Solving for k, Initial residual = 0.000119588, Final residual = 6.52771e-08, No Iterations 5
-ExecutionTime = 1.62 s  ClockTime = 1 s
+ExecutionTime = 2.17 s  ClockTime = 2 s
 
 Courant Number mean: 0.272875 max: 0.96
 deltaT = 0.00192
@@ -5141,7 +5145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0010836, Final residual = 7.32386
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.72436e-10, global = -5.37562e-12, cumulative = 7.72641e-05
 smoothSolver:  Solving for k, Initial residual = 0.000122273, Final residual = 7.99996e-08, No Iterations 5
-ExecutionTime = 1.63 s  ClockTime = 1 s
+ExecutionTime = 2.18 s  ClockTime = 2 s
 
 Courant Number mean: 0.272881 max: 0.96
 deltaT = 0.00192
@@ -5166,7 +5170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107632, Final residual = 8.3965
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.10847e-10, global = -8.75385e-11, cumulative = 7.72485e-05
 smoothSolver:  Solving for k, Initial residual = 0.000113099, Final residual = 7.10744e-08, No Iterations 5
-ExecutionTime = 1.64 s  ClockTime = 1 s
+ExecutionTime = 2.19 s  ClockTime = 2 s
 
 Courant Number mean: 0.272879 max: 0.96
 deltaT = 0.00192
@@ -5191,7 +5195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112204, Final residual = 8.9074
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.26676e-10, global = 6.77008e-11, cumulative = 7.72415e-05
 smoothSolver:  Solving for k, Initial residual = 0.000114938, Final residual = 7.52402e-08, No Iterations 5
-ExecutionTime = 1.65 s  ClockTime = 1 s
+ExecutionTime = 2.2 s  ClockTime = 2 s
 
 Courant Number mean: 0.272883 max: 0.96
 deltaT = 0.00192
@@ -5216,7 +5220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120314, Final residual = 6.4360
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.07262e-10, global = -2.03108e-11, cumulative = 7.72508e-05
 smoothSolver:  Solving for k, Initial residual = 0.000122215, Final residual = 8.18135e-08, No Iterations 5
-ExecutionTime = 1.65 s  ClockTime = 1 s
+ExecutionTime = 2.21 s  ClockTime = 2 s
 
 Courant Number mean: 0.272881 max: 0.96
 deltaT = 0.00192
@@ -5241,7 +5245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107474, Final residual = 6.9709
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.64306e-10, global = 5.03254e-11, cumulative = 7.71974e-05
 smoothSolver:  Solving for k, Initial residual = 0.000117695, Final residual = 8.85742e-08, No Iterations 5
-ExecutionTime = 1.66 s  ClockTime = 1 s
+ExecutionTime = 2.22 s  ClockTime = 2 s
 
 Courant Number mean: 0.272882 max: 0.96
 deltaT = 0.00192
@@ -5266,7 +5270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000915994, Final residual = 7.984
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.99098e-10, global = -5.66006e-11, cumulative = 7.71901e-05
 smoothSolver:  Solving for k, Initial residual = 0.000102575, Final residual = 6.97104e-08, No Iterations 5
-ExecutionTime = 1.67 s  ClockTime = 1 s
+ExecutionTime = 2.23 s  ClockTime = 2 s
 
 Courant Number mean: 0.272877 max: 0.96
 deltaT = 0.00192
@@ -5291,7 +5295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000957736, Final residual = 7.611
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.36439e-10, global = 5.56531e-11, cumulative = 7.72027e-05
 smoothSolver:  Solving for k, Initial residual = 9.75268e-05, Final residual = 6.29263e-08, No Iterations 5
-ExecutionTime = 1.68 s  ClockTime = 1 s
+ExecutionTime = 2.25 s  ClockTime = 2 s
 
 Courant Number mean: 0.272879 max: 0.96
 deltaT = 0.00192308
@@ -5316,7 +5320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000754142, Final residual = 7.765
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.73656e-10, global = 3.20343e-11, cumulative = 7.72183e-05
 smoothSolver:  Solving for k, Initial residual = 9.88435e-05, Final residual = 6.22761e-08, No Iterations 5
-ExecutionTime = 1.69 s  ClockTime = 1 s
+ExecutionTime = 2.26 s  ClockTime = 2 s
 
 Courant Number mean: 0.273316 max: 0.961538
 deltaT = 0.00192308
@@ -5341,7 +5345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108515, Final residual = 7.1286
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.59628e-10, global = -9.94076e-12, cumulative = 7.72056e-05
 smoothSolver:  Solving for k, Initial residual = 0.000101176, Final residual = 7.703e-08, No Iterations 5
-ExecutionTime = 1.7 s  ClockTime = 1 s
+ExecutionTime = 2.27 s  ClockTime = 2 s
 
 Courant Number mean: 0.273322 max: 0.961538
 deltaT = 0.00192308
@@ -5366,7 +5370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107843, Final residual = 8.3204
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.077e-10, global = -8.33296e-11, cumulative = 7.71899e-05
 smoothSolver:  Solving for k, Initial residual = 9.3211e-05, Final residual = 6.81369e-08, No Iterations 5
-ExecutionTime = 1.71 s  ClockTime = 1 s
+ExecutionTime = 2.28 s  ClockTime = 2 s
 
 Courant Number mean: 0.273319 max: 0.961538
 deltaT = 0.00192308
@@ -5391,7 +5395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112487, Final residual = 7.9182
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.9302e-10, global = 4.01311e-11, cumulative = 7.71829e-05
 smoothSolver:  Solving for k, Initial residual = 9.60548e-05, Final residual = 7.23076e-08, No Iterations 5
-ExecutionTime = 1.71 s  ClockTime = 1 s
+ExecutionTime = 2.29 s  ClockTime = 2 s
 
 Courant Number mean: 0.273323 max: 0.961538
 deltaT = 0.00192308
@@ -5416,7 +5420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120523, Final residual = 9.7107
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.58659e-10, global = -3.07781e-12, cumulative = 7.71922e-05
 smoothSolver:  Solving for k, Initial residual = 0.000105273, Final residual = 7.93725e-08, No Iterations 5
-ExecutionTime = 1.72 s  ClockTime = 1 s
+ExecutionTime = 2.3 s  ClockTime = 2 s
 
 Courant Number mean: 0.273322 max: 0.961538
 deltaT = 0.00192308
@@ -5441,7 +5445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107556, Final residual = 6.5135
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.41709e-10, global = 6.88395e-11, cumulative = 7.71387e-05
 smoothSolver:  Solving for k, Initial residual = 0.000100464, Final residual = 8.62276e-08, No Iterations 5
-ExecutionTime = 1.73 s  ClockTime = 1 s
+ExecutionTime = 2.31 s  ClockTime = 2 s
 
 Courant Number mean: 0.273323 max: 0.961538
 deltaT = 0.00192308
@@ -5466,7 +5470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00091743, Final residual = 8.7838
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.95518e-10, global = -6.31031e-11, cumulative = 7.71313e-05
 smoothSolver:  Solving for k, Initial residual = 8.66473e-05, Final residual = 6.73885e-08, No Iterations 5
-ExecutionTime = 1.74 s  ClockTime = 1 s
+ExecutionTime = 2.32 s  ClockTime = 2 s
 
 Courant Number mean: 0.273317 max: 0.961538
 deltaT = 0.00192308
@@ -5491,7 +5495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000959448, Final residual = 8.014
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.83226e-10, global = 5.23047e-11, cumulative = 7.71441e-05
 smoothSolver:  Solving for k, Initial residual = 8.23583e-05, Final residual = 6.07506e-08, No Iterations 5
-ExecutionTime = 1.74 s  ClockTime = 1 s
+ExecutionTime = 2.33 s  ClockTime = 2 s
 
 Courant Number mean: 0.273319 max: 0.961538
 deltaT = 0.00192308
@@ -5516,7 +5520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753758, Final residual = 7.364
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.52292e-10, global = 2.16204e-11, cumulative = 7.71596e-05
 smoothSolver:  Solving for k, Initial residual = 8.5089e-05, Final residual = 6.02443e-08, No Iterations 5
-ExecutionTime = 1.75 s  ClockTime = 1 s
+ExecutionTime = 2.34 s  ClockTime = 2 s
 
 Courant Number mean: 0.273319 max: 0.961538
 deltaT = 0.00192308
@@ -5541,7 +5545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108522, Final residual = 7.6752
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.6927e-10, global = -2.90796e-12, cumulative = 7.7147e-05
 smoothSolver:  Solving for k, Initial residual = 8.71986e-05, Final residual = 7.47796e-08, No Iterations 5
-ExecutionTime = 1.76 s  ClockTime = 1 s
+ExecutionTime = 2.35 s  ClockTime = 2 s
 
 Courant Number mean: 0.273325 max: 0.961538
 deltaT = 0.00192308
@@ -5566,7 +5570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0010789, Final residual = 7.93878
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.05538e-10, global = -8.50771e-11, cumulative = 7.71311e-05
 smoothSolver:  Solving for k, Initial residual = 8.04552e-05, Final residual = 6.61409e-08, No Iterations 5
-ExecutionTime = 1.77 s  ClockTime = 1 s
+ExecutionTime = 2.36 s  ClockTime = 2 s
 
 Courant Number mean: 0.273322 max: 0.961538
 deltaT = 0.00192308
@@ -5591,7 +5595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112541, Final residual = 8.5306
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.187e-10, global = 6.91529e-11, cumulative = 7.71247e-05
 smoothSolver:  Solving for k, Initial residual = 8.42979e-05, Final residual = 7.03425e-08, No Iterations 5
-ExecutionTime = 1.77 s  ClockTime = 1 s
+ExecutionTime = 2.37 s  ClockTime = 2 s
 
 Courant Number mean: 0.273326 max: 0.961538
 deltaT = 0.00192308
@@ -5616,7 +5620,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120629, Final residual = 9.8664
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.65549e-10, global = -1.02015e-11, cumulative = 7.71343e-05
 smoothSolver:  Solving for k, Initial residual = 9.41593e-05, Final residual = 7.77113e-08, No Iterations 5
-ExecutionTime = 1.78 s  ClockTime = 1 s
+ExecutionTime = 2.38 s  ClockTime = 2 s
 
 Courant Number mean: 0.273324 max: 0.961538
 deltaT = 0.00192308
@@ -5641,7 +5645,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107571, Final residual = 6.8724
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.50031e-10, global = 6.3274e-11, cumulative = 7.70808e-05
 smoothSolver:  Solving for k, Initial residual = 8.93591e-05, Final residual = 8.43903e-08, No Iterations 5
-ExecutionTime = 1.79 s  ClockTime = 1 s
+ExecutionTime = 2.39 s  ClockTime = 2 s
 
 Courant Number mean: 0.273325 max: 0.961538
 deltaT = 0.00192308
@@ -5666,7 +5670,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000918022, Final residual = 8.463
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.02359e-10, global = -6.93603e-11, cumulative = 7.70733e-05
 smoothSolver:  Solving for k, Initial residual = 7.6371e-05, Final residual = 6.56493e-08, No Iterations 5
-ExecutionTime = 1.8 s  ClockTime = 1 s
+ExecutionTime = 2.4 s  ClockTime = 2 s
 
 Courant Number mean: 0.27332 max: 0.961538
 deltaT = 0.00192308
@@ -5691,7 +5695,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000959782, Final residual = 7.954
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.92325e-10, global = 3.79272e-11, cumulative = 7.70861e-05
 smoothSolver:  Solving for k, Initial residual = 7.32456e-05, Final residual = 5.91485e-08, No Iterations 5
-ExecutionTime = 1.8 s  ClockTime = 1 s
+ExecutionTime = 2.41 s  ClockTime = 2 s
 
 Courant Number mean: 0.273322 max: 0.961538
 deltaT = 0.00192308
@@ -5716,7 +5720,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753736, Final residual = 7.406
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.51487e-10, global = 1.74e-11, cumulative = 7.71017e-05
 smoothSolver:  Solving for k, Initial residual = 7.62024e-05, Final residual = 5.89069e-08, No Iterations 5
-ExecutionTime = 1.81 s  ClockTime = 1 s
+ExecutionTime = 2.42 s  ClockTime = 2 s
 
 Courant Number mean: 0.273321 max: 0.961538
 deltaT = 0.00192308
@@ -5741,7 +5745,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108508, Final residual = 7.0566
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.58327e-10, global = -2.42889e-11, cumulative = 7.70891e-05
 smoothSolver:  Solving for k, Initial residual = 7.83823e-05, Final residual = 7.33522e-08, No Iterations 5
-ExecutionTime = 1.82 s  ClockTime = 1 s
+ExecutionTime = 2.43 s  ClockTime = 2 s
 
 Courant Number mean: 0.273327 max: 0.961538
 deltaT = 0.00192308
@@ -5766,7 +5770,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0010792, Final residual = 8.07507
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.92311e-10, global = -7.79629e-11, cumulative = 7.70732e-05
 smoothSolver:  Solving for k, Initial residual = 7.2313e-05, Final residual = 6.48807e-08, No Iterations 5
-ExecutionTime = 1.83 s  ClockTime = 1 s
+ExecutionTime = 2.44 s  ClockTime = 2 s
 
 Courant Number mean: 0.273324 max: 0.961538
 deltaT = 0.00192308
@@ -5791,7 +5795,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112534, Final residual = 8.6051
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.03526e-10, global = 3.76041e-11, cumulative = 7.70662e-05
 smoothSolver:  Solving for k, Initial residual = 7.69584e-05, Final residual = 6.90103e-08, No Iterations 5
-ExecutionTime = 1.83 s  ClockTime = 1 s
+ExecutionTime = 2.45 s  ClockTime = 2 s
 
 Courant Number mean: 0.273328 max: 0.961538
 deltaT = 0.00192308
@@ -5816,7 +5820,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120561, Final residual = 9.1356
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.50641e-10, global = -3.06079e-11, cumulative = 7.70755e-05
 smoothSolver:  Solving for k, Initial residual = 8.72633e-05, Final residual = 7.65481e-08, No Iterations 5
-ExecutionTime = 1.84 s  ClockTime = 1 s
+ExecutionTime = 2.46 s  ClockTime = 2 s
 
 Courant Number mean: 0.273326 max: 0.961538
 deltaT = 0.00192308
@@ -5841,7 +5845,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107578, Final residual = 6.8452
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.45105e-10, global = 5.6774e-11, cumulative = 7.70219e-05
 smoothSolver:  Solving for k, Initial residual = 8.23899e-05, Final residual = 8.31318e-08, No Iterations 5
-ExecutionTime = 1.85 s  ClockTime = 1 s
+ExecutionTime = 2.47 s  ClockTime = 2 s
 
 Courant Number mean: 0.273327 max: 0.961538
 deltaT = 0.00192308
@@ -5866,7 +5870,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000918278, Final residual = 8.359
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.12338e-10, global = -5.47601e-11, cumulative = 7.70145e-05
 smoothSolver:  Solving for k, Initial residual = 6.98283e-05, Final residual = 6.45252e-08, No Iterations 5
-ExecutionTime = 1.85 s  ClockTime = 1 s
+ExecutionTime = 2.48 s  ClockTime = 2 s
 
 Courant Number mean: 0.273322 max: 0.961538
 deltaT = 0.00192308
@@ -5891,7 +5895,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00095998, Final residual = 7.4621
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.66461e-10, global = 5.51854e-11, cumulative = 7.70272e-05
 smoothSolver:  Solving for k, Initial residual = 6.74453e-05, Final residual = 5.80518e-08, No Iterations 5
-ExecutionTime = 1.86 s  ClockTime = 1 s
+ExecutionTime = 2.49 s  ClockTime = 2 s
 
 Courant Number mean: 0.273323 max: 0.961538
 deltaT = 0.00192308
@@ -5916,7 +5920,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753757, Final residual = 7.521
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.69369e-10, global = 1.3872e-11, cumulative = 7.70428e-05
 smoothSolver:  Solving for k, Initial residual = 7.09086e-05, Final residual = 5.80122e-08, No Iterations 5
-ExecutionTime = 1.87 s  ClockTime = 1 s
+ExecutionTime = 2.5 s  ClockTime = 2 s
 
 Courant Number mean: 0.273323 max: 0.961538
 deltaT = 0.00192308
@@ -5941,7 +5945,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108503, Final residual = 7.6462
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.84891e-10, global = -3.27834e-11, cumulative = 7.70301e-05
 smoothSolver:  Solving for k, Initial residual = 7.31282e-05, Final residual = 7.24364e-08, No Iterations 5
-ExecutionTime = 1.88 s  ClockTime = 1 s
+ExecutionTime = 2.52 s  ClockTime = 2 s
 
 Courant Number mean: 0.273329 max: 0.961538
 deltaT = 0.00192308
@@ -5966,7 +5970,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107936, Final residual = 8.3753
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.01988e-10, global = -9.23877e-11, cumulative = 7.70143e-05
 smoothSolver:  Solving for k, Initial residual = 6.73504e-05, Final residual = 6.41587e-08, No Iterations 5
-ExecutionTime = 1.89 s  ClockTime = 1 s
+ExecutionTime = 2.53 s  ClockTime = 2 s
 
 Courant Number mean: 0.273326 max: 0.961538
 deltaT = 0.00192308
@@ -5991,7 +5995,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112543, Final residual = 8.3721
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.81368e-10, global = 4.96389e-11, cumulative = 7.70072e-05
 smoothSolver:  Solving for k, Initial residual = 7.24254e-05, Final residual = 6.81729e-08, No Iterations 5
-ExecutionTime = 1.9 s  ClockTime = 1 s
+ExecutionTime = 2.54 s  ClockTime = 2 s
 
 Courant Number mean: 0.27333 max: 0.961538
 deltaT = 0.00192308
@@ -6016,7 +6020,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120562, Final residual = 6.1457
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.14289e-10, global = -2.4903e-11, cumulative = 7.70165e-05
 smoothSolver:  Solving for k, Initial residual = 8.31164e-05, Final residual = 7.58443e-08, No Iterations 5
-ExecutionTime = 1.91 s  ClockTime = 1 s
+ExecutionTime = 2.55 s  ClockTime = 2 s
 
 Courant Number mean: 0.273328 max: 0.961538
 deltaT = 0.00192308
@@ -6041,7 +6045,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107584, Final residual = 6.9821
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.66005e-10, global = 5.93064e-11, cumulative = 7.69629e-05
 smoothSolver:  Solving for k, Initial residual = 7.83122e-05, Final residual = 8.23749e-08, No Iterations 5
-ExecutionTime = 1.91 s  ClockTime = 1 s
+ExecutionTime = 2.56 s  ClockTime = 2 s
 
 Courant Number mean: 0.273329 max: 0.961538
 deltaT = 0.00192308
@@ -6066,7 +6070,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000918393, Final residual = 8.258
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.94079e-10, global = -4.42878e-11, cumulative = 7.69555e-05
 smoothSolver:  Solving for k, Initial residual = 6.59379e-05, Final residual = 6.38623e-08, No Iterations 5
-ExecutionTime = 1.92 s  ClockTime = 1 s
+ExecutionTime = 2.57 s  ClockTime = 2 s
 
 Courant Number mean: 0.273323 max: 0.961538
 deltaT = 0.00192308
@@ -6091,7 +6095,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000960051, Final residual = 7.841
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.95069e-10, global = 5.37335e-11, cumulative = 7.69683e-05
 smoothSolver:  Solving for k, Initial residual = 6.38285e-05, Final residual = 5.73649e-08, No Iterations 5
-ExecutionTime = 1.93 s  ClockTime = 1 s
+ExecutionTime = 2.58 s  ClockTime = 2 s
 
 Courant Number mean: 0.273325 max: 0.961538
 deltaT = 0.00192308
@@ -6116,7 +6120,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753812, Final residual = 7.521
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.81653e-10, global = 2.14304e-11, cumulative = 7.69839e-05
 smoothSolver:  Solving for k, Initial residual = 6.7538e-05, Final residual = 5.74437e-08, No Iterations 5
-ExecutionTime = 1.94 s  ClockTime = 2 s
+ExecutionTime = 2.59 s  ClockTime = 3 s
 
 Courant Number mean: 0.273324 max: 0.961538
 deltaT = 0.00192308
@@ -6141,7 +6145,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108498, Final residual = 7.2994
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.51164e-10, global = -8.19421e-13, cumulative = 7.69712e-05
 smoothSolver:  Solving for k, Initial residual = 6.99337e-05, Final residual = 7.18291e-08, No Iterations 5
-ExecutionTime = 1.94 s  ClockTime = 2 s
+ExecutionTime = 2.6 s  ClockTime = 3 s
 
 Courant Number mean: 0.27333 max: 0.961538
 deltaT = 0.00192308
@@ -6166,7 +6170,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107939, Final residual = 7.7023
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.77667e-10, global = -9.27978e-11, cumulative = 7.69553e-05
 smoothSolver:  Solving for k, Initial residual = 6.42349e-05, Final residual = 6.36665e-08, No Iterations 5
-ExecutionTime = 1.95 s  ClockTime = 2 s
+ExecutionTime = 2.61 s  ClockTime = 3 s
 
 Courant Number mean: 0.273327 max: 0.961538
 deltaT = 0.00192308
@@ -6191,7 +6195,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112541, Final residual = 7.9562
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.99339e-10, global = 4.66272e-11, cumulative = 7.69483e-05
 smoothSolver:  Solving for k, Initial residual = 6.95077e-05, Final residual = 6.76041e-08, No Iterations 5
-ExecutionTime = 1.96 s  ClockTime = 2 s
+ExecutionTime = 2.62 s  ClockTime = 3 s
 
 Courant Number mean: 0.273331 max: 0.961538
 deltaT = 0.00192308
@@ -6216,7 +6220,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120561, Final residual = 6.6150
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.5264e-10, global = -2.33673e-11, cumulative = 7.69576e-05
 smoothSolver:  Solving for k, Initial residual = 8.03543e-05, Final residual = 7.53912e-08, No Iterations 5
-ExecutionTime = 1.97 s  ClockTime = 2 s
+ExecutionTime = 2.63 s  ClockTime = 3 s
 
 Courant Number mean: 0.273329 max: 0.961538
 deltaT = 0.00192308
@@ -6241,7 +6245,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107588, Final residual = 6.8924
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.68357e-10, global = 6.19581e-11, cumulative = 7.6904e-05
 smoothSolver:  Solving for k, Initial residual = 7.57712e-05, Final residual = 8.18819e-08, No Iterations 5
-ExecutionTime = 1.97 s  ClockTime = 2 s
+ExecutionTime = 2.64 s  ClockTime = 3 s
 
 Courant Number mean: 0.27333 max: 0.961538
 deltaT = 0.00192308
@@ -6266,7 +6270,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00091839, Final residual = 8.1361
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.87845e-10, global = -6.29732e-11, cumulative = 7.68966e-05
 smoothSolver:  Solving for k, Initial residual = 6.33638e-05, Final residual = 6.34194e-08, No Iterations 5
-ExecutionTime = 1.98 s  ClockTime = 2 s
+ExecutionTime = 2.65 s  ClockTime = 3 s
 
 Courant Number mean: 0.273324 max: 0.961538
 deltaT = 0.00192308
@@ -6291,7 +6295,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000960034, Final residual = 7.457
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.66801e-10, global = 5.1343e-11, cumulative = 7.69093e-05
 smoothSolver:  Solving for k, Initial residual = 6.14431e-05, Final residual = 5.69114e-08, No Iterations 5
-ExecutionTime = 1.99 s  ClockTime = 2 s
+ExecutionTime = 2.65 s  ClockTime = 3 s
 
 Courant Number mean: 0.273326 max: 0.961538
 deltaT = 0.00192308
@@ -6316,7 +6320,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000753838, Final residual = 7.700
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.82624e-10, global = 2.3097e-11, cumulative = 7.69249e-05
 smoothSolver:  Solving for k, Initial residual = 6.53115e-05, Final residual = 5.70781e-08, No Iterations 5
-ExecutionTime = 2 s  ClockTime = 2 s
+ExecutionTime = 2.66 s  ClockTime = 3 s
 
 Courant Number mean: 0.273325 max: 0.961538
 deltaT = 0.00192308
@@ -6341,7 +6345,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108495, Final residual = 7.6965
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.93964e-10, global = 8.95157e-12, cumulative = 7.69123e-05
 smoothSolver:  Solving for k, Initial residual = 6.79828e-05, Final residual = 7.14358e-08, No Iterations 5
-ExecutionTime = 2 s  ClockTime = 2 s
+ExecutionTime = 2.67 s  ClockTime = 3 s
 
 Courant Number mean: 0.273331 max: 0.961538
 deltaT = 0.00192308
@@ -6366,7 +6370,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107938, Final residual = 8.1356
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.99734e-10, global = -8.49863e-11, cumulative = 7.68964e-05
 smoothSolver:  Solving for k, Initial residual = 6.21064e-05, Final residual = 6.33031e-08, No Iterations 5
-ExecutionTime = 2.01 s  ClockTime = 2 s
+ExecutionTime = 2.68 s  ClockTime = 3 s
 
 Courant Number mean: 0.273328 max: 0.961538
 deltaT = 0.00192308
@@ -6391,7 +6395,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00112549, Final residual = 8.7396
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.10794e-10, global = 8.60104e-11, cumulative = 7.689e-05
 smoothSolver:  Solving for k, Initial residual = 6.755e-05, Final residual = 6.72379e-08, No Iterations 5
-ExecutionTime = 2.02 s  ClockTime = 2 s
+ExecutionTime = 2.69 s  ClockTime = 3 s
 
 Courant Number mean: 0.273332 max: 0.961538
 deltaT = 0.00192308
@@ -6416,7 +6420,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00120651, Final residual = 9.9612
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.60584e-10, global = -1.78506e-11, cumulative = 7.68998e-05
 smoothSolver:  Solving for k, Initial residual = 7.84568e-05, Final residual = 7.51096e-08, No Iterations 5
-ExecutionTime = 2.03 s  ClockTime = 2 s
+ExecutionTime = 2.7 s  ClockTime = 3 s
 
 Courant Number mean: 0.27333 max: 0.961538
 deltaT = 0.00192308
@@ -6441,7 +6445,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00107592, Final residual = 6.6713
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.42477e-10, global = 7.11623e-11, cumulative = 7.68454e-05
 smoothSolver:  Solving for k, Initial residual = 7.41922e-05, Final residual = 8.15658e-08, No Iterations 5
-ExecutionTime = 2.03 s  ClockTime = 2 s
+ExecutionTime = 2.71 s  ClockTime = 3 s
 
 Courant Number mean: 0.273331 max: 0.961538
 deltaT = 0.00192308
@@ -6466,7 +6470,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000918383, Final residual = 8.337
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.25793e-10, global = -7.08019e-11, cumulative = 7.68379e-05
 smoothSolver:  Solving for k, Initial residual = 6.162e-05, Final residual = 6.30967e-08, No Iterations 5
-ExecutionTime = 2.04 s  ClockTime = 2 s
+ExecutionTime = 2.72 s  ClockTime = 3 s
 
 Courant Number mean: 0.273325 max: 0.961538
 deltaT = 0.00192308
@@ -6491,7 +6495,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000960298, Final residual = 7.726
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.87243e-10, global = 5.38732e-11, cumulative = 7.68513e-05
 smoothSolver:  Solving for k, Initial residual = 5.98415e-05, Final residual = 5.6602e-08, No Iterations 5
-ExecutionTime = 2.05 s  ClockTime = 2 s
+ExecutionTime = 2.73 s  ClockTime = 3 s
 
 Courant Number mean: 0.273327 max: 0.961538
 deltaT = 0.00192308
@@ -6516,7 +6520,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.000754729, Final residual = 7.975
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.78858e-10, global = 5.44689e-12, cumulative = 7.68665e-05
 smoothSolver:  Solving for k, Initial residual = 6.38491e-05, Final residual = 5.68395e-08, No Iterations 5
-ExecutionTime = 2.06 s  ClockTime = 2 s
+ExecutionTime = 2.74 s  ClockTime = 3 s
 
 Courant Number mean: 0.273326 max: 0.961538
 deltaT = 0.00192308
@@ -6541,7 +6545,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108537, Final residual = 8.2494
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.05232e-10, global = -1.44098e-11, cumulative = 7.68539e-05
 smoothSolver:  Solving for k, Initial residual = 6.66868e-05, Final residual = 7.11741e-08, No Iterations 5
-ExecutionTime = 2.06 s  ClockTime = 2 s
+ExecutionTime = 2.75 s  ClockTime = 3 s
 
 Courant Number mean: 0.273332 max: 0.961538
 deltaT = 0.00192308
@@ -6566,7 +6570,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.00108008, Final residual = 8.2293
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 4.10071e-10, global = -9.14947e-11, cumulative = 7.68368e-05
 smoothSolver:  Solving for k, Initial residual = 6.06259e-05, Final residual = 6.30542e-08, No Iterations 5
-ExecutionTime = 2.07 s  ClockTime = 2 s
+ExecutionTime = 2.76 s  ClockTime = 3 s
 
 Courant Number mean: 0.273329 max: 0.961538
 deltaT = 0.00192308
@@ -6591,7 +6595,7 @@ GAMG:  Solving for p_rgh, Initial residual = 0.0011257, Final residual = 9.05417
 diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
 time step continuity errors : sum local = 3.9848e-10, global = 8.29126e-11, cumulative = 7.68308e-05
 smoothSolver:  Solving for k, Initial residual = 6.62169e-05, Final residual = 6.7002e-08, No Iterations 5
-ExecutionTime = 2.08 s  ClockTime = 2 s
+ExecutionTime = 2.78 s  ClockTime = 3 s
 
 End
 

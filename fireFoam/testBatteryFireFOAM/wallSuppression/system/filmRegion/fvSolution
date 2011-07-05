@@ -1,0 +1,64 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system/wallFilmRegion";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    Twf
+    {
+        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-10;
+        relTol          1e-3;
+    }
+    hsf
+    {
+        solver          PBiCG;
+        preconditioner  DILU;
+        tolerance       1e-200;
+        relTol          1e-3;
+    }
+    "(Uf|deltaf\*rhof)"
+    {
+        solver          PBiCG;
+        preconditioner  DILU;
+        tolerance       1e-10;
+        relTol          0;
+    }
+    deltaf
+    {
+        solver          PBiCG; // PCG;
+        preconditioner  DILU; // DIC;
+        tolerance       1e-10;
+        relTol          0;
+    }
+}
+
+
+PISO
+{
+    momentumPredictor true;
+    nOuterCorr      1; //kvm, inner and outer iterations need to be greater than 1 to avoid Ts<0 during vaporization
+    nCorr           1;
+    nNonOrthCorr    0;
+    dfMin           1e-10;
+}
+
+
+relaxationFactors
+{}
+
+// ************************************************************************* //

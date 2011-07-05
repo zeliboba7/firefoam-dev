@@ -3,6 +3,7 @@ cd ${0%/*} || exit 1    # run from this directory
 set -x
 
 wclean libso thermophysicalModels/combustionModels
+wclean libso thermophysicalModels/radiation/submodels/absorptionEmissionModel/greyMeanAbsorptionEmissionSoot
 wclean libso thermophysicalModels/radiation/derivedFvPatchFields/greyDiffusiveRadiation
 wclean libso fvPatchFields
 wclean libso fvPatchFieldsPyrolysis

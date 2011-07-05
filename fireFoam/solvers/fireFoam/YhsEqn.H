@@ -106,6 +106,7 @@ tmp<fv::convectionScheme<scalar> > mvConvection
          ==
             DpDt
           + parcels.Sh()         
+          + surfaceFilm.Sh()
           + dQ                    
           + radiation->Shs(thermo)
         );
@@ -146,6 +147,7 @@ tmp<fv::convectionScheme<scalar> > mvConvection
          == 
             DpDt
           + parcels.Sh()         
+          + surfaceFilm.Sh()
           + dQ                    
           + radiation->Shs(thermo)
         );
@@ -160,6 +162,7 @@ tmp<fv::convectionScheme<scalar> > mvConvection
          ==
             DpDt
           + parcels.Sh()         
+          + surfaceFilm.Sh()
           + dQ                    
           + radiation->Shs(thermo)
         );
@@ -175,6 +178,7 @@ tmp<fv::convectionScheme<scalar> > mvConvection
 
         hsEqn.solve();
     }
+
 
     thermo.correct();
 }

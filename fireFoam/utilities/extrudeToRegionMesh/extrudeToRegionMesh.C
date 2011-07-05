@@ -1221,8 +1221,8 @@ int main(int argc, char *argv[])
     {
         if (oneD)
         {
-            // Always add empty patches, one per zone.
-            word patchName = faceZones[zoneI].name() + "_" + "side";
+            // Always add empty patches (as single patch)
+            word patchName = "oneDEmptyPatch";
 
             zoneSidePatch[zoneI] = addPatch<emptyPolyPatch>
             (

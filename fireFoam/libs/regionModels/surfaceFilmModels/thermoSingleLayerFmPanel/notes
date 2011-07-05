@@ -1,0 +1,2 @@
+#tip, \b matches word boundaries
+sed -i 's/\bthermoSingleLayer\b/thermoSingleLayerLI/g' thermoSingleLayerFM.H

@@ -36,6 +36,8 @@ PhaseChangeModel LiquidEvaporation;
 
 PostProcessingModel none; //PatchPostProcessing; 
 
+SurfaceFilmModel none; //ThermoSurfaceFilm; 
+
 radiation       off;
 
 coupled         true;
@@ -174,5 +176,24 @@ LiquidEvaporationCoeffs
         H2O
     );
 }
+
+ThermoSurfaceFilmCoeffs 
+{
+    interactionType absorb;
+    deltaWetThreshold 0.0001;
+    Adry            2630;
+    Awet            1320;
+    Cf              0.6;
+    splashParcelPDF
+    {
+        pdfType         uniform;
+        uniformPDF
+        {
+            minValue        1e-04;
+            maxValue        1e-04;
+        }
+    }
+}
+
 
 // ************************************************************************* //

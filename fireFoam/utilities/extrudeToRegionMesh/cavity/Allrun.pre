@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+rm -fr log.*
+
+blockMesh >& log.blockMesh 
+setSet -batch makeSetsAndZones.setSet >& log.makeSetsAndZones
+extrudeToRegionMesh17x >& log.extrudeToRegionMesh17x

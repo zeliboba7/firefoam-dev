@@ -1,0 +1,3 @@
+subModels/absorptionEmissionModel/greyMeanAbsorptionEmissionNew/greyMeanAbsorptionEmissionNew.C
+
+LIB = $(FOAM_USER_LIBBIN)/libgreyAbsorptionNew17x

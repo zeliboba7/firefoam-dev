@@ -7,16 +7,16 @@
 \*---------------------------------------------------------------------------*/
 Build  : 1.7.x-868d5097761f
 Exec   : fireFoam -parallel
-Date   : Jun 02 2011
-Time   : 10:53:34
+Date   : May 24 2011
+Time   : 15:56:47
 Host   : wangyUbuntu
-PID    : 3831
+PID    : 6016
 Case   : /home/wangy/OpenFOAM/wangy-1.7.x/run/fireFoam/testBatteryFireFOAM/wallFireSpread2D_MULES
 nProcs : 2
 Slaves : 
 1
 (
-wangyUbuntu.3832
+wangyUbuntu.6017
 )
 
 Pstream initialized with:
@@ -26,6 +26,9 @@ Pstream initialized with:
 SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FireFOAM Build Version:  75224d2d3d657d60a93020c7c07f76e3a2c45fe8
+FireFOAM Build Time Stamp:  Tue May 24 13:54:54 EDT 2011
+****************************************************
 Create time
 
 Create mesh for time = 0
@@ -42,6 +45,10 @@ stoichiometric air-fuel ratio :15.5715
 stoichiometric oxygen-fuel ratio :3.62829
 Max products: 5(0 0.0986136 0 0.180679 0.720707)
 mass based specieStoichCoeffs: 5(-3.62829 1.63418 -1 2.99414 11.9432)
+Creating component thermo properties:
+    multi-component carrier - 5 species
+    liquids - 1 components
+    solids - 0 components
 Reading field p_rgh
 
 Reading field U
@@ -99,24 +106,35 @@ irreversibleSolidArrheniusReaction
 Selecting ODE solver SIBS
 
 Constructing reacting cloud
+Constructing cloud functions
+    none
 Selecting DispersionModel none
 Selecting DragModel SphereDrag
 Selecting InjectionModel ConeInjection
     Constructing 2-D injection
 Selecting pdfType RosinRammler
 Selecting PatchInteractionModel StandardWallInteraction
-Selecting PostProcessingModel none
+Selecting SurfaceFilmModel ThermoSurfaceFilm
+    Applying absorb interaction model
 Selecting U IntegrationScheme Euler
 Selecting HeatTransferModel RanzMarshall
 Selecting T IntegrationScheme Analytical
 Selecting CompositionModel SinglePhaseMixture
 Selecting PhaseChangeModel LiquidEvaporation
+
+Constructing surface film model
+Selecting surfaceFilmModel none
 Courant Number mean: 0 max: 0
 
 Starting time loop
 
 Courant Number mean: 0 max: 0
 deltaT = 0.0011976
+--> FOAM Warning : 
+    From function dlLibraryTable::open(const dictionary& dict, const word& libsEntry, const TablePtr tablePtr)
+    in file lnInclude/dlLibraryTableTemplates.C at line 67
+    library "libsampling.so" did not introduce any new entries
+
 cellSource HRR:
     total cells  = 800
     total volume = 0.4
@@ -218,7 +236,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.13 s  ClockTime = 0 s
+ExecutionTime = 0.08 s  ClockTime = 0 s
 
 Courant Number mean: 2.93673e-05 max: 0.00179966
 deltaT = 0.00143023
@@ -267,7 +285,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.15 s  ClockTime = 0 s
+ExecutionTime = 0.1 s  ClockTime = 0 s
 
 Courant Number mean: 8.175e-05 max: 0.00156437
 deltaT = 0.00170148
@@ -316,7 +334,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.16 s  ClockTime = 0 s
+ExecutionTime = 0.12 s  ClockTime = 0 s
 
 Courant Number mean: 0.000129472 max: 0.00186085
 deltaT = 0.00203824
@@ -365,7 +383,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.18 s  ClockTime = 0 s
+ExecutionTime = 0.13 s  ClockTime = 0 s
 
 Courant Number mean: 0.000526961 max: 0.00843263
 deltaT = 0.00242041
@@ -414,7 +432,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.19 s  ClockTime = 0 s
+ExecutionTime = 0.15 s  ClockTime = 0 s
 
 Courant Number mean: 0.00134703 max: 0.0173165
 deltaT = 0.00289715
@@ -463,7 +481,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.21 s  ClockTime = 0 s
+ExecutionTime = 0.17 s  ClockTime = 0 s
 
 Courant Number mean: 0.00232378 max: 0.02647
 deltaT = 0.00342391
@@ -512,7 +530,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.22 s  ClockTime = 0 s
+ExecutionTime = 0.4 s  ClockTime = 1 s
 
 Courant Number mean: 0.00314404 max: 0.0358878
 deltaT = 0.00401937
@@ -561,7 +579,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.24 s  ClockTime = 0 s
+ExecutionTime = 0.53 s  ClockTime = 1 s
 
 Courant Number mean: 0.00391095 max: 0.0455429
 deltaT = 0.00475978
@@ -610,7 +628,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.25 s  ClockTime = 0 s
+ExecutionTime = 0.55 s  ClockTime = 1 s
 
 Courant Number mean: 0.00487476 max: 0.055428
 deltaT = 0.00568103
@@ -704,7 +722,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.29 s  ClockTime = 0 s
+ExecutionTime = 0.58 s  ClockTime = 1 s
 
 Courant Number mean: 0.00604776 max: 0.0654691
 deltaT = 0.00655503
@@ -753,7 +771,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.3 s  ClockTime = 0 s
+ExecutionTime = 0.6 s  ClockTime = 1 s
 
 Courant Number mean: 0.00728943 max: 0.0752609
 deltaT = 0.00780361
@@ -802,7 +820,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.32 s  ClockTime = 0 s
+ExecutionTime = 0.62 s  ClockTime = 1 s
 
 Courant Number mean: 0.00877239 max: 0.0840902
 deltaT = 0.00918072
@@ -851,7 +869,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.33 s  ClockTime = 0 s
+ExecutionTime = 0.63 s  ClockTime = 1 s
 
 Courant Number mean: 0.0103375 max: 0.0917096
 deltaT = 0.00979276
@@ -900,7 +918,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.35 s  ClockTime = 0 s
+ExecutionTime = 0.65 s  ClockTime = 1 s
 
 Courant Number mean: 0.0116313 max: 0.104434
 deltaT = 0.00979276
@@ -949,7 +967,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.37 s  ClockTime = 0 s
+ExecutionTime = 0.67 s  ClockTime = 1 s
 
 Courant Number mean: 0.0117384 max: 0.103692
 deltaT = 0.00979276
@@ -998,7 +1016,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.38 s  ClockTime = 0 s
+ExecutionTime = 0.69 s  ClockTime = 1 s
 
 Courant Number mean: 0.0109395 max: 0.0925266
 deltaT = 0.00979276
@@ -1047,7 +1065,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.4 s  ClockTime = 0 s
+ExecutionTime = 0.7 s  ClockTime = 1 s
 
 Courant Number mean: 0.00993476 max: 0.0809225
 deltaT = 0.00979276
@@ -1096,7 +1114,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.41 s  ClockTime = 0 s
+ExecutionTime = 0.72 s  ClockTime = 1 s
 
 Courant Number mean: 0.00908945 max: 0.0722185
 deltaT = 0.00979276
@@ -1145,7 +1163,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.43 s  ClockTime = 0 s
+ExecutionTime = 0.73 s  ClockTime = 1 s
 
 Courant Number mean: 0.00841753 max: 0.0654042
 deltaT = 0.00979276
@@ -1239,7 +1257,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.46 s  ClockTime = 0 s
+ExecutionTime = 0.77 s  ClockTime = 1 s
 
 Courant Number mean: 0.00785081 max: 0.0609767
 deltaT = 0.00979276
@@ -1288,7 +1306,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.48 s  ClockTime = 0 s
+ExecutionTime = 0.78 s  ClockTime = 1 s
 
 Courant Number mean: 0.00737537 max: 0.0584942
 deltaT = 0.00979276
@@ -1337,7 +1355,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.49 s  ClockTime = 0 s
+ExecutionTime = 0.8 s  ClockTime = 1 s
 
 Courant Number mean: 0.00695059 max: 0.0563702
 deltaT = 0.00979276
@@ -1386,7 +1404,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.51 s  ClockTime = 0 s
+ExecutionTime = 0.82 s  ClockTime = 1 s
 
 Courant Number mean: 0.00657518 max: 0.0546069
 deltaT = 0.00979276
@@ -1435,7 +1453,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.52 s  ClockTime = 0 s
+ExecutionTime = 0.83 s  ClockTime = 1 s
 
 Courant Number mean: 0.0062534 max: 0.0531865
 deltaT = 0.00979276
@@ -1484,7 +1502,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.54 s  ClockTime = 0 s
+ExecutionTime = 0.85 s  ClockTime = 1 s
 
 Courant Number mean: 0.00599918 max: 0.0521603
 deltaT = 0.00979276
@@ -1533,7 +1551,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.55 s  ClockTime = 0 s
+ExecutionTime = 0.87 s  ClockTime = 1 s
 
 Courant Number mean: 0.00579387 max: 0.0515862
 deltaT = 0.00979276
@@ -1582,7 +1600,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.57 s  ClockTime = 0 s
+ExecutionTime = 0.88 s  ClockTime = 1 s
 
 Courant Number mean: 0.00571711 max: 0.052516
 deltaT = 0.00979276
@@ -1631,7 +1649,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.6 s  ClockTime = 0 s
+ExecutionTime = 0.91 s  ClockTime = 1 s
 
 Courant Number mean: 0.00567226 max: 0.0526906
 deltaT = 0.00952381
@@ -1680,7 +1698,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.61 s  ClockTime = 0 s
+ExecutionTime = 0.93 s  ClockTime = 1 s
 
 Courant Number mean: 0.00551782 max: 0.0516604
 deltaT = 0.00952381
@@ -1774,7 +1792,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.65 s  ClockTime = 0 s
+ExecutionTime = 0.97 s  ClockTime = 1 s
 
 Courant Number mean: 0.00552667 max: 0.0565924
 deltaT = 0.00952381
@@ -1823,7 +1841,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.66 s  ClockTime = 0 s
+ExecutionTime = 0.98 s  ClockTime = 1 s
 
 Courant Number mean: 0.00552608 max: 0.0636499
 deltaT = 0.00952381
@@ -1872,7 +1890,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.68 s  ClockTime = 0 s
+ExecutionTime = 1 s  ClockTime = 1 s
 
 Courant Number mean: 0.00552525 max: 0.0705064
 deltaT = 0.00952381
@@ -1921,7 +1939,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.7 s  ClockTime = 0 s
+ExecutionTime = 1.01 s  ClockTime = 1 s
 
 Courant Number mean: 0.00554494 max: 0.0772704
 deltaT = 0.00952381
@@ -1970,7 +1988,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.71 s  ClockTime = 0 s
+ExecutionTime = 1.03 s  ClockTime = 1 s
 
 Courant Number mean: 0.00552513 max: 0.0845289
 deltaT = 0.00952381
@@ -2019,7 +2037,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.73 s  ClockTime = 0 s
+ExecutionTime = 1.05 s  ClockTime = 1 s
 
 Courant Number mean: 0.00539211 max: 0.0928232
 deltaT = 0.00952381
@@ -2068,7 +2086,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.74 s  ClockTime = 0 s
+ExecutionTime = 1.06 s  ClockTime = 1 s
 
 Courant Number mean: 0.00520391 max: 0.100443
 deltaT = 0.00952381
@@ -2117,7 +2135,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.76 s  ClockTime = 0 s
+ExecutionTime = 1.08 s  ClockTime = 1 s
 
 Courant Number mean: 0.0050383 max: 0.108
 deltaT = 0.00952381
@@ -2166,7 +2184,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.78 s  ClockTime = 0 s
+ExecutionTime = 1.09 s  ClockTime = 1 s
 
 Courant Number mean: 0.00493189 max: 0.114666
 deltaT = 0.00952381
@@ -2215,7 +2233,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.79 s  ClockTime = 0 s
+ExecutionTime = 1.11 s  ClockTime = 1 s
 
 Courant Number mean: 0.00489102 max: 0.120384
 deltaT = 0.00952381
@@ -2309,7 +2327,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.82 s  ClockTime = 0 s
+ExecutionTime = 1.15 s  ClockTime = 1 s
 
 Courant Number mean: 0.00490903 max: 0.125057
 deltaT = 0.00952381
@@ -2358,7 +2376,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.84 s  ClockTime = 0 s
+ExecutionTime = 1.16 s  ClockTime = 1 s
 
 Courant Number mean: 0.00499849 max: 0.128464
 deltaT = 0.00952381
@@ -2407,7 +2425,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.85 s  ClockTime = 0 s
+ExecutionTime = 1.18 s  ClockTime = 1 s
 
 Courant Number mean: 0.00517535 max: 0.130248
 deltaT = 0.00952381
@@ -2456,7 +2474,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.87 s  ClockTime = 0 s
+ExecutionTime = 1.19 s  ClockTime = 2 s
 
 Courant Number mean: 0.00545862 max: 0.131426
 deltaT = 0.00952381
@@ -2505,7 +2523,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.89 s  ClockTime = 1 s
+ExecutionTime = 1.21 s  ClockTime = 2 s
 
 Courant Number mean: 0.00577525 max: 0.132225
 deltaT = 0.00952381
@@ -2554,7 +2572,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.9 s  ClockTime = 1 s
+ExecutionTime = 1.23 s  ClockTime = 2 s
 
 Courant Number mean: 0.0061072 max: 0.132834
 deltaT = 0.00952381
@@ -2603,7 +2621,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.92 s  ClockTime = 1 s
+ExecutionTime = 1.24 s  ClockTime = 2 s
 
 Courant Number mean: 0.00651542 max: 0.132734
 deltaT = 0.00952381
@@ -2652,7 +2670,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.93 s  ClockTime = 1 s
+ExecutionTime = 1.26 s  ClockTime = 2 s
 
 Courant Number mean: 0.0069439 max: 0.136422
 deltaT = 0.00952381
@@ -2701,7 +2719,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.95 s  ClockTime = 1 s
+ExecutionTime = 1.28 s  ClockTime = 2 s
 
 Courant Number mean: 0.00739033 max: 0.140814
 deltaT = 0.00952381
@@ -2750,7 +2768,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 0.98 s  ClockTime = 1 s
+ExecutionTime = 1.31 s  ClockTime = 2 s
 
 Courant Number mean: 0.00785473 max: 0.144657
 deltaT = 0.00952381
@@ -2844,7 +2862,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.01 s  ClockTime = 1 s
+ExecutionTime = 1.35 s  ClockTime = 2 s
 
 Courant Number mean: 0.0083074 max: 0.148364
 deltaT = 0.00952381
@@ -2893,7 +2911,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.03 s  ClockTime = 1 s
+ExecutionTime = 1.36 s  ClockTime = 2 s
 
 Courant Number mean: 0.0087537 max: 0.151888
 deltaT = 0.00952381
@@ -2942,7 +2960,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.04 s  ClockTime = 1 s
+ExecutionTime = 1.38 s  ClockTime = 2 s
 
 Courant Number mean: 0.00920631 max: 0.154754
 deltaT = 0.00952381
@@ -2991,7 +3009,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.06 s  ClockTime = 1 s
+ExecutionTime = 1.4 s  ClockTime = 2 s
 
 Courant Number mean: 0.00973753 max: 0.162399
 deltaT = 0.00952381
@@ -3040,7 +3058,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.07 s  ClockTime = 1 s
+ExecutionTime = 1.41 s  ClockTime = 2 s
 
 Courant Number mean: 0.0102178 max: 0.169591
 deltaT = 0.00952381
@@ -3089,7 +3107,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.09 s  ClockTime = 1 s
+ExecutionTime = 1.43 s  ClockTime = 2 s
 
 Courant Number mean: 0.0105568 max: 0.171736
 deltaT = 0.00952381
@@ -3138,7 +3156,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.1 s  ClockTime = 1 s
+ExecutionTime = 1.45 s  ClockTime = 2 s
 
 Courant Number mean: 0.0108253 max: 0.173043
 deltaT = 0.00952381
@@ -3187,7 +3205,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.12 s  ClockTime = 1 s
+ExecutionTime = 1.46 s  ClockTime = 2 s
 
 Courant Number mean: 0.0110448 max: 0.173772
 deltaT = 0.00952381
@@ -3236,7 +3254,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.13 s  ClockTime = 1 s
+ExecutionTime = 1.48 s  ClockTime = 2 s
 
 Courant Number mean: 0.0112758 max: 0.174093
 deltaT = 0.00952381
@@ -3285,7 +3303,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.15 s  ClockTime = 1 s
+ExecutionTime = 1.5 s  ClockTime = 2 s
 
 Courant Number mean: 0.0115954 max: 0.175058
 deltaT = 0.00952381
@@ -3379,7 +3397,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.18 s  ClockTime = 1 s
+ExecutionTime = 1.53 s  ClockTime = 2 s
 
 Courant Number mean: 0.0120546 max: 0.174903
 deltaT = 0.00952381
@@ -3428,7 +3446,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.2 s  ClockTime = 1 s
+ExecutionTime = 1.55 s  ClockTime = 2 s
 
 Courant Number mean: 0.0127022 max: 0.180563
 deltaT = 0.00952381
@@ -3477,7 +3495,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.22 s  ClockTime = 1 s
+ExecutionTime = 1.56 s  ClockTime = 2 s
 
 Courant Number mean: 0.0133642 max: 0.185136
 deltaT = 0.00952381
@@ -3526,7 +3544,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.23 s  ClockTime = 1 s
+ExecutionTime = 1.58 s  ClockTime = 2 s
 
 Courant Number mean: 0.014026 max: 0.187053
 deltaT = 0.00952381
@@ -3575,7 +3593,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.25 s  ClockTime = 1 s
+ExecutionTime = 1.6 s  ClockTime = 2 s
 
 Courant Number mean: 0.014455 max: 0.186658
 deltaT = 0.00952381
@@ -3624,7 +3642,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.26 s  ClockTime = 1 s
+ExecutionTime = 1.61 s  ClockTime = 2 s
 
 Courant Number mean: 0.0147851 max: 0.18582
 deltaT = 0.00952381
@@ -3673,7 +3691,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.28 s  ClockTime = 1 s
+ExecutionTime = 1.63 s  ClockTime = 2 s
 
 Courant Number mean: 0.0152054 max: 0.183255
 deltaT = 0.00952381
@@ -3722,7 +3740,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.3 s  ClockTime = 1 s
+ExecutionTime = 1.65 s  ClockTime = 2 s
 
 Courant Number mean: 0.0157955 max: 0.179894
 deltaT = 0.00952381
@@ -3771,7 +3789,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.31 s  ClockTime = 1 s
+ExecutionTime = 1.66 s  ClockTime = 2 s
 
 Courant Number mean: 0.0163649 max: 0.179065
 deltaT = 0.00952381
@@ -3820,7 +3838,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.33 s  ClockTime = 1 s
+ExecutionTime = 1.68 s  ClockTime = 2 s
 
 Courant Number mean: 0.0169111 max: 0.178333
 deltaT = 0.00952381
@@ -3914,7 +3932,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.38 s  ClockTime = 1 s
+ExecutionTime = 1.73 s  ClockTime = 2 s
 
 Courant Number mean: 0.0175336 max: 0.180358
 deltaT = 0.01
@@ -3963,7 +3981,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.39 s  ClockTime = 1 s
+ExecutionTime = 1.75 s  ClockTime = 2 s
 
 Courant Number mean: 0.0188759 max: 0.190189
 deltaT = 0.01
@@ -4012,7 +4030,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.41 s  ClockTime = 1 s
+ExecutionTime = 1.77 s  ClockTime = 2 s
 
 Courant Number mean: 0.0194006 max: 0.193528
 deltaT = 0.01
@@ -4061,7 +4079,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.43 s  ClockTime = 1 s
+ExecutionTime = 1.78 s  ClockTime = 2 s
 
 Courant Number mean: 0.0197362 max: 0.197151
 deltaT = 0.01
@@ -4110,7 +4128,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.44 s  ClockTime = 1 s
+ExecutionTime = 1.8 s  ClockTime = 2 s
 
 Courant Number mean: 0.0201154 max: 0.207827
 deltaT = 0.01
@@ -4159,7 +4177,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.46 s  ClockTime = 1 s
+ExecutionTime = 1.82 s  ClockTime = 2 s
 
 Courant Number mean: 0.0207788 max: 0.217613
 deltaT = 0.01
@@ -4208,7 +4226,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.47 s  ClockTime = 1 s
+ExecutionTime = 1.83 s  ClockTime = 2 s
 
 Courant Number mean: 0.0214589 max: 0.221296
 deltaT = 0.01
@@ -4257,7 +4275,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.49 s  ClockTime = 1 s
+ExecutionTime = 1.85 s  ClockTime = 2 s
 
 Courant Number mean: 0.0220127 max: 0.221728
 deltaT = 0.01
@@ -4306,7 +4324,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.5 s  ClockTime = 1 s
+ExecutionTime = 1.86 s  ClockTime = 2 s
 
 Courant Number mean: 0.022777 max: 0.220459
 deltaT = 0.01
@@ -4355,7 +4373,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.52 s  ClockTime = 1 s
+ExecutionTime = 1.88 s  ClockTime = 2 s
 
 Courant Number mean: 0.023714 max: 0.230431
 deltaT = 0.01
@@ -4449,7 +4467,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 0
     Total heat release rate [J/s] = 0
 
-ExecutionTime = 1.55 s  ClockTime = 1 s
+ExecutionTime = 1.92 s  ClockTime = 2 s
 
 Courant Number mean: 0.0244349 max: 0.238103
 deltaT = 0.01
@@ -4498,7 +4516,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.11214e-09
     Total heat release rate [J/s] = -0.00174286
 
-ExecutionTime = 1.57 s  ClockTime = 1 s
+ExecutionTime = 1.94 s  ClockTime = 2 s
 
 Courant Number mean: 0.0252183 max: 0.245452
 deltaT = 0.01
@@ -4547,7 +4565,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.26884e-09
     Total heat release rate [J/s] = -0.00198842
 
-ExecutionTime = 1.59 s  ClockTime = 1 s
+ExecutionTime = 1.95 s  ClockTime = 2 s
 
 Courant Number mean: 0.026336 max: 0.25353
 deltaT = 0.01
@@ -4596,7 +4614,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.44445e-09
     Total heat release rate [J/s] = -0.00226363
 
-ExecutionTime = 1.6 s  ClockTime = 1 s
+ExecutionTime = 1.97 s  ClockTime = 2 s
 
 Courant Number mean: 0.0274489 max: 0.263256
 deltaT = 0.01
@@ -4645,7 +4663,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.64118e-09
     Total heat release rate [J/s] = -0.00257192
 
-ExecutionTime = 1.62 s  ClockTime = 1 s
+ExecutionTime = 1.99 s  ClockTime = 2 s
 
 Courant Number mean: 0.0279193 max: 0.274446
 deltaT = 0.01
@@ -4694,7 +4712,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.86141e-09
     Total heat release rate [J/s] = -0.00291706
 
-ExecutionTime = 1.63 s  ClockTime = 1 s
+ExecutionTime = 2 s  ClockTime = 2 s
 
 Courant Number mean: 0.0285976 max: 0.283955
 deltaT = 0.01
@@ -4743,7 +4761,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.10782e-09
     Total heat release rate [J/s] = -0.00330321
 
-ExecutionTime = 1.65 s  ClockTime = 1 s
+ExecutionTime = 2.02 s  ClockTime = 2 s
 
 Courant Number mean: 0.0294069 max: 0.29296
 deltaT = 0.01
@@ -4792,7 +4810,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.38333e-09
     Total heat release rate [J/s] = -0.00373497
 
-ExecutionTime = 1.67 s  ClockTime = 1 s
+ExecutionTime = 2.04 s  ClockTime = 2 s
 
 Courant Number mean: 0.0303787 max: 0.300248
 deltaT = 0.01
@@ -4841,7 +4859,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.74958e-09
     Total heat release rate [J/s] = -0.00587604
 
-ExecutionTime = 1.68 s  ClockTime = 1 s
+ExecutionTime = 2.05 s  ClockTime = 2 s
 
 Courant Number mean: 0.031249 max: 0.306726
 deltaT = 0.01
@@ -4890,7 +4908,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.4994e-09
     Total heat release rate [J/s] = -0.00705111
 
-ExecutionTime = 1.7 s  ClockTime = 1 s
+ExecutionTime = 2.07 s  ClockTime = 2 s
 
 Courant Number mean: 0.0321218 max: 0.311748
 deltaT = 0.01
@@ -4984,7 +5002,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.41744e-09
     Total heat release rate [J/s] = -0.0084898
 
-ExecutionTime = 1.75 s  ClockTime = 1 s
+ExecutionTime = 2.12 s  ClockTime = 2 s
 
 Courant Number mean: 0.0329051 max: 0.314517
 deltaT = 0.01
@@ -5033,7 +5051,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 6.30896e-09
     Total heat release rate [J/s] = -0.00988692
 
-ExecutionTime = 1.76 s  ClockTime = 1 s
+ExecutionTime = 2.14 s  ClockTime = 2 s
 
 Courant Number mean: 0.034098 max: 0.323624
 deltaT = 0.01
@@ -5082,7 +5100,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 7.34517e-09
     Total heat release rate [J/s] = -0.0115108
 
-ExecutionTime = 1.78 s  ClockTime = 1 s
+ExecutionTime = 2.16 s  ClockTime = 2 s
 
 Courant Number mean: 0.0353535 max: 0.333918
 deltaT = 0.01
@@ -5131,7 +5149,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 8.54333e-09
     Total heat release rate [J/s] = -0.0133884
 
-ExecutionTime = 1.8 s  ClockTime = 1 s
+ExecutionTime = 2.17 s  ClockTime = 2 s
 
 Courant Number mean: 0.0361124 max: 0.34723
 deltaT = 0.01
@@ -5180,7 +5198,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 9.92205e-09
     Total heat release rate [J/s] = -0.0155491
 
-ExecutionTime = 1.81 s  ClockTime = 1 s
+ExecutionTime = 2.19 s  ClockTime = 2 s
 
 Courant Number mean: 0.0372446 max: 0.353447
 deltaT = 0.01
@@ -5229,7 +5247,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.26186e-08
     Total heat release rate [J/s] = -0.0197749
 
-ExecutionTime = 1.83 s  ClockTime = 1 s
+ExecutionTime = 2.21 s  ClockTime = 3 s
 
 Courant Number mean: 0.0379842 max: 0.358814
 deltaT = 0.01
@@ -5278,7 +5296,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.50696e-08
     Total heat release rate [J/s] = -0.023616
 
-ExecutionTime = 1.84 s  ClockTime = 1 s
+ExecutionTime = 2.22 s  ClockTime = 3 s
 
 Courant Number mean: 0.0385991 max: 0.359573
 deltaT = 0.01
@@ -5327,7 +5345,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.80757e-08
     Total heat release rate [J/s] = -0.0283268
 
-ExecutionTime = 1.86 s  ClockTime = 1 s
+ExecutionTime = 2.24 s  ClockTime = 3 s
 
 Courant Number mean: 0.0391692 max: 0.359067
 deltaT = 0.01
@@ -5376,7 +5394,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.17797e-08
     Total heat release rate [J/s] = -0.0341314
 
-ExecutionTime = 1.87 s  ClockTime = 1 s
+ExecutionTime = 2.26 s  ClockTime = 3 s
 
 Courant Number mean: 0.0400979 max: 0.360214
 deltaT = 0.01
@@ -5425,7 +5443,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.63613e-08
     Total heat release rate [J/s] = -0.0413114
 
-ExecutionTime = 1.89 s  ClockTime = 2 s
+ExecutionTime = 2.27 s  ClockTime = 3 s
 
 Courant Number mean: 0.041067 max: 0.364893
 deltaT = 0.01
@@ -5519,7 +5537,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.20457e-08
     Total heat release rate [J/s] = -0.0502195
 
-ExecutionTime = 1.94 s  ClockTime = 2 s
+ExecutionTime = 2.31 s  ClockTime = 3 s
 
 Courant Number mean: 0.0422322 max: 0.366883
 deltaT = 0.01
@@ -5568,7 +5586,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.56254e-08
     Total heat release rate [J/s] = -0.0558294
 
-ExecutionTime = 1.95 s  ClockTime = 2 s
+ExecutionTime = 2.33 s  ClockTime = 3 s
 
 Courant Number mean: 0.0434041 max: 0.373872
 deltaT = 0.01
@@ -5617,7 +5635,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.9702e-08
     Total heat release rate [J/s] = -0.0622179
 
-ExecutionTime = 1.98 s  ClockTime = 2 s
+ExecutionTime = 2.34 s  ClockTime = 3 s
 
 Courant Number mean: 0.0447928 max: 0.377422
 deltaT = 0.01
@@ -5666,7 +5684,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.43185e-08
     Total heat release rate [J/s] = -0.0694526
 
-ExecutionTime = 2 s  ClockTime = 2 s
+ExecutionTime = 2.36 s  ClockTime = 3 s
 
 Courant Number mean: 0.0457748 max: 0.381867
 deltaT = 0.01
@@ -5715,7 +5733,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.08477e-08
     Total heat release rate [J/s] = -0.0796845
 
-ExecutionTime = 2.02 s  ClockTime = 2 s
+ExecutionTime = 2.38 s  ClockTime = 3 s
 
 Courant Number mean: 0.0469642 max: 0.379045
 deltaT = 0.01
@@ -5764,7 +5782,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.74707e-08
     Total heat release rate [J/s] = -0.0900636
 
-ExecutionTime = 2.03 s  ClockTime = 2 s
+ExecutionTime = 2.4 s  ClockTime = 3 s
 
 Courant Number mean: 0.0484437 max: 0.378354
 deltaT = 0.01
@@ -5813,7 +5831,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 6.51665e-08
     Total heat release rate [J/s] = -0.102124
 
-ExecutionTime = 2.06 s  ClockTime = 2 s
+ExecutionTime = 2.41 s  ClockTime = 3 s
 
 Courant Number mean: 0.0498081 max: 0.376857
 deltaT = 0.01
@@ -5862,7 +5880,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 7.41438e-08
     Total heat release rate [J/s] = -0.116192
 
-ExecutionTime = 2.08 s  ClockTime = 2 s
+ExecutionTime = 2.43 s  ClockTime = 3 s
 
 Courant Number mean: 0.0508914 max: 0.37957
 deltaT = 0.01
@@ -5911,7 +5929,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 8.46591e-08
     Total heat release rate [J/s] = -0.132671
 
-ExecutionTime = 2.09 s  ClockTime = 2 s
+ExecutionTime = 2.45 s  ClockTime = 3 s
 
 Courant Number mean: 0.0523499 max: 0.379076
 deltaT = 0.01
@@ -5960,7 +5978,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 9.70261e-08
     Total heat release rate [J/s] = -0.152052
 
-ExecutionTime = 2.11 s  ClockTime = 2 s
+ExecutionTime = 2.47 s  ClockTime = 3 s
 
 Courant Number mean: 0.0538095 max: 0.382798
 deltaT = 0.01
@@ -6054,7 +6072,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.11629e-07
     Total heat release rate [J/s] = -0.174936
 
-ExecutionTime = 2.16 s  ClockTime = 2 s
+ExecutionTime = 2.52 s  ClockTime = 3 s
 
 Courant Number mean: 0.0552558 max: 0.387413
 deltaT = 0.00952381
@@ -6103,7 +6121,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.23086e-07
     Total heat release rate [J/s] = -0.192891
 
-ExecutionTime = 2.17 s  ClockTime = 2 s
+ExecutionTime = 2.55 s  ClockTime = 3 s
 
 Courant Number mean: 0.0542483 max: 0.375691
 deltaT = 0.00952381
@@ -6152,7 +6170,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.37139e-07
     Total heat release rate [J/s] = -0.214913
 
-ExecutionTime = 2.19 s  ClockTime = 2 s
+ExecutionTime = 2.57 s  ClockTime = 3 s
 
 Courant Number mean: 0.0555263 max: 0.382554
 deltaT = 0.00952381
@@ -6201,7 +6219,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.52866e-07
     Total heat release rate [J/s] = -0.23956
 
-ExecutionTime = 2.21 s  ClockTime = 2 s
+ExecutionTime = 2.58 s  ClockTime = 3 s
 
 Courant Number mean: 0.0565989 max: 0.38749
 deltaT = 0.00952381
@@ -6250,7 +6268,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.71176e-07
     Total heat release rate [J/s] = -0.268254
 
-ExecutionTime = 2.22 s  ClockTime = 2 s
+ExecutionTime = 2.6 s  ClockTime = 3 s
 
 Courant Number mean: 0.0581539 max: 0.38935
 deltaT = 0.00952381
@@ -6299,7 +6317,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.92367e-07
     Total heat release rate [J/s] = -0.301462
 
-ExecutionTime = 2.24 s  ClockTime = 2 s
+ExecutionTime = 2.62 s  ClockTime = 3 s
 
 Courant Number mean: 0.0594605 max: 0.388926
 deltaT = 0.00952381
@@ -6348,7 +6366,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.16802e-07
     Total heat release rate [J/s] = -0.339755
 
-ExecutionTime = 2.25 s  ClockTime = 2 s
+ExecutionTime = 2.64 s  ClockTime = 3 s
 
 Courant Number mean: 0.0609098 max: 0.387675
 deltaT = 0.00952381
@@ -6397,7 +6415,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.4491e-07
     Total heat release rate [J/s] = -0.383803
 
-ExecutionTime = 2.27 s  ClockTime = 2 s
+ExecutionTime = 2.66 s  ClockTime = 3 s
 
 Courant Number mean: 0.0621178 max: 0.391591
 deltaT = 0.00952381
@@ -6446,7 +6464,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.78346e-07
     Total heat release rate [J/s] = -0.436202
 
-ExecutionTime = 2.28 s  ClockTime = 2 s
+ExecutionTime = 2.67 s  ClockTime = 3 s
 
 Courant Number mean: 0.0641807 max: 0.39498
 deltaT = 0.00952381
@@ -6495,7 +6513,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.15548e-07
     Total heat release rate [J/s] = -0.494502
 
-ExecutionTime = 2.3 s  ClockTime = 2 s
+ExecutionTime = 2.69 s  ClockTime = 3 s
 
 Courant Number mean: 0.0654113 max: 0.407458
 deltaT = 0.00952381
@@ -6589,7 +6607,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.5822e-07
     Total heat release rate [J/s] = -0.561375
 
-ExecutionTime = 2.33 s  ClockTime = 2 s
+ExecutionTime = 2.73 s  ClockTime = 3 s
 
 Courant Number mean: 0.0670212 max: 0.408685
 deltaT = 0.00952381
@@ -6638,7 +6656,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.65763e-07
     Total heat release rate [J/s] = -0.573196
 
-ExecutionTime = 2.35 s  ClockTime = 2 s
+ExecutionTime = 2.75 s  ClockTime = 3 s
 
 Courant Number mean: 0.0680885 max: 0.413118
 deltaT = 0.00952381
@@ -6687,7 +6705,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.76616e-07
     Total heat release rate [J/s] = -0.590203
 
-ExecutionTime = 2.37 s  ClockTime = 2 s
+ExecutionTime = 2.77 s  ClockTime = 3 s
 
 Courant Number mean: 0.0700742 max: 0.409639
 deltaT = 0.00952381
@@ -6736,7 +6754,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.92775e-07
     Total heat release rate [J/s] = -0.615526
 
-ExecutionTime = 2.38 s  ClockTime = 2 s
+ExecutionTime = 2.78 s  ClockTime = 3 s
 
 Courant Number mean: 0.0714478 max: 0.415969
 deltaT = 0.00952381
@@ -6785,7 +6803,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.12039e-07
     Total heat release rate [J/s] = -0.645716
 
-ExecutionTime = 2.4 s  ClockTime = 2 s
+ExecutionTime = 2.81 s  ClockTime = 3 s
 
 Courant Number mean: 0.0735503 max: 0.413498
 deltaT = 0.00952381
@@ -6834,7 +6852,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.35392e-07
     Total heat release rate [J/s] = -0.682312
 
-ExecutionTime = 2.41 s  ClockTime = 2 s
+ExecutionTime = 2.83 s  ClockTime = 3 s
 
 Courant Number mean: 0.0747436 max: 0.424994
 deltaT = 0.00952381
@@ -6883,7 +6901,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.63058e-07
     Total heat release rate [J/s] = -0.725669
 
-ExecutionTime = 2.43 s  ClockTime = 2 s
+ExecutionTime = 2.84 s  ClockTime = 3 s
 
 Courant Number mean: 0.0770644 max: 0.422823
 deltaT = 0.00952381
@@ -6932,7 +6950,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.95389e-07
     Total heat release rate [J/s] = -0.776336
 
-ExecutionTime = 2.45 s  ClockTime = 2 s
+ExecutionTime = 2.86 s  ClockTime = 3 s
 
 Courant Number mean: 0.0786901 max: 0.42993
 deltaT = 0.00952381
@@ -6981,7 +6999,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.3285e-07
     Total heat release rate [J/s] = -0.835041
 
-ExecutionTime = 2.46 s  ClockTime = 2 s
+ExecutionTime = 2.88 s  ClockTime = 3 s
 
 Courant Number mean: 0.0809969 max: 0.426729
 deltaT = 0.00952381
@@ -7030,7 +7048,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.77481e-07
     Total heat release rate [J/s] = -0.904984
 
-ExecutionTime = 2.48 s  ClockTime = 2 s
+ExecutionTime = 2.9 s  ClockTime = 3 s
 
 Courant Number mean: 0.082613 max: 0.43313
 deltaT = 0.00952381
@@ -7124,7 +7142,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 6.27873e-07
     Total heat release rate [J/s] = -0.983954
 
-ExecutionTime = 2.51 s  ClockTime = 2 s
+ExecutionTime = 2.94 s  ClockTime = 3 s
 
 Courant Number mean: 0.0849446 max: 0.436155
 deltaT = 0.00952381
@@ -7173,7 +7191,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 6.63254e-07
     Total heat release rate [J/s] = -1.0394
 
-ExecutionTime = 2.54 s  ClockTime = 2 s
+ExecutionTime = 2.98 s  ClockTime = 3 s
 
 Courant Number mean: 0.0867224 max: 0.445465
 deltaT = 0.01
@@ -7222,7 +7240,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 7.07117e-07
     Total heat release rate [J/s] = -1.10814
 
-ExecutionTime = 2.56 s  ClockTime = 2 s
+ExecutionTime = 2.99 s  ClockTime = 3 s
 
 Courant Number mean: 0.0934397 max: 0.4688
 deltaT = 0.01
@@ -7271,7 +7289,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 7.65065e-07
     Total heat release rate [J/s] = -1.19895
 
-ExecutionTime = 2.58 s  ClockTime = 2 s
+ExecutionTime = 3.01 s  ClockTime = 3 s
 
 Courant Number mean: 0.0952673 max: 0.475087
 deltaT = 0.01
@@ -7320,7 +7338,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 8.36276e-07
     Total heat release rate [J/s] = -1.31055
 
-ExecutionTime = 2.59 s  ClockTime = 2 s
+ExecutionTime = 3.03 s  ClockTime = 3 s
 
 Courant Number mean: 0.0980294 max: 0.474988
 deltaT = 0.01
@@ -7369,7 +7387,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 9.25804e-07
     Total heat release rate [J/s] = -1.45085
 
-ExecutionTime = 2.61 s  ClockTime = 2 s
+ExecutionTime = 3.05 s  ClockTime = 3 s
 
 Courant Number mean: 0.099974 max: 0.482793
 deltaT = 0.01
@@ -7418,7 +7436,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.0401e-06
     Total heat release rate [J/s] = -1.62996
 
-ExecutionTime = 2.62 s  ClockTime = 2 s
+ExecutionTime = 3.07 s  ClockTime = 3 s
 
 Courant Number mean: 0.102909 max: 0.484527
 deltaT = 0.01
@@ -7467,7 +7485,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.18834e-06
     Total heat release rate [J/s] = -1.86228
 
-ExecutionTime = 2.64 s  ClockTime = 2 s
+ExecutionTime = 3.09 s  ClockTime = 3 s
 
 Courant Number mean: 0.104847 max: 0.494402
 deltaT = 0.01
@@ -7516,7 +7534,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.38445e-06
     Total heat release rate [J/s] = -2.1696
 
-ExecutionTime = 2.66 s  ClockTime = 2 s
+ExecutionTime = 3.11 s  ClockTime = 3 s
 
 Courant Number mean: 0.107275 max: 0.498292
 deltaT = 0.01
@@ -7565,7 +7583,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.6441e-06
     Total heat release rate [J/s] = -2.57651
 
-ExecutionTime = 2.67 s  ClockTime = 2 s
+ExecutionTime = 3.12 s  ClockTime = 3 s
 
 Courant Number mean: 0.109715 max: 0.515734
 deltaT = 0.00923077
@@ -7659,7 +7677,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.99122e-06
     Total heat release rate [J/s] = -3.12048
 
-ExecutionTime = 2.71 s  ClockTime = 2 s
+ExecutionTime = 3.16 s  ClockTime = 3 s
 
 Courant Number mean: 0.104574 max: 0.485138
 deltaT = 0.00923077
@@ -7708,7 +7726,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.26438e-06
     Total heat release rate [J/s] = -3.54856
 
-ExecutionTime = 2.72 s  ClockTime = 2 s
+ExecutionTime = 3.18 s  ClockTime = 3 s
 
 Courant Number mean: 0.105839 max: 0.50162
 deltaT = 0.00846154
@@ -7757,7 +7775,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.59372e-06
     Total heat release rate [J/s] = -4.06468
 
-ExecutionTime = 2.74 s  ClockTime = 2 s
+ExecutionTime = 3.19 s  ClockTime = 4 s
 
 Courant Number mean: 0.100524 max: 0.459233
 deltaT = 0.00846154
@@ -7806,7 +7824,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.95571e-06
     Total heat release rate [J/s] = -4.63196
 
-ExecutionTime = 2.75 s  ClockTime = 2 s
+ExecutionTime = 3.22 s  ClockTime = 4 s
 
 Courant Number mean: 0.101791 max: 0.469242
 deltaT = 0.00846154
@@ -7855,7 +7873,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.38817e-06
     Total heat release rate [J/s] = -5.30967
 
-ExecutionTime = 2.77 s  ClockTime = 2 s
+ExecutionTime = 3.24 s  ClockTime = 4 s
 
 Courant Number mean: 0.103251 max: 0.473759
 deltaT = 0.00846154
@@ -7904,7 +7922,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.9066e-06
     Total heat release rate [J/s] = -6.12212
 
-ExecutionTime = 2.79 s  ClockTime = 2 s
+ExecutionTime = 3.26 s  ClockTime = 4 s
 
 Courant Number mean: 0.104511 max: 0.479929
 deltaT = 0.00846154
@@ -7953,7 +7971,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 4.52999e-06
     Total heat release rate [J/s] = -7.09905
 
-ExecutionTime = 2.8 s  ClockTime = 2 s
+ExecutionTime = 3.27 s  ClockTime = 4 s
 
 Courant Number mean: 0.106222 max: 0.481297
 deltaT = 0.00846154
@@ -8002,7 +8020,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 5.28136e-06
     Total heat release rate [J/s] = -8.27654
 
-ExecutionTime = 2.82 s  ClockTime = 2 s
+ExecutionTime = 3.29 s  ClockTime = 4 s
 
 Courant Number mean: 0.107541 max: 0.486049
 deltaT = 0.00846154
@@ -8051,7 +8069,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 6.18955e-06
     Total heat release rate [J/s] = -9.69978
 
-ExecutionTime = 2.83 s  ClockTime = 2 s
+ExecutionTime = 3.31 s  ClockTime = 4 s
 
 Courant Number mean: 0.109863 max: 0.49213
 deltaT = 0.00846154
@@ -8100,7 +8118,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 7.28656e-06
     Total heat release rate [J/s] = -11.4189
 
-ExecutionTime = 2.85 s  ClockTime = 2 s
+ExecutionTime = 3.32 s  ClockTime = 4 s
 
 Courant Number mean: 0.111756 max: 0.509165
 deltaT = 0.00676923
@@ -8194,7 +8212,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 8.61499e-06
     Total heat release rate [J/s] = -13.5007
 
-ExecutionTime = 2.88 s  ClockTime = 3 s
+ExecutionTime = 3.37 s  ClockTime = 4 s
 
 Courant Number mean: 0.0926336 max: 0.417273
 deltaT = 0.00676923
@@ -8243,7 +8261,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 9.38183e-06
     Total heat release rate [J/s] = -14.7025
 
-ExecutionTime = 2.9 s  ClockTime = 3 s
+ExecutionTime = 3.39 s  ClockTime = 4 s
 
 Courant Number mean: 0.0934603 max: 0.43162
 deltaT = 0.00676923
@@ -8292,7 +8310,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.03266e-05
     Total heat release rate [J/s] = -16.1831
 
-ExecutionTime = 2.92 s  ClockTime = 3 s
+ExecutionTime = 3.4 s  ClockTime = 4 s
 
 Courant Number mean: 0.0944243 max: 0.437801
 deltaT = 0.00676923
@@ -8341,7 +8359,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.1501e-05
     Total heat release rate [J/s] = -18.0234
 
-ExecutionTime = 2.93 s  ClockTime = 3 s
+ExecutionTime = 3.42 s  ClockTime = 4 s
 
 Courant Number mean: 0.0949443 max: 0.446275
 deltaT = 0.00676923
@@ -8390,7 +8408,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.29701e-05
     Total heat release rate [J/s] = -20.3257
 
-ExecutionTime = 2.96 s  ClockTime = 3 s
+ExecutionTime = 3.46 s  ClockTime = 4 s
 
 Courant Number mean: 0.0962112 max: 0.448624
 deltaT = 0.00740741
@@ -8439,7 +8457,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.48139e-05
     Total heat release rate [J/s] = -23.2153
 
-ExecutionTime = 2.98 s  ClockTime = 3 s
+ExecutionTime = 3.48 s  ClockTime = 4 s
 
 Courant Number mean: 0.105716 max: 0.496519
 deltaT = 0.00740741
@@ -8488,7 +8506,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 1.73962e-05
     Total heat release rate [J/s] = -27.262
 
-ExecutionTime = 2.99 s  ClockTime = 3 s
+ExecutionTime = 3.49 s  ClockTime = 4 s
 
 Courant Number mean: 0.107526 max: 0.494505
 deltaT = 0.00740741
@@ -8537,7 +8555,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.07393e-05
     Total heat release rate [J/s] = -32.5011
 
-ExecutionTime = 3.01 s  ClockTime = 3 s
+ExecutionTime = 3.51 s  ClockTime = 4 s
 
 Courant Number mean: 0.108984 max: 0.507974
 deltaT = 0.00711111
@@ -8586,7 +8604,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.50638e-05
     Total heat release rate [J/s] = -39.2781
 
-ExecutionTime = 3.03 s  ClockTime = 3 s
+ExecutionTime = 3.53 s  ClockTime = 4 s
 
 Courant Number mean: 0.106751 max: 0.496413
 deltaT = 0.00711111
@@ -8635,7 +8653,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.03626e-05
     Total heat release rate [J/s] = -47.5819
 
-ExecutionTime = 3.04 s  ClockTime = 3 s
+ExecutionTime = 3.55 s  ClockTime = 4 s
 
 Courant Number mean: 0.108079 max: 0.508694
 deltaT = 0.00681481
@@ -8729,7 +8747,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.70448e-05
     Total heat release rate [J/s] = -58.0538
 
-ExecutionTime = 3.08 s  ClockTime = 3 s
+ExecutionTime = 3.59 s  ClockTime = 4 s
 
 Courant Number mean: 0.105405 max: 0.493214
 deltaT = 0.00681481
@@ -8778,7 +8796,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.47599e-05
     Total heat release rate [J/s] = -54.473
 
-ExecutionTime = 3.1 s  ClockTime = 3 s
+ExecutionTime = 3.61 s  ClockTime = 4 s
 
 Courant Number mean: 0.106494 max: 0.50327
 deltaT = 0.00651852
@@ -8827,7 +8845,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.29756e-05
     Total heat release rate [J/s] = -51.6768
 
-ExecutionTime = 3.11 s  ClockTime = 3 s
+ExecutionTime = 3.63 s  ClockTime = 4 s
 
 Courant Number mean: 0.103776 max: 0.48495
 deltaT = 0.00651852
@@ -8876,7 +8894,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.16199e-05
     Total heat release rate [J/s] = -49.5523
 
-ExecutionTime = 3.13 s  ClockTime = 3 s
+ExecutionTime = 3.65 s  ClockTime = 4 s
 
 Courant Number mean: 0.104646 max: 0.492616
 deltaT = 0.00651852
@@ -8925,7 +8943,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 3.05434e-05
     Total heat release rate [J/s] = -47.8652
 
-ExecutionTime = 3.14 s  ClockTime = 3 s
+ExecutionTime = 3.66 s  ClockTime = 4 s
 
 Courant Number mean: 0.106127 max: 0.505778
 deltaT = 0.00620811
@@ -8974,7 +8992,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.97078e-05
     Total heat release rate [J/s] = -46.5558
 
-ExecutionTime = 3.16 s  ClockTime = 3 s
+ExecutionTime = 3.68 s  ClockTime = 4 s
 
 Courant Number mean: 0.102048 max: 0.503804
 deltaT = 0.00591249
@@ -9023,7 +9041,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.9094e-05
     Total heat release rate [J/s] = -45.5939
 
-ExecutionTime = 3.18 s  ClockTime = 3 s
+ExecutionTime = 3.7 s  ClockTime = 4 s
 
 Courant Number mean: 0.0986037 max: 0.514187
 deltaT = 0.00563094
@@ -9072,7 +9090,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.86548e-05
     Total heat release rate [J/s] = -44.9056
 
-ExecutionTime = 3.19 s  ClockTime = 3 s
+ExecutionTime = 3.72 s  ClockTime = 4 s
 
 Courant Number mean: 0.0950806 max: 0.511494
 deltaT = 0.0053628
@@ -9121,7 +9139,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.83543e-05
     Total heat release rate [J/s] = -44.4347
 
-ExecutionTime = 3.21 s  ClockTime = 3 s
+ExecutionTime = 3.73 s  ClockTime = 4 s
 
 Courant Number mean: 0.091743 max: 0.512433
 deltaT = 0.00510743
@@ -9170,7 +9188,7 @@ Pyrolysis: reactingOneDim
     Total pyrolysis gases  [kg/s] = 2.81621e-05
     Total heat release rate [J/s] = -44.1334
 
-ExecutionTime = 3.22 s  ClockTime = 3 s
+ExecutionTime = 3.75 s  ClockTime = 4 s
 
 End
 

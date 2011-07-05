@@ -1,0 +1,48 @@
+DEV_PATH = ./../../..
+
+EXE_INC = \
+    -DFULLDEBUG -g -O0 \
+    -I$(DEV_PATH)/libs/lagrangian/basicNew/lnInclude \
+    -I$(DEV_PATH)/libs/regionModels/regionModel/lnInclude \
+    -I$(DEV_PATH)/libs/regionModels/surfaceFilmModels/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/reactionThermoNew/lnInclude \
+    -I$(DEV_PATH)/libs/thermophysicalModels/SLGThermo/lnInclude \
+    \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/pdfs/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/specie/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/basic/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/liquids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/liquidMixture/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solids/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/solidMixture/lnInclude \
+    -I$(LIB_SRC)/thermophysicalModels/radiation/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels \
+    -I$(LIB_SRC)/turbulenceModels/compressible/turbulenceModel \
+    -I$(LIB_SRC)/turbulenceModels/compressible/RAS/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/LES/LESdeltas/lnInclude \
+    -I$(LIB_SRC)/turbulenceModels/compressible/LES/lnInclude \
+    -I$(LIB_SRC)/sampling/lnInclude \
+    -I$(LIB_SRC)/surfMesh/lnInclude
+
+LIB_LIBS = \
+    -L$(FOAM_USER_LIBBIN) \
+        -llagrangianNew17x \
+        -lregionModels17x \
+        -lsurfaceFilmModels17x \
+        -lreactionThermophysicalModelsNew17x \
+        -lSLGThermoNew17x \
+    -lfiniteVolume \
+    -lmeshTools \
+    -lpdf \
+    -lliquids \
+    -lliquidMixture \
+    -lsolids \
+    -lsolidMixture \
+    -lspecie \
+    -lbasicThermophysicalModels \
+    -lcompressibleRASModels \
+    -lcompressibleLESModels \
+    -lsampling \
+    -lsurfMesh

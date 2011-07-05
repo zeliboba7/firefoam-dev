@@ -1,0 +1,60 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.6                                   |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/filmRegion";
+    object      Twf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform  288;
+
+boundaryField
+{
+    coupledWall_top
+    {
+        type            zeroGradient;
+    }
+
+    /*This bc is the back boundary condition for the film energy equation*/
+    coupledWall
+    {
+        /*type            fixedValue;*/
+        /*value           uniform 288.0;*/
+        type            zeroGradient;
+    }
+
+    side1 //bottom
+    {
+        type            zeroGradient;
+    }
+
+    side2 //side
+    {
+        type            zeroGradient;
+    }
+
+    side3 //top
+    {
+        /*type            fixedValue;*/
+        /*value           uniform 288.0;*/
+        type            zeroGradient;
+    }
+
+    side4 //side
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

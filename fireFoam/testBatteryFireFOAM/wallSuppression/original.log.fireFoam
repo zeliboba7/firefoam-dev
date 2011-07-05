@@ -1,0 +1,917 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 1.7.x-356805cce996
+Exec   : fireFoam
+Date   : May 25 2011
+Time   : 14:32:56
+Host   : kvmlinux
+PID    : 18324
+Case   : /home/meredithk/filmModel/testBattery/wallSuppression
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FireFOAM Build Version:  8086532dde27cb8c78e7af6fe2205a636ed743c2
+FireFOAM Build Time Stamp:  Wed May 25 10:49:54 EDT 2011
+****************************************************
+Create time
+
+Create mesh for time = 0
+
+
+Reading g
+Reading thermophysical properties
+
+Selecting thermodynamics package hsPsiMixtureThermoNew<singleStepReactingMixture<gasThermoPhysics>>
+Selecting chemistryReader foamChemistryReader
+Fuel heat of combustion :4.63574e+07
+Mole based specieStoichCoeffs: 5(-5 4 -1 3 0)
+stoichiometric air-fuel ratio :3.62829
+stoichiometric oxygen-fuel ratio :3.62829
+Max products: 5(0 0.353083 0 0.646917 0)
+mass based specieStoichCoeffs: 5(-3.62829 1.63418 -1 2.99414 0)
+Creating component thermo properties:
+    multi-component carrier - 5 species
+    liquids - 1 components
+    solids - 0 components
+Reading field p_rgh
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Creating turbulence model
+
+Selecting turbulence model type LESModel
+Selecting LES turbulence model oneEqEddy
+oneEqEddyCoeffs
+{
+    Prt             1;
+    ce              1.048;
+    ck              0.094;
+}
+
+Creating combustion model
+
+Selecting combustion model infinitelyFastChemistry
+stoichiometric mixture fraction is = 0.216062
+Creating field DpDt
+
+Calculating field g.h
+
+Selecting radiationModel fvDOM
+Selecting absorptionEmissionModel greyMeanAbsorptionEmission
+Selecting scatterModel constantScatter
+fvDOM : Allocated 16 rays with average orientation:
+	I0	(0.230038 0.55536 0.392699)
+	I1	(0.55536 0.230038 0.392699)
+	I2	(0.55536 -0.230038 0.392699)
+	I3	(0.230038 -0.55536 0.392699)
+	I4	(-0.230038 -0.55536 0.392699)
+	I5	(-0.55536 -0.230038 0.392699)
+	I6	(-0.55536 0.230038 0.392699)
+	I7	(-0.230038 0.55536 0.392699)
+	I8	(0.230038 0.55536 -0.392699)
+	I9	(0.55536 0.230038 -0.392699)
+	I10	(0.55536 -0.230038 -0.392699)
+	I11	(0.230038 -0.55536 -0.392699)
+	I12	(-0.230038 -0.55536 -0.392699)
+	I13	(-0.55536 -0.230038 -0.392699)
+	I14	(-0.55536 0.230038 -0.392699)
+	I15	(-0.230038 0.55536 -0.392699)
+
+Creating pyrolysis model
+
+Selecting pyrolysisModel reactingOneDim
+Selecting solidChemistryModel "ODESolidChemistryModel<constSolidThermoPhysics>gasThermoPhysics"
+ODESolidChemistryModel: Number of solids = 2 and reactions = 1
+Number of gases from pyrolysis = 1
+Reaction 0
+irreversibleSolidArrheniusReaction
+    v = char +  gas
+    Reaction order: 4.86
+(7.83e+10 15274.6 400)
+Selecting ODE solver SIBS
+
+Constructing reacting cloud
+Constructing cloud functions
+    none
+Selecting DispersionModel none
+Selecting DragModel SphereDrag
+Selecting InjectionModel ConeInjection
+    Constructing 3-D injection
+Selecting pdfType RosinRammler
+Selecting PatchInteractionModel StandardWallInteraction
+Selecting SurfaceFilmModel ThermoSurfaceFilm
+    Applying absorb interaction model
+Selecting U IntegrationScheme Euler
+Selecting HeatTransferModel RanzMarshall
+Selecting T IntegrationScheme Analytical
+Selecting CompositionModel SinglePhaseMixture
+Selecting PhaseChangeModel LiquidEvaporation
+
+Constructing surface film model
+Selecting surfaceFilmModel thermoSingleLayer
+    Selecting film injection models
+        none
+    Selecting heatTransferModel constant
+    Selecting heatTransferModel constant
+    Selecting phaseChangeModel standardPhaseChange
+    Selecting radiationModel standardRadiation
+Courant Number mean: 0 max: 0
+
+Starting time loop
+
+Courant Number mean: 0 max: 0
+--> FOAM Warning : 
+    From function dlLibraryTable::open(const dictionary& dict, const word& libsEntry, const TablePtr tablePtr)
+    in file lnInclude/dlLibraryTableTemplates.C at line 67
+    library "libsampling.so" did not introduce any new entries
+
+cellSource HRR:
+    total cells  = 8000
+    total volume = 4
+
+
+
+faceSource patchBurner:
+    total faces  = 40
+    total area   = 0.4
+
+
+faceSource patchPanel:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchPanelQr:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchFilmQrNet2:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchFilmQrNet:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchPyrQrNet:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchOutlet:
+    total faces  = 200
+    total area   = 2
+
+
+faceSource patchPanelSolidRegion:
+    total faces  = 400
+    total area   = 4
+
+
+faceSource patchFilmInlet:
+    total faces  = 10
+    total area   = 0.2
+
+
+faceSource patchFilmOutlet:
+    total faces  = 10
+    total area   = 0.2
+
+
+Time = 0.003
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 4.71845e-18, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufz, Initial residual = 1, Final residual = 0, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.00786954, Final residual = 3.60287e-20, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 1, Final residual = 1.74475e-17, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 7.28211e-07
+    min/max(mag(U))    = 0, 0.000487897
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 298, 298
+    mass phase change  = 0
+    vapourisation rate = 0
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 1, Final residual = 7.06409e-15, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.999999, Final residual = 2.78883e-12, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 1, Final residual = 2.19871e-15, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.0019308, Final residual = 2.14561e-09, No Iterations 1
+max of O2 = 0.23301
+min of O2 = 0.23301
+DILUPBiCG:  Solving for H2O, Initial residual = 0, Final residual = 0, No Iterations 0
+max of H2O = 0
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 1, Final residual = 1.12034e-14, No Iterations 2
+max of C3H8 = 9.93718e-11
+min of C3H8 = 6.68508e-96
+DILUPBiCG:  Solving for CO2, Initial residual = 0, Final residual = 0, No Iterations 0
+max of CO2 = 0
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 1, Final residual = 1.11866e-14, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.886014, Final residual = 0.00794378, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.10552e-08, global = 6.7228e-10, cumulative = 6.7228e-10
+GAMG:  Solving for p_rgh, Initial residual = 0.0151436, Final residual = 8.26967e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.58298e-11, global = -2.23797e-12, cumulative = 6.70042e-10
+DILUPBiCG:  Solving for k, Initial residual = 1, Final residual = 6.76217e-15, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 1, Final residual = 5.18186e-17, No Iterations 1
+pyrolysis min/max(T) = 297.857, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 0
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 0.91 s  ClockTime = 1 s
+
+Courant Number mean: 4.04299e-05 max: 0.00137554
+Time = 0.006
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 2.26075e-16, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.990688, Final residual = 1.79338e-16, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 7.62146e-06, Final residual = 1.3911e-22, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 1, Final residual = 5.56517e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.204082, Final residual = 7.12144e-18, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 1.45642e-06
+    min/max(mag(U))    = 0, 0.000487897
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.857, 298
+    mass phase change  = 0
+    vapourisation rate = 0
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.399861, Final residual = 2.5864e-14, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.334254, Final residual = 6.974e-13, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.363736, Final residual = 2.3439e-14, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 1, Final residual = 1.57959e-13, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0295014
+DILUPBiCG:  Solving for H2O, Initial residual = 1, Final residual = 2.57147e-14, No Iterations 2
+max of H2O = 1.6607e-15
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 1, Final residual = 8.12894e-14, No Iterations 2
+max of C3H8 = 0.87339
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 1, Final residual = 2.57147e-14, No Iterations 2
+max of CO2 = 3.04271e-15
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.999399, Final residual = 3.80022e-14, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.0626246, Final residual = 0.000469407, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 4.98171e-08, global = 7.54863e-10, cumulative = 1.42491e-09
+GAMG:  Solving for p_rgh, Initial residual = 0.0156908, Final residual = 9.60468e-07, No Iterations 10
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.00653e-10, global = 2.76523e-11, cumulative = 1.45256e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.924914, Final residual = 4.22524e-15, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.223916, Final residual = 3.37823e-17, No Iterations 1
+pyrolysis min/max(T) = 297.852, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 1.78789e-17
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 1.25 s  ClockTime = 2 s
+
+Courant Number mean: 4.91692e-05 max: 0.0010105
+Time = 0.009
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 4.20167e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.854378, Final residual = 5.47125e-18, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 7.4969e-06, Final residual = 2.22573e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 1, Final residual = 5.73953e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.113543, Final residual = 1.10802e-26, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 2.18396e-06
+    min/max(mag(U))    = 0, 0.000487897
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.852, 298
+    mass phase change  = 6.71719e-10
+    vapourisation rate = 2.23906e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.205241, Final residual = 3.36885e-15, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.48456, Final residual = 1.00052e-12, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.12105, Final residual = 5.21178e-15, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.388172, Final residual = 2.27379e-14, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.028799
+DILUPBiCG:  Solving for H2O, Initial residual = 1, Final residual = 7.76396e-14, No Iterations 2
+max of H2O = 0.000113127
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.192582, Final residual = 1.12496e-14, No Iterations 2
+max of C3H8 = 0.876275
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 1, Final residual = 7.76396e-14, No Iterations 2
+max of CO2 = 0.000207271
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.986643, Final residual = 7.65308e-14, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.424842, Final residual = 0.00152139, No Iterations 6
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.30928e-07, global = 3.87109e-10, cumulative = 1.83967e-09
+GAMG:  Solving for p_rgh, Initial residual = 0.00014305, Final residual = 7.409e-07, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.1647e-10, global = 8.48925e-11, cumulative = 1.92456e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.94524, Final residual = 2.86298e-12, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.127393, Final residual = 9.24202e-18, No Iterations 1
+pyrolysis min/max(T) = 297.846, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 4.65596e-17
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 1.58 s  ClockTime = 2 s
+
+Courant Number mean: 0.000382277 max: 0.00629614
+Time = 0.012
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 2.54674e-25, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.994832, Final residual = 8.09794e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 1.05254e-06, Final residual = 2.21601e-22, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.9218, Final residual = 3.10299e-16, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0786848, Final residual = 2.74865e-18, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 2.9114e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.846, 298.026
+    mass phase change  = 1.44903e-09
+    vapourisation rate = 2.59103e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.368619, Final residual = 3.01979e-12, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.320225, Final residual = 1.6876e-12, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.336695, Final residual = 2.14867e-12, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.221563, Final residual = 1.60983e-13, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0286835
+DILUPBiCG:  Solving for H2O, Initial residual = 0.323253, Final residual = 3.07442e-13, No Iterations 2
+max of H2O = 0.000327458
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.103792, Final residual = 7.51517e-14, No Iterations 2
+max of C3H8 = 0.876526
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.323253, Final residual = 3.07442e-13, No Iterations 2
+max of CO2 = 0.000599965
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.347457, Final residual = 3.39002e-13, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.0312104, Final residual = 0.00012642, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.13941e-07, global = 1.02982e-09, cumulative = 2.95438e-09
+GAMG:  Solving for p_rgh, Initial residual = 8.00965e-05, Final residual = 7.31445e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.2366e-09, global = 1.44244e-10, cumulative = 3.09862e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.542777, Final residual = 1.5977e-11, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0895668, Final residual = 5.643e-18, No Iterations 1
+pyrolysis min/max(T) = 297.841, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 7.52404e-17
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 1.91 s  ClockTime = 2 s
+
+Courant Number mean: 0.000854804 max: 0.0118179
+Time = 0.015
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 4.5946e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.843603, Final residual = 2.26911e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 3.79667e-05, Final residual = 5.7078e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.65032, Final residual = 1.14915e-16, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0601926, Final residual = 1.05163e-18, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 3.63864e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.841, 298.092
+    mass phase change  = 2.43232e-09
+    vapourisation rate = 3.27765e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.294744, Final residual = 1.12282e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.346031, Final residual = 6.68709e-12, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.239677, Final residual = 7.50395e-12, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.153569, Final residual = 3.24584e-13, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0286501
+DILUPBiCG:  Solving for H2O, Initial residual = 0.191884, Final residual = 5.57779e-13, No Iterations 2
+max of H2O = 0.000633279
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.0705637, Final residual = 1.62707e-13, No Iterations 2
+max of C3H8 = 0.876318
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.191884, Final residual = 5.57779e-13, No Iterations 2
+max of CO2 = 0.00116029
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.198196, Final residual = 6.06508e-13, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.00803634, Final residual = 5.03386e-05, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.35563e-08, global = 1.1113e-09, cumulative = 4.20992e-09
+GAMG:  Solving for p_rgh, Initial residual = 7.04278e-05, Final residual = 7.05557e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 1.18008e-09, global = 2.41216e-10, cumulative = 4.45114e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.328278, Final residual = 4.73107e-11, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0693622, Final residual = 4.5158e-18, No Iterations 1
+pyrolysis min/max(T) = 297.836, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 1.03921e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 2.23 s  ClockTime = 3 s
+
+Courant Number mean: 0.00127358 max: 0.0164862
+Time = 0.018
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 6.00681e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.970925, Final residual = 4.30825e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 6.53866e-05, Final residual = 3.59248e-22, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.413713, Final residual = 8.16219e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.048737, Final residual = 2.55511e-18, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 4.36569e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.836, 298.188
+    mass phase change  = 3.59964e-09
+    vapourisation rate = 3.89107e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.204997, Final residual = 2.36092e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.908963, Final residual = 5.35517e-11, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.150697, Final residual = 1.71754e-11, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.1173, Final residual = 9.53586e-13, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0287787
+DILUPBiCG:  Solving for H2O, Initial residual = 0.136421, Final residual = 1.60099e-12, No Iterations 2
+max of H2O = 0.0010228
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.0533269, Final residual = 5.26959e-13, No Iterations 2
+max of C3H8 = 0.87531
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.136421, Final residual = 1.60099e-12, No Iterations 2
+max of CO2 = 0.00187397
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.1368, Final residual = 1.6015e-12, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.0122839, Final residual = 7.15424e-05, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 9.8111e-08, global = -1.39649e-09, cumulative = 3.05465e-09
+GAMG:  Solving for p_rgh, Initial residual = 0.000337053, Final residual = 4.23806e-07, No Iterations 7
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.70709e-10, global = 2.52664e-10, cumulative = 3.30731e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.228956, Final residual = 6.85598e-11, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0567793, Final residual = 9.962e-18, No Iterations 1
+pyrolysis min/max(T) = 297.83, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 1.32602e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 2.57 s  ClockTime = 3 s
+
+Courant Number mean: 0.00159285 max: 0.0204019
+Time = 0.021
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 4.49423e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.554097, Final residual = 1.69231e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 9.09213e-05, Final residual = 4.15612e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.284046, Final residual = 1.91526e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0409419, Final residual = 1.06645e-26, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 5.09254e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.83, 298.312
+    mass phase change  = 4.97184e-09
+    vapourisation rate = 4.574e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.127201, Final residual = 3.87137e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.467751, Final residual = 7.14804e-11, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0993208, Final residual = 2.83598e-11, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.0947357, Final residual = 2.45654e-12, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0291034
+DILUPBiCG:  Solving for H2O, Initial residual = 0.105681, Final residual = 4.09403e-12, No Iterations 2
+max of H2O = 0.00148974
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.0428887, Final residual = 1.36149e-12, No Iterations 2
+max of C3H8 = 0.873348
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.105681, Final residual = 4.09403e-12, No Iterations 2
+max of CO2 = 0.0027295
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.106554, Final residual = 4.10804e-12, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.01332, Final residual = 5.21489e-05, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 5.22251e-08, global = -3.60496e-09, cumulative = -2.97644e-10
+GAMG:  Solving for p_rgh, Initial residual = 0.0001363, Final residual = 8.03419e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.8011e-10, global = 2.87632e-10, cumulative = -1.00116e-11
+DILUPBiCG:  Solving for k, Initial residual = 0.175455, Final residual = 8.35769e-11, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0481797, Final residual = 3.53134e-18, No Iterations 1
+pyrolysis min/max(T) = 297.825, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 1.61283e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 2.9 s  ClockTime = 3 s
+
+Courant Number mean: 0.00185317 max: 0.0236708
+Time = 0.024
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 4.84946e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.273212, Final residual = 1.24851e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 0.000113994, Final residual = 1.53048e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.208778, Final residual = 9.28725e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0352991, Final residual = 6.17143e-19, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 5.81928e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.825, 298.461
+    mass phase change  = 6.46398e-09
+    vapourisation rate = 4.9738e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0840843, Final residual = 5.2391e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.48418, Final residual = 1.15276e-10, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.076216, Final residual = 4.09541e-11, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.0792778, Final residual = 4.99624e-12, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0296181
+DILUPBiCG:  Solving for H2O, Initial residual = 0.0860917, Final residual = 8.40077e-12, No Iterations 2
+max of H2O = 0.00202909
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.0358061, Final residual = 3.18654e-12, No Iterations 2
+max of C3H8 = 0.870449
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.0860917, Final residual = 8.40077e-12, No Iterations 2
+max of CO2 = 0.00371768
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.0865061, Final residual = 8.40493e-12, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.0087579, Final residual = 3.58025e-05, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.70447e-08, global = -2.11212e-09, cumulative = -2.12213e-09
+GAMG:  Solving for p_rgh, Initial residual = 0.0001158, Final residual = 7.9351e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 8.64073e-10, global = 3.35593e-10, cumulative = -1.78654e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.142862, Final residual = 2.98779e-10, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0419226, Final residual = 6.73588e-18, No Iterations 1
+pyrolysis min/max(T) = 297.82, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 1.89963e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 3.23 s  ClockTime = 4 s
+
+Courant Number mean: 0.00209436 max: 0.0263886
+Time = 0.027
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 3.93285e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.141257, Final residual = 5.58299e-18, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 0.000136386, Final residual = 4.69873e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.161345, Final residual = 9.49879e-18, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0310237, Final residual = 1.61667e-26, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 6.54592e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.82, 298.635
+    mass phase change  = 8.05206e-09
+    vapourisation rate = 5.29357e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0685475, Final residual = 6.07334e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.677904, Final residual = 2.62585e-10, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0633352, Final residual = 5.41888e-11, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.0681029, Final residual = 9.09793e-12, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0302904
+DILUPBiCG:  Solving for H2O, Initial residual = 0.0725776, Final residual = 1.48566e-11, No Iterations 2
+max of H2O = 0.00263686
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.030752, Final residual = 1.18246e-11, No Iterations 2
+max of C3H8 = 0.866739
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.0725776, Final residual = 1.48566e-11, No Iterations 2
+max of CO2 = 0.00483124
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+DILUPBiCG:  Solving for hs, Initial residual = 0.0725875, Final residual = 1.48665e-11, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.0108338, Final residual = 4.40685e-05, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 3.0657e-08, global = 2.01519e-09, cumulative = 2.28653e-10
+GAMG:  Solving for p_rgh, Initial residual = 0.000123159, Final residual = 6.03028e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 7.55533e-10, global = 3.629e-10, cumulative = 5.91553e-10
+DILUPBiCG:  Solving for k, Initial residual = 0.120923, Final residual = 7.11674e-10, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0371591, Final residual = 2.7673e-18, No Iterations 1
+pyrolysis min/max(T) = 297.815, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 2.18644e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 3.56 s  ClockTime = 4 s
+
+Courant Number mean: 0.00232579 max: 0.0286254
+Time = 0.03
+
+
+Evolving thermoSingleLayer for region filmRegion
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ufx, Initial residual = 1, Final residual = 6.63926e-17, No Iterations 1
+DILUPBiCG:  Solving for Ufy, Initial residual = 0.166269, Final residual = 6.39855e-18, No Iterations 1
+DILUPBiCG:  Solving for Ufz, Initial residual = 0.00015676, Final residual = 6.05416e-21, No Iterations 1
+DILUPBiCG:  Solving for hsf, Initial residual = 0.129722, Final residual = 2.72517e-17, No Iterations 1
+DILUPBiCG:  Solving for deltaf, Initial residual = 0.0276719, Final residual = 9.67834e-19, No Iterations 1
+diagonal:  Solving for deltaf*rhof, Initial residual = 0, Final residual = 0, No Iterations 0
+
+Surface film: thermoSingleLayer
+    added mass         = 0
+    current mass       = 7.27247e-06
+    min/max(mag(U))    = 0, 0.000487895
+    min/max(delta)     = 0, 0.00025
+    injected mass      = 0
+    min/max(T)         = 297.815, 298.831
+    mass phase change  = 9.73129e-09
+    vapourisation rate = 5.59743e-07
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0619602, Final residual = 6.44031e-11, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.352791, Final residual = 1.61924e-10, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0526263, Final residual = 6.55029e-11, No Iterations 2
+DILUPBiCG:  Solving for O2, Initial residual = 0.0596339, Final residual = 1.4787e-11, No Iterations 2
+max of O2 = 0.23301
+min of O2 = 0.0310742
+DILUPBiCG:  Solving for H2O, Initial residual = 0.0626851, Final residual = 2.36745e-11, No Iterations 2
+max of H2O = 0.00330998
+min of H2O = 0
+DILUPBiCG:  Solving for C3H8, Initial residual = 0.0269547, Final residual = 8.42024e-12, No Iterations 2
+max of C3H8 = 0.862405
+min of C3H8 = 0
+DILUPBiCG:  Solving for CO2, Initial residual = 0.0626851, Final residual = 2.36745e-11, No Iterations 2
+max of CO2 = 0.00606452
+min of CO2 = 0
+max of N2 = 0.76699
+min of N2 = 0
+GAMG:  Solving for ILambda_0_0, Initial residual = 1, Final residual = 2.98307e-08, No Iterations 2
+GAMG:  Solving for ILambda_1_0, Initial residual = 1, Final residual = 2.23504e-07, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 1, Final residual = 1.03909e-05, No Iterations 3
+GAMG:  Solving for ILambda_3_0, Initial residual = 1, Final residual = 9.29436e-06, No Iterations 5
+GAMG:  Solving for ILambda_4_0, Initial residual = 1, Final residual = 4.84948e-05, No Iterations 4
+GAMG:  Solving for ILambda_5_0, Initial residual = 1, Final residual = 4.85699e-05, No Iterations 4
+GAMG:  Solving for ILambda_6_0, Initial residual = 1, Final residual = 3.5663e-05, No Iterations 4
+GAMG:  Solving for ILambda_7_0, Initial residual = 1, Final residual = 2.15534e-05, No Iterations 4
+GAMG:  Solving for ILambda_8_0, Initial residual = 1, Final residual = 3.59149e-05, No Iterations 4
+GAMG:  Solving for ILambda_9_0, Initial residual = 1, Final residual = 5.69261e-05, No Iterations 4
+GAMG:  Solving for ILambda_10_0, Initial residual = 1, Final residual = 3.77728e-05, No Iterations 4
+GAMG:  Solving for ILambda_11_0, Initial residual = 1, Final residual = 2.8698e-05, No Iterations 4
+GAMG:  Solving for ILambda_12_0, Initial residual = 1, Final residual = 1.08224e-09, No Iterations 2
+GAMG:  Solving for ILambda_13_0, Initial residual = 1, Final residual = 4.84462e-09, No Iterations 1
+GAMG:  Solving for ILambda_14_0, Initial residual = 1, Final residual = 4.04168e-05, No Iterations 2
+GAMG:  Solving for ILambda_15_0, Initial residual = 1, Final residual = 8.47764e-05, No Iterations 3
+Radiation solver iter: 1
+GAMG:  Solving for ILambda_0_0, Initial residual = 0.361794, Final residual = 8.26984e-09, No Iterations 2
+GAMG:  Solving for ILambda_1_0, Initial residual = 0.43597, Final residual = 3.70928e-08, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 0.435969, Final residual = 3.10449e-06, No Iterations 3
+GAMG:  Solving for ILambda_3_0, Initial residual = 0.361794, Final residual = 5.57644e-05, No Iterations 4
+GAMG:  Solving for ILambda_4_0, Initial residual = 0.528312, Final residual = 2.89009e-05, No Iterations 4
+GAMG:  Solving for ILambda_5_0, Initial residual = 0.521385, Final residual = 3.36283e-05, No Iterations 4
+GAMG:  Solving for ILambda_6_0, Initial residual = 0.521388, Final residual = 2.39579e-05, No Iterations 4
+GAMG:  Solving for ILambda_7_0, Initial residual = 0.528315, Final residual = 1.29543e-05, No Iterations 4
+GAMG:  Solving for ILambda_8_0, Initial residual = 0.262272, Final residual = 2.18108e-05, No Iterations 4
+GAMG:  Solving for ILambda_9_0, Initial residual = 0.240444, Final residual = 2.45748e-05, No Iterations 4
+GAMG:  Solving for ILambda_10_0, Initial residual = 0.240443, Final residual = 1.75874e-05, No Iterations 4
+GAMG:  Solving for ILambda_11_0, Initial residual = 0.262272, Final residual = 1.15068e-05, No Iterations 4
+GAMG:  Solving for ILambda_12_0, Initial residual = 0.317126, Final residual = 7.72018e-10, No Iterations 2
+GAMG:  Solving for ILambda_13_0, Initial residual = 0.373779, Final residual = 3.79223e-09, No Iterations 1
+GAMG:  Solving for ILambda_14_0, Initial residual = 0.373777, Final residual = 2.76455e-05, No Iterations 2
+GAMG:  Solving for ILambda_15_0, Initial residual = 0.317116, Final residual = 5.44115e-05, No Iterations 3
+Radiation solver iter: 2
+GAMG:  Solving for ILambda_0_0, Initial residual = 0.190217, Final residual = 7.88222e-10, No Iterations 2
+GAMG:  Solving for ILambda_1_0, Initial residual = 0.18919, Final residual = 3.59968e-09, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 0.189189, Final residual = 5.18639e-05, No Iterations 2
+GAMG:  Solving for ILambda_3_0, Initial residual = 0.190207, Final residual = 7.24521e-06, No Iterations 4
+GAMG:  Solving for ILambda_4_0, Initial residual = 0.20724, Final residual = 7.0085e-05, No Iterations 3
+GAMG:  Solving for ILambda_5_0, Initial residual = 0.184858, Final residual = 8.7579e-05, No Iterations 3
+GAMG:  Solving for ILambda_6_0, Initial residual = 0.184856, Final residual = 6.62459e-05, No Iterations 3
+GAMG:  Solving for ILambda_7_0, Initial residual = 0.207241, Final residual = 4.6093e-05, No Iterations 3
+GAMG:  Solving for ILambda_8_0, Initial residual = 0.0853689, Final residual = 5.48953e-05, No Iterations 3
+GAMG:  Solving for ILambda_9_0, Initial residual = 0.0888142, Final residual = 5.28213e-05, No Iterations 3
+GAMG:  Solving for ILambda_10_0, Initial residual = 0.0888124, Final residual = 4.9055e-05, No Iterations 3
+GAMG:  Solving for ILambda_11_0, Initial residual = 0.085367, Final residual = 4.12276e-05, No Iterations 3
+GAMG:  Solving for ILambda_12_0, Initial residual = 0.101291, Final residual = 5.8518e-05, No Iterations 1
+GAMG:  Solving for ILambda_13_0, Initial residual = 0.138584, Final residual = 1.46561e-09, No Iterations 1
+GAMG:  Solving for ILambda_14_0, Initial residual = 0.138586, Final residual = 7.96466e-06, No Iterations 2
+GAMG:  Solving for ILambda_15_0, Initial residual = 0.101278, Final residual = 1.51747e-05, No Iterations 3
+Radiation solver iter: 3
+GAMG:  Solving for ILambda_0_0, Initial residual = 0.117339, Final residual = 2.10407e-05, No Iterations 1
+GAMG:  Solving for ILambda_1_0, Initial residual = 0.119936, Final residual = 2.74503e-09, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 0.119928, Final residual = 1.85065e-05, No Iterations 2
+GAMG:  Solving for ILambda_3_0, Initial residual = 0.117335, Final residual = 4.45907e-05, No Iterations 3
+GAMG:  Solving for ILambda_4_0, Initial residual = 0.077464, Final residual = 1.43919e-05, No Iterations 3
+GAMG:  Solving for ILambda_5_0, Initial residual = 0.064827, Final residual = 1.74711e-05, No Iterations 3
+GAMG:  Solving for ILambda_6_0, Initial residual = 0.0648235, Final residual = 1.60287e-05, No Iterations 3
+GAMG:  Solving for ILambda_7_0, Initial residual = 0.0774555, Final residual = 7.96378e-06, No Iterations 3
+GAMG:  Solving for ILambda_8_0, Initial residual = 0.0321641, Final residual = 9.30456e-06, No Iterations 3
+GAMG:  Solving for ILambda_9_0, Initial residual = 0.0377661, Final residual = 2.04735e-05, No Iterations 3
+GAMG:  Solving for ILambda_10_0, Initial residual = 0.0377563, Final residual = 3.39011e-05, No Iterations 3
+GAMG:  Solving for ILambda_11_0, Initial residual = 0.0321552, Final residual = 9.77999e-06, No Iterations 3
+GAMG:  Solving for ILambda_12_0, Initial residual = 0.028514, Final residual = 9.92179e-06, No Iterations 1
+GAMG:  Solving for ILambda_13_0, Initial residual = 0.0383004, Final residual = 3.1467e-10, No Iterations 1
+GAMG:  Solving for ILambda_14_0, Initial residual = 0.0383001, Final residual = 1.70024e-06, No Iterations 2
+GAMG:  Solving for ILambda_15_0, Initial residual = 0.0284869, Final residual = 4.05692e-05, No Iterations 2
+Radiation solver iter: 4
+GAMG:  Solving for ILambda_0_0, Initial residual = 0.0760594, Final residual = 2.4357e-05, No Iterations 1
+GAMG:  Solving for ILambda_1_0, Initial residual = 0.0747156, Final residual = 2.6732e-10, No Iterations 1
+GAMG:  Solving for ILambda_2_0, Initial residual = 0.0747104, Final residual = 5.96447e-06, No Iterations 2
+GAMG:  Solving for ILambda_3_0, Initial residual = 0.0760503, Final residual = 1.83004e-05, No Iterations 3
+GAMG:  Solving for ILambda_4_0, Initial residual = 0.0386304, Final residual = 7.65324e-05, No Iterations 2
+GAMG:  Solving for ILambda_5_0, Initial residual = 0.0312482, Final residual = 5.22403e-05, No Iterations 2
+GAMG:  Solving for ILambda_6_0, Initial residual = 0.0312473, Final residual = 5.33872e-05, No Iterations 2
+GAMG:  Solving for ILambda_7_0, Initial residual = 0.0386303, Final residual = 5.1335e-05, No Iterations 2
+GAMG:  Solving for ILambda_8_0, Initial residual = 0.0144209, Final residual = 8.78311e-05, No Iterations 2
+GAMG:  Solving for ILambda_9_0, Initial residual = 0.015799, Final residual = 1.40319e-05, No Iterations 3
+GAMG:  Solving for ILambda_10_0, Initial residual = 0.0158035, Final residual = 1.22103e-05, No Iterations 3
+GAMG:  Solving for ILambda_11_0, Initial residual = 0.0144226, Final residual = 6.41074e-05, No Iterations 2
+GAMG:  Solving for ILambda_12_0, Initial residual = 0.0125025, Final residual = 1.92538e-06, No Iterations 1
+GAMG:  Solving for ILambda_13_0, Initial residual = 0.0167475, Final residual = 3.90471e-11, No Iterations 1
+GAMG:  Solving for ILambda_14_0, Initial residual = 0.0167463, Final residual = 5.44419e-05, No Iterations 1
+GAMG:  Solving for ILambda_15_0, Initial residual = 0.0125011, Final residual = 1.65398e-05, No Iterations 2
+Radiation solver iter: 5
+DILUPBiCG:  Solving for hs, Initial residual = 0.0626786, Final residual = 2.36929e-11, No Iterations 2
+GAMG:  Solving for p_rgh, Initial residual = 0.00765634, Final residual = 3.24504e-05, No Iterations 5
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 2.28092e-08, global = 3.56456e-10, cumulative = 9.48009e-10
+GAMG:  Solving for p_rgh, Initial residual = 0.000120028, Final residual = 4.2573e-07, No Iterations 4
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+time step continuity errors : sum local = 6.38442e-10, global = 3.72683e-10, cumulative = 1.32069e-09
+DILUPBiCG:  Solving for k, Initial residual = 0.104958, Final residual = 1.184e-09, No Iterations 2
+
+Evolving reactingOneDim for region pyrolysisRegion
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+diagonal:  Solving for Yv, Initial residual = 0, Final residual = 0, No Iterations 0
+DICPCG:  Solving for T, Initial residual = 0.0334065, Final residual = 2.33448e-18, No Iterations 1
+pyrolysis min/max(T) = 297.811, 298
+
+Pyrolysis: reactingOneDim
+    Total gas mass produced  [kg] = 0
+    Total solid mass lost    [kg] = 2.47325e-16
+    Total pyrolysis gases  [kg/s] = 0
+    Total heat release rate [J/s] = 0
+
+ExecutionTime = 4.46 s  ClockTime = 5 s
+
+End
+

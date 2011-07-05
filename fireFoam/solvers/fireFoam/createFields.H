@@ -7,7 +7,7 @@ autoPtr<hsCombustionThermo> pThermo
 
 hsCombustionThermo& thermo = pThermo();
 
-//SLGThermo slgThermo(mesh, thermo);  
+SLGThermo slgThermo(mesh, thermo);  
 
 basicMultiComponentMixtureNew& composition = thermo.composition();
 

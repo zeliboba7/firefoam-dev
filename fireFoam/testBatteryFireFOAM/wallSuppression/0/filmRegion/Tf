@@ -1,0 +1,68 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.x                                 |
+|   \\  /    A nd           | Web:      http://www.OpenFOAM.org               |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0/filmRegion";
+    object      Tf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform  298;
+
+boundaryField
+{
+    coupledWall_top
+    {
+        type            zeroGradient;
+    }
+
+    /*This bc is the back boundary condition for the film energy equation*/
+    coupledWall
+    {
+        /*type            fixedValue;*/
+        /*value           uniform 298.0;*/
+        /*type            zeroGradient;*/
+        type            directMappedField; // map to pyrolysis region temp field
+        sampleRegion    pyrolysisRegion;
+        sampleMode      nearestPatchFace;
+        samplePatch     region0_to_pyrolysisRegion_coupledWall; // coupledWall;
+        offset          (0 0 0);
+        fieldName       T;
+        setAverage      no;
+        average         0;
+        value           uniform 298;
+    }
+
+    side1 //bottom
+    {
+        type            zeroGradient;
+    }
+
+    side2 //side
+    {
+        type            zeroGradient;
+    }
+
+    side3 //top
+    {
+        type            fixedValue;
+        value           uniform 298.0;
+    }
+
+    side4 //side
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

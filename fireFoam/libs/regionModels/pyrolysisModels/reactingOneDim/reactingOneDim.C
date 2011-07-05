@@ -173,6 +173,16 @@ void reactingOneDim::updatePhiGas()
 void reactingOneDim::updateFields()
 {
     updateQr();
+    
+    /*set Tinternal_.coupledPatch values equal to internal T values*/
+    //TODO:  restart might have issues because Tinternal_ is not updated until after film calculation
+    forAll(intCoupledPatchIDs_, i)
+    {
+        const label patchI = intCoupledPatchIDs_[i];
+        forAll(Tinternal_.boundaryField()[patchI], j){
+            Tinternal_.boundaryField()[patchI][j] = T_.boundaryField()[patchI].patchInternalField()()[j];
+        }
+    }
 
     updatePhiGas();
 }
@@ -215,8 +225,7 @@ void reactingOneDim::solveContinuity()
     (
         fvm::ddt(rho_)
      ==
-        //solidChemistry_->RRg()
-        - solidChemistry_->RRg()
+      - solidChemistry_->RRg()
     );
 }
 
@@ -391,6 +400,20 @@ reactingOneDim::reactingOneDim(const word& modelType, const fvMesh& mesh)
         regionMesh()
     ),
 
+    convectiveFlux_
+    (
+        IOobject
+        (
+            "convectiveFlux",
+            time().timeName(),
+            regionMesh(),
+            IOobject::NO_READ,
+            IOobject::AUTO_WRITE
+        ),
+        regionMesh(),
+        dimensionedScalar("zero", dimEnergy/dimTime/dimArea, 0.0)
+    ),
+
     Qr_
     (
         IOobject
@@ -403,6 +426,21 @@ reactingOneDim::reactingOneDim(const word& modelType, const fvMesh& mesh)
         ),
         regionMesh(),
         dimensionedScalar("zero", dimEnergy/dimArea/dimTime, 0.0),
+        zeroGradientFvPatchVectorField::typeName
+    ),
+
+    Tinternal_
+    (
+        IOobject
+        (
+            "Tinternal",
+            time().timeName(),
+            regionMesh(),
+            IOobject::NO_READ,
+            IOobject::AUTO_WRITE
+        ),
+        regionMesh(),
+        dimensionedScalar("Tinternal", dimTemperature, 298),
         zeroGradientFvPatchVectorField::typeName
     ),
 
@@ -524,35 +562,6 @@ void reactingOneDim::preEvolveRegion()
         solidChemistry_->setCellReacting(cellI, true);
     }
 
-    // De-activate reactions if pyrolysis region coupled to (valid) film
-    if (filmCoupled_)
-    {
-        const volScalarField& filmDelta = filmDeltaPtr_();
-
-        forAll(intCoupledPatchIDs_, i)
-        {
-            const label patchI = intCoupledPatchIDs_[i];
-            const scalarField& filmDeltap = filmDelta.boundaryField()[patchI];
-
-            forAll(filmDeltap, faceI)
-            {
-                const scalar filmDelta0 = filmDeltap[faceI];
-                if (filmDelta0 > reactionDeltaMin_)
-                {
-                    const labelList& cells = boundaryFaceCells_[faceI];
-
-                    // TODO: only limit cell adjacent to film?
-                    //solidChemistry_->setCellNoReacting(cells[0])
-
-                    // Propagate flag through 1-D region
-                    forAll(cells, k)
-                    {
-                        solidChemistry_->setCellReacting(cells[k], false);
-                    }
-                }
-            }
-        }
-    }
 }
 
 
@@ -592,18 +601,13 @@ void reactingOneDim::info() const
     Info<< "\nPyrolysis: " << type() << endl;
 
     Info<< indent << "Total gas mass produced  [kg] = "
-        //<< returnReduce<scalar>(addedGasMass_.value(), sumOp<scalar>()) << nl
         << addedGasMass_.value() << nl
         << indent << "Total solid mass lost    [kg] = "
-        //<< returnReduce<scalar>(lostSolidMass_.value(), sumOp<scalar>()) << nl
         << lostSolidMass_.value() << nl
         << indent << "Total pyrolysis gases  [kg/s] = "
-        //<< returnReduce<scalar>(totalGasMassFlux_, sumOp<scalar>()) << nl
         << totalGasMassFlux_ << nl
         << indent << "Total heat release rate [J/s] = "
-        //<< returnReduce<scalar>(totalHeatRR_.value(), sumOp<scalar>())
-        << totalHeatRR_.value()
-        << nl;
+        << totalHeatRR_.value() << nl;
 }
 
 

@@ -4,6 +4,8 @@ set -x
 
 wmake libso regionModel
 wmake libso pyrolysisModels
+wmake libso surfaceFilmModels
+wmake libso regionCoupling
 
 
 # ----------------------------------------------------------------- end-of-file
