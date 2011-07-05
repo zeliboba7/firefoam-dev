@@ -119,7 +119,7 @@ Foam::combustionModels::eddyDissipationModel::R(volScalarField& Y) const
 
     const volScalarField wSpecie =
         wFuelNorm_*singleMixture_.specieStoichCoeffs()[specieI]
-      / max(fNorm*(Y - fres), 0.001);
+      / max(fNorm*(Y - fres), SMALL);
 
     return -fNorm*wSpecie*fres + fNorm*fvm::Sp(wSpecie, Y);
 }

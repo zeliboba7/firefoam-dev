@@ -1,0 +1,8 @@
+log.fireFoam original/log.fireFoam
+patchPanel/0/faceSource.dat original/patchPanel/0/faceSource.dat
+patchProbes/panelRegion/0/T original/patchProbes/panelRegion/0/T
+patchProbes/0/Qr original/patchProbes/0/Qr
+patchPanelSolidRegion/0/faceSource.dat original/patchPanelSolidRegion/0/faceSource.dat
+patchProbes/panelRegion/0/emissivity original/patchProbes/panelRegion/0/emissivity
+patchProbes/0/T original/patchProbes/0/T
+patchPanelQr/0/faceSource.dat original/patchPanelQr/0/faceSource.dat

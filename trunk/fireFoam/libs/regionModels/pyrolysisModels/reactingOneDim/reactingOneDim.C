@@ -592,13 +592,17 @@ void reactingOneDim::info() const
     Info<< "\nPyrolysis: " << type() << endl;
 
     Info<< indent << "Total gas mass produced  [kg] = "
-        << returnReduce<scalar>(addedGasMass_.value(), sumOp<scalar>()) << nl
+        //<< returnReduce<scalar>(addedGasMass_.value(), sumOp<scalar>()) << nl
+        << addedGasMass_.value() << nl
         << indent << "Total solid mass lost    [kg] = "
-        << returnReduce<scalar>(lostSolidMass_.value(), sumOp<scalar>()) << nl
+        //<< returnReduce<scalar>(lostSolidMass_.value(), sumOp<scalar>()) << nl
+        << lostSolidMass_.value() << nl
         << indent << "Total pyrolysis gases  [kg/s] = "
-        << returnReduce<scalar>(totalGasMassFlux_, sumOp<scalar>()) << nl
+        //<< returnReduce<scalar>(totalGasMassFlux_, sumOp<scalar>()) << nl
+        << totalGasMassFlux_ << nl
         << indent << "Total heat release rate [J/s] = "
-        << returnReduce<scalar>(totalHeatRR_.value(), sumOp<scalar>())
+        //<< returnReduce<scalar>(totalHeatRR_.value(), sumOp<scalar>())
+        << totalHeatRR_.value()
         << nl;
 }
 

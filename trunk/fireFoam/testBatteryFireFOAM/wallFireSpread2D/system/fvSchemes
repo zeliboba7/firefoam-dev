@@ -40,6 +40,13 @@ divSchemes
 //    div(phi,U)      Gauss linear;
     div(phi,U)      Gauss filteredLinear2V 0.2 0.05;
     div(phi,k)      Gauss limitedLinear 1;
+    flux(phi,O2)  Gauss limitedLinear01 1;
+    flux(phi,C3H8)  Gauss limitedLinear01 1;
+    flux(phi,H2O)  Gauss limitedLinear01 1;
+    flux(phi,CO2)  Gauss limitedLinear01 1;
+    div(phi,hs)  Gauss limitedLinear 1;
+
+
     div(phi,Yi_hs) Gauss multivariateSelection
     {
         O2              limitedLinear01 1;

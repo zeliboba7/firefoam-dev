@@ -15,12 +15,21 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-combustionModel    infinitelyFastChemistry;
+//combustionModel    infinitelyFastChemistry;
+combustionModel    infinitelyFastChemistryExplicit;
 
 infinitelyFastChemistryCoeffs
 {
-//    C       10;
     C       10;
+}
+
+infinitelyFastChemistryExplicitCoeffs
+{
+    C       10;
+}
+
+noCombustionCoeffs
+{
 }
 
 coherentFlameCoeffs
@@ -28,10 +37,7 @@ coherentFlameCoeffs
 
 }
 
-noCombustionCoeffs
-{
-}
-
+/*
 XiModel transport;
 
 transportCoeffs
@@ -93,5 +99,6 @@ GuldersCoeffs
     }
 }
 
+*/
 
 // ************************************************************************* //

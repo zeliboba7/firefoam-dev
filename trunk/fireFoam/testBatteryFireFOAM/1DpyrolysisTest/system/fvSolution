@@ -122,6 +122,11 @@ PISO
     nNonOrthogonalCorrectors 0;
 }
 
+MULES
+{
+    bMULES     no;
+}
+
 relaxationFactors
 {
     U       0.9;
